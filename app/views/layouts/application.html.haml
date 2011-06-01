@@ -1,0 +1,9 @@
+%html{html_attrs}
+  %head
+    %title Songfeedback
+    = stylesheet_link_tag :all, :cache => true
+    = javascript_include_tag :all, :cache => true, :recursive => true
+    = csrf_meta_tag
+  %body
+    Song Feedback
+    = yield
