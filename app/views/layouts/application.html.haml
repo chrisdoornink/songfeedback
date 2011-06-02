@@ -9,7 +9,123 @@
     #container
       #header
         #menu
+          #menu-songs
+            .songs Songs
+            .arrow
+            #menu-songs-list
+              %ul
+                %li
+                  %a.first.ajax{:href => "/songs/recent"} Recent
+                %li
+                  %a.ajax{:href => "/songs/least_rated"} Least Rated
+                %li
+                  %a.ajax{:href => "/songs/top_rated"} Top Rated
+                %li
+                  %a.ajax{:href => "/songs/random"} Random
+                %li
+                  %a.last.ajax{:href => "/songs/genre"} By Genre
+          #menu-myfeedback
+            .myfeedback My Feedback
+            .arrow
+            #menu-myfeedback-list
+              %ul
+                %li
+                  %a.first.ajax{:href => "/my_songs"} My Songs
+                %li
+                  %a.ajax{:href => "/upload"} Upload Songs
+                %li
+                  Feedback Score: 180
+                %li
+                  Level: Rockstar | Strictness: Harsh
+                %li
+                  Uploads: 3  Available: 2
+          #menu-myaccount
+            .myaccount
+              = @username
+            .arrow
+            #menu-myaccount-list
+              %ul
+                %li
+                  %a.ajax{:href => "/authentication/signout"} Sign Out
+                %li
+                  %a.last.ajax{:href => "/account"} My Account
         #player
           #player-header
-            Song Feedback
+          #player-title
+            %p
+              = @title
+          #player-artist
+            %p
+              = @artist
+          #player-description
+            %p
+              = @desc
+          #player-controls
+            #player-volume
+            #play-pause-control
+              #play-button
+                %a{:href => "#"}
+              #pause-button
+            #player-time
+              #total-time
+                0:00
+              #current-time
+                0:00/
+              #progress-bar
+                #progress
+          .player-divider
+          #feedback-frame
+            %form#feedback-form
+              #vocals.feedback-row
+                .star-frame
+                  #vocal-star1.star
+                  #vocal-star2.star
+                  #vocal-star3.star
+                  #vocal-star4.star
+                  #vocal-star5.star
+                .category vocals
+              #songwriting.feedback-row
+                .star-frame
+                  #songwriting-star1.star
+                  #songwriting-star2.star
+                  #songwriting-star3.star
+                  #songwriting-star4.star
+                  #songwriting-star5.star
+                .category songwriting
+              #musicianship.feedback-row
+                .star-frame
+                  #musicianship-star1.star
+                  #musicianship-star2.star
+                  #musicianship-star3.star
+                  #musicianship-star4.star
+                  #musicianship-star5.star
+                .category musicianship
+              #creativity.feedback-row
+                .star-frame
+                  #creativity-star1.star
+                  #creativity-star2.star
+                  #creativity-star3.star
+                  #creativity-star4.star
+                  #creativity-star5.star
+                .category creativity
+              #production.feedback-row
+                .star-frame
+                  #production-star1.star
+                  #production-star2.star
+                  #production-star3.star
+                  #production-star4.star
+                  #production-star5.star
+                .category production
+              #overall.feedback-row
+                .star-frame
+                  #overall-star1.star
+                  #overall-star2.star
+                  #overall-star3.star
+                  #overall-star4.star
+                  #overall-star5.star
+                .category overall
+              %textarea#comment-box{:placeholder => "Your comments here", :name => "comments"}
+              %input#feedback-submit{:name => "feedback-submit", :type => "submit", :value => "Submit Feedback"}
+      #main-section-frame
         = yield
+      #footer
