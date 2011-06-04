@@ -13,7 +13,7 @@ a {
   cursor: pointer; }
 
 a:hover {
-  color: #77cfdf; }
+  color: #81c3cf; }
 
 img {
   border: none; }
@@ -35,6 +35,7 @@ ul {
   position: relative;
   top: -50px;
   width: 850px;
+  padding: 0 15px 15px;
   margin: 0 auto; }
   #container #header {
     height: 50px;
@@ -91,13 +92,15 @@ ul {
         background: #4b4f4e;
         position: absolute;
         z-index: 1000;
-        left: 282px;
+        left: 297px;
         top: 40px;
         margin: 0;
         padding: 0;
         display: none;
         -moz-border-radius: 0 5px 5px 5px;
-        -webkit-border-radius: 0 5px 5px 5px; }
+        -webkit-border-radius: 0 5px 5px 5px;
+        -moz-box-shadow: 0px 8px 8px #888888;
+        -webkit-box-shadow: 0px 8px 8px #888888; }
         #container #header #menu #menu-songs-list ul a {
           display: block;
           outline: 0;
@@ -105,7 +108,7 @@ ul {
           background-color: #4b4f4e;
           color: white; }
           #container #header #menu #menu-songs-list ul a:hover {
-            background-color: #77cfdf; }
+            background-color: #81c3cf; }
         #container #header #menu #menu-songs-list ul li .last {
           -moz-border-radius: 0 0 5px 5px;
           -webkit-border-radius: 0 0 5px 5px; }
@@ -116,13 +119,15 @@ ul {
         background: #4b4f4e;
         position: absolute;
         z-index: 1000;
-        left: 369px;
+        left: 384px;
         top: 40px;
         margin: 0;
         padding: 0;
         display: none;
         -moz-border-radius: 0 5px 5px 5px;
-        -webkit-border-radius: 0 5px 5px 5px; }
+        -webkit-border-radius: 0 5px 5px 5px;
+        -moz-box-shadow: 0px 8px 8px #888888;
+        -webkit-box-shadow: 0px 8px 8px #888888; }
         #container #header #menu #menu-myfeedback-list ul a {
           display: block;
           outline: 0;
@@ -130,7 +135,7 @@ ul {
           background-color: #4b4f4e;
           color: white; }
           #container #header #menu #menu-myfeedback-list ul a:hover {
-            background-color: #77cfdf; }
+            background-color: #81c3cf; }
         #container #header #menu #menu-myfeedback-list ul li .last {
           -moz-border-radius: 0 0 5px 5px;
           -webkit-border-radius: 0 0 5px 5px; }
@@ -141,13 +146,15 @@ ul {
         background: #4b4f4e;
         position: absolute;
         z-index: 1000;
-        left: 734px;
+        left: 749px;
         top: 40px;
         margin: 0;
         padding: 0;
         display: none;
         -moz-border-radius: 0 5px 5px 5px;
-        -webkit-border-radius: 0 5px 5px 5px; }
+        -webkit-border-radius: 0 5px 5px 5px;
+        -moz-box-shadow: 0px 8px 8px #888888;
+        -webkit-box-shadow: 0px 8px 8px #888888; }
         #container #header #menu #menu-myaccount-list ul a {
           display: block;
           outline: 0;
@@ -155,7 +162,7 @@ ul {
           background-color: #4b4f4e;
           color: white; }
           #container #header #menu #menu-myaccount-list ul a:hover {
-            background-color: #77cfdf; }
+            background-color: #81c3cf; }
         #container #header #menu #menu-myaccount-list ul li .last {
           -moz-border-radius: 0 0 5px 5px;
           -webkit-border-radius: 0 0 5px 5px; }
@@ -172,7 +179,7 @@ ul {
         height: 50px;
         width: 100%;
         background: url(/images/sprites.png) no-repeat 16px 6px;
-        background-color: #77cfdf;
+        background-color: #81c3cf;
         margin-bottom: 15px; }
       #container #header #player #player-title p {
         font-size: 14px;
@@ -226,7 +233,7 @@ ul {
           margin: 0; }
           #container #header #player #player-time #progress-bar #progress {
             position: absolute;
-            background-color: #77cfdf;
+            background-color: #81c3cf;
             height: 11px;
             -moz-border-radius: 10px 0 0 10px;
             -webkit-border-radius: 10px 0px 0 10px;
@@ -300,7 +307,7 @@ ul {
         margin: 0;
         font-size: 24px;
         color: white;
-        background: #77cfdf;
+        background: #81c3cf;
         border-top: 1px solid #4b4f4e;
         border-left: 1px solid #222222;
         border-right: 1px solid #222222;
@@ -313,12 +320,45 @@ ul {
     float: right;
     width: 555px;
     margin: 0 5px 10px; }
-  #container #footer {
-    height: 100px;
-    overflow: auto;
-    border: 1px solid green;
-    width: 800px;
-    position: relative;
-    bottom: 0; }
   #container .menu-background {
     background-color: #4b4f4e; }
+
+.song-list-container {
+  margin: 15px;
+  padding: 0;
+  -moz-box-shadow: 0px 0px 15px #aaaaaa;
+  -webkit-box-shadow: 0px 0px 15px #aaaaaa; }
+  .song-list-container .song-list-category {
+    background: #81c3cf;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 20px;
+    padding: 6px 10px 10px; }
+  .song-list-container .song-list-item {
+    overflow: hidden;
+    height: 30px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #cbcfce;
+    cursor: pointer; }
+    .song-list-container .song-list-item:hover {
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
+      background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }
+    .song-list-container .song-list-item .song-list-names {
+      float: left; }
+      .song-list-container .song-list-item .song-list-names .song-list-title {
+        position: relative;
+        font-size: 12px;
+        font-weight: bold; }
+      .song-list-container .song-list-item .song-list-names .song-list-artist {
+        font-size: 12px; }
+    .song-list-container .song-list-item .song-list-data {
+      float: right; }
+      .song-list-container .song-list-item .song-list-data .song-list-date {
+        text-align: right;
+        font-size: 12px; }
+      .song-list-container .song-list-item .song-list-data .song-list-time {
+        text-align: right;
+        font-size: 12px; }
+  .song-list-container .song-list-overlay {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
+    background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }

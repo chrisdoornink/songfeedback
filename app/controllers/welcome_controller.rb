@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
     @artist = "Choose a song on the right to get started."
     @desc = ""
     @username = "chrisdoornink@gmail.com"
+    @eventual_username = User.find(1)
   end
 
   def show

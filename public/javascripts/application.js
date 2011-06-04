@@ -1,6 +1,9 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+
+//HOVER DELEGATES
+
 $(document).ready(function() {
   $("#menu").delegate("#menu-songs", "mouseenter", function() {
     $("#menu-songs-list").show();
@@ -46,6 +49,11 @@ $(document).ready(function() {
     $("#menu-myaccount-list").hide();
     $("#menu-myaccount").removeClass("menu-background");
   });
+
+//  $("#main-section-frame").delegate(".song-list-item", "click", function() {
+//    //something to play this
+//  });
+//
 
 
 

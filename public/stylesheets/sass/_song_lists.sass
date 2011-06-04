@@ -1,0 +1,41 @@
+.song-list-container
+  margin: 15px
+  padding: 0
+  -moz-box-shadow: 0px 0px 15px #AAA
+  -webkit-box-shadow: 0px 0px 15px #AAA
+  .song-list-category
+    background: $sf_pri
+    color: $sf_white
+    font-size: 20px
+    height: 20px
+    padding: 6px 10px 10px
+  .song-list-item
+    overflow: hidden
+    height: 30px
+    padding: 5px 10px
+    border-bottom: 1px solid $sf_light_gray
+    cursor: pointer
+    &:hover
+      background: $inner_shadow_webkit
+      background: $inner_shadow_moz
+    .song-list-names
+      float: left
+      .song-list-title
+        position: relative
+        font-size: 12px
+        font-weight: bold
+      .song-list-artist
+        font-size: 12px
+    .song-list-data
+      float: right
+      .song-list-date
+        text-align: right
+        font-size: 12px
+      .song-list-time
+        text-align: right
+        font-size: 12px
+  .song-list-overlay
+    background: $inner_shadow_webkit
+    background: $inner_shadow_moz
+
+

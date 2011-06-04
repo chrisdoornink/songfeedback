@@ -11,8 +11,8 @@ checked program was:
 find_library: checking for sqlite3_libversion_number() in -lsqlite3... -------------------- yes
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.       -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_libversion_number’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_libversion_number' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -37,8 +37,8 @@ checked program was:
 have_func: checking for rb_proc_arity()... -------------------- no
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘rb_proc_arity’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'rb_proc_arity' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -53,7 +53,7 @@ ld: warning: directory '/opt/local/lib' following -L not found
 ld: warning: directory '/sw/local/lib' following -L not found
 Undefined symbols:
   "_rb_proc_arity", referenced from:
-      _t in ccIXStG9.o
+      _t in ccvKivLg.o
 ld: symbol(s) not found
 collect2: ld returned 1 exit status
 checked program was:
@@ -68,8 +68,8 @@ checked program was:
 have_func: checking for sqlite3_initialize()... -------------------- yes
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_initialize’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_initialize' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -94,8 +94,8 @@ checked program was:
 have_func: checking for sqlite3_next_stmt()... -------------------- yes
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_next_stmt’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_next_stmt' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -120,8 +120,8 @@ checked program was:
 have_func: checking for sqlite3_backup_init()... -------------------- yes
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_backup_init’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_backup_init' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -146,8 +146,8 @@ checked program was:
 have_func: checking for sqlite3_column_database_name()... -------------------- no
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_column_database_name’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_column_database_name' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -162,7 +162,7 @@ ld: warning: directory '/opt/local/lib' following -L not found
 ld: warning: directory '/sw/local/lib' following -L not found
 Undefined symbols:
   "_sqlite3_column_database_name", referenced from:
-      _t in ccu1PSia.o
+      _t in cc55cy8z.o
 ld: symbol(s) not found
 collect2: ld returned 1 exit status
 checked program was:
@@ -177,8 +177,8 @@ checked program was:
 have_func: checking for sqlite3_enable_load_extension()... -------------------- no
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_enable_load_extension’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_enable_load_extension' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -193,7 +193,7 @@ ld: warning: directory '/opt/local/lib' following -L not found
 ld: warning: directory '/sw/local/lib' following -L not found
 Undefined symbols:
   "_sqlite3_enable_load_extension", referenced from:
-      _t in cc2g5DUN.o
+      _t in cc8IL5l2.o
 ld: symbol(s) not found
 collect2: ld returned 1 exit status
 checked program was:
@@ -208,8 +208,8 @@ checked program was:
 have_func: checking for sqlite3_load_extension()... -------------------- no
 
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE    -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L/usr/local/lib -L/opt/local/lib -L/sw/local/lib -L/usr/lib -L.      -lsqlite3  -lruby -lsqlite3  -lpthread -ldl  "
-conftest.c: In function ‘t’:
-conftest.c:3: error: ‘sqlite3_load_extension’ undeclared (first use in this function)
+conftest.c: In function 't':
+conftest.c:3: error: 'sqlite3_load_extension' undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
 checked program was:
@@ -224,7 +224,7 @@ ld: warning: directory '/opt/local/lib' following -L not found
 ld: warning: directory '/sw/local/lib' following -L not found
 Undefined symbols:
   "_sqlite3_load_extension", referenced from:
-      _t in ccA77u6u.o
+      _t in ccIXOz5N.o
 ld: symbol(s) not found
 collect2: ld returned 1 exit status
 checked program was:

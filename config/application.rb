@@ -38,5 +38,10 @@ module Songfeedback
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    #uses pre Rails 2.1 method of numbering migrations without a timestamp
+    config.active_record.timestamped_migrations = false
   end
 end
+
+
