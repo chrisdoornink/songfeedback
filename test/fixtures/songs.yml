@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  artist: MyString
+  description: MyString
+  username: 1
+  location: MyString
+  feedbacks: 1
+  overall: 1.5
+  vocals: 1.5
+  songwriting: 1.5
+  musicianship: 1.5
+  creativity: 1.5
+  production: 1.5
+
+two:
+  title: MyString
+  artist: MyString
+  description: MyString
+  username: 1
+  location: MyString
+  feedbacks: 1
+  overall: 1.5
+  vocals: 1.5
+  songwriting: 1.5
+  musicianship: 1.5
+  creativity: 1.5
+  production: 1.5

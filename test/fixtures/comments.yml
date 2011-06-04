@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  song_id: 1
+  user: 1
+  comment: MyString
+  thumbsup: 1
+  thumbsdown: 1
+
+two:
+  song_id: 1
+  user: 1
+  comment: MyString
+  thumbsup: 1
+  thumbsdown: 1
