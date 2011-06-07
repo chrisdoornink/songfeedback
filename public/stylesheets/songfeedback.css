@@ -83,11 +83,12 @@ ul {
         -moz-border-radius: 5px 5px 0 5px;
         -webkit-border-radius: 5px 5px 0 5px; }
         #container #header #menu #menu-myaccount .myaccount {
-          float: left; }
+          float: right; }
         #container #header #menu #menu-myaccount .arrow {
-          width: 197px;
+          float: right;
+          width: 10px;
           height: 14px;
-          background: url(/images/sprites.png) no-repeat 163px -171px; }
+          background: url(/images/sprites.png) no-repeat -23px -171px; }
       #container #header #menu #menu-songs-list {
         background: #4b4f4e;
         position: absolute;

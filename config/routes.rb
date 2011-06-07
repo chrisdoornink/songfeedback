@@ -1,4 +1,16 @@
 Songfeedback::Application.routes.draw do
+  get "songs/index"
+
+  get "songs/recent"
+
+  get "songs/least_rated"
+
+  get "songs/top"
+
+  get "songs/random"
+
+  get "songs/genre"
+
   get "welcome/index"
 
   get "welcome/show"
