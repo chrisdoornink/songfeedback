@@ -1,12 +1,19 @@
 class AuthenticationController < ApplicationController
   def login
-    if params[:username] || params[:password]
-      #if username and password both clear then assign a cookie and redirect to welcome page
-      #and dont forget to uncomment the other stuff on the welcome page
-
-      redirect_to "/welcome/index"
+    if params[:username] && params[:password]
+      @user_info = User.find_by_username(params[:username])
+      if !@user_info.nil?
+        if @user_info["password"] == params[:password]
+          @user_id = @user_info["id"]
+          @token_new = @user_id.to_s + "-".to_s + Time.current.usec.to_s
+          User.update(@user_id, {:token => @token_new})
+          cookies[:authenticate] = {:value => @token_new, :expires => 1.days.from_now, :domain => nil}
+          redirect_to "/welcome/index"
+        else
+          puts "password was wrong"
+        end
+      end
     end
-
   end
 
   def index

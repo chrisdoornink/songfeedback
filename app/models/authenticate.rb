@@ -1,8 +1,9 @@
-class ApplicationController < ActionController::Base
-  protect_from_forgery
+class Authenticate
+  require 'rubygems'
 
-  def user_auth
-    @token = cookies[:authenticate] ? cookies[:authenticate] : ""
+  def self.verify
+
+    @token = get_auth
     @token_sliced = @token.partition("-")
     @user_id = @token_sliced[0]
 
@@ -18,7 +19,8 @@ class ApplicationController < ActionController::Base
     else
       redirect_to "/authentication/login"
     end
-    user_info = @user_info
+
   end
 
 end
+

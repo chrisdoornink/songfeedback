@@ -1,7 +1,7 @@
 Songfeedback::Application.routes.draw do
-  get "authentication/index"
+  get "authentication/login"
 
-  post "authentication/index"
+  post "authentication/login"
 
   get "songs/index"
 
