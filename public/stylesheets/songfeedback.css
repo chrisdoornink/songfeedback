@@ -1,11 +1,71 @@
+#login {
+  width: 345px;
+  margin: 30px auto; }
+  #login h1 {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 0;
+    margin: 5px 0;
+    color: #4b4f4e; }
+  #login #login-form {
+    overflow: auto;
+    margin: 10px 0;
+    padding: 10px 20px 15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-top: 2px solid #aaaaaa;
+    border-bottom: 2px solid #eeeeee;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc; }
+    #login #login-form .form-item {
+      padding-top: 10px; }
+      #login #login-form .form-item .input {
+        padding: 8px 5px 5px;
+        font-size: 12px;
+        width: 300px;
+        border-top: 1px solid #888888;
+        border-bottom: 2px solid #eeeeee;
+        border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        color: #606463;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px; }
+        #login #login-form .form-item .input:selected {
+          background: green; }
+    #login #login-form #login-submit {
+      float: right;
+      padding: 5px;
+      font-size: 16px;
+      width: 100px;
+      border-top: 1px solid #888888;
+      border-bottom: 2px solid #eeeeee;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      color: white;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background: #81c3cf;
+      cursor: pointer; }
+    #login #login-form #register-submit {
+      margin-top: 15px;
+      float: right;
+      padding: 5px;
+      font-size: 16px;
+      width: 100px;
+      border-top: 1px solid #888888;
+      border-bottom: 2px solid #eeeeee;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      color: white;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background: #81c3cf;
+      cursor: pointer; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Verdana, Sans-Serif;
   font-size: 0.9em;
   margin: 0; }
-
-h1 {
-  color: #606463;
-  font-size: 11px; }
 
 a {
   text-decoration: none;
@@ -35,7 +95,7 @@ ul {
   position: relative;
   top: -50px;
   width: 850px;
-  padding: 0 15px 15px;
+  padding: 0 0 15px 15px;
   margin: 0 auto; }
   #container #header {
     height: 50px;
@@ -78,7 +138,7 @@ ul {
       #container #header #menu #menu-myaccount {
         overflow: auto;
         float: right;
-        padding: 4px 12px 5px 8px;
+        padding: 4px 8px 5px 8px;
         margin-right: 10px;
         -moz-border-radius: 5px 5px 0 5px;
         -webkit-border-radius: 5px 5px 0 5px; }
@@ -328,7 +388,8 @@ ul {
   margin: 15px;
   padding: 0;
   -moz-box-shadow: 0px 0px 15px #aaaaaa;
-  -webkit-box-shadow: 0px 0px 15px #aaaaaa; }
+  -webkit-box-shadow: 0px 0px 15px #aaaaaa;
+  background: white; }
   .song-list-container .song-list-category {
     background: #81c3cf;
     color: #f2f2f2;

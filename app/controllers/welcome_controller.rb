@@ -9,15 +9,9 @@ class WelcomeController < ApplicationController
   end
 
   def index
-
-
-
     @title = "Songs will play here."
     @artist = "Choose a song on the right to get started."
     @desc = ""
-
-
-
   end
 
   def show

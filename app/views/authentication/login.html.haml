@@ -1,21 +1,17 @@
-%h1 Authentication#index
-%p Find me in app/views/authentication/index.html.erb
+#login
+  %h1 Sign in
+  %a{:href => "register"} Not a member? Registering is free and easy.
+  %form#login-form{:method => "POST", :action => "/authentication/login"}
+    #noticebox{:style => "display:none;"}
+      #notice
+    .form-item
+      %input#username.input{:name => "username", :label => "username", :type => "text", :value => "username", :onfocus => "if (this.value == 'username') {this.value=''}", :onblur => "if(this.value == '') { this.value='username'}"}
+    .form-item
+      %input#password.input{:name => "password", :type => "text", :value => "password", :onfocus => "if (this.value == 'password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='password'; this.type='text'}" }
+    .form-item
+      %a{:target => "_blank", :href => ""} Forgot your password?
 
-%form#login-form{:method => "POST", :action => "/authentication/login"}
-  #noticebox{:style => "display:none;"}
-    #notice
-  %h2.general Sign in and start listening
-  .form-item
-    %label{:for => "username"} Username (usually your e-mail address)
-    %input#username{:name => "username", :label => "username", :type => "text" }
-  .form-item
-    %label{:for => "password"} Password
-    %input#password{:name => "password", :type => "password" }
-  .form-item
-    %a{:target => "_blank", :href => ""} Forgot your password?
-  .form-item
-    .remember-me
-      %input#remember_me.checkbox{:name => "remember_me", :type => "checkbox", :checked => "true" }
-      %label{:for => "remember_me"} Remember me
     .sign-in
       %input#login-submit{:name => "login-submit", :type => "submit", :value => "Sign In"}
+
+

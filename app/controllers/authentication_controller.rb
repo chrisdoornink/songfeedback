@@ -1,4 +1,8 @@
 class AuthenticationController < ApplicationController
+
+  def index
+  end
+
   def login
     if params[:username] && params[:password]
       @user_info = User.find_by_username(params[:username])
@@ -7,17 +11,28 @@ class AuthenticationController < ApplicationController
           @user_id = @user_info["id"]
           @token_new = @user_id.to_s + "-".to_s + Time.current.usec.to_s
           User.update(@user_id, {:token => @token_new})
-          cookies[:authenticate] = {:value => @token_new, :expires => 1.days.from_now, :domain => nil}
+          cookies[:authenticate] = {:value => @token_new, :expires => 1.years.from_now, :domain => nil}
           redirect_to "/welcome/index"
         else
-          puts "password was wrong"
+          #message about wrong password
         end
+      else
+        #message about wrong username
       end
+    else
+      #message about blank fields
     end
   end
 
-  def index
-
+  def register
+    if params[:username] && params[:password]
+      @user_info = User.create(:username => params[:username], :password => params[:password], :email => params[:email])
+      @user_id = @user_info["id"]
+      @token_new = @user_id.to_s + "-".to_s + Time.current.usec.to_s
+      User.update(@user_id, {:token => @token_new})
+      cookies[:authenticate] = {:value => @token_new, :expires => 1.years.from_now, :domain => nil}
+      redirect_to "/welcome/index"
+    end
   end
 
 end

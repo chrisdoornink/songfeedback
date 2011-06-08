@@ -3,6 +3,10 @@ Songfeedback::Application.routes.draw do
 
   post "authentication/login"
 
+  get "authentication/register"
+
+  post "authentication/register"
+
   get "songs/index"
 
   get "songs/recent"
