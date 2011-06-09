@@ -1,0 +1,17 @@
+#login
+  %h1 Register
+
+  %form#login-form{:method => "POST", :action => "/authentication/register"}
+    #noticebox{:style => "display:none;"}
+      #notice
+
+    .form-item
+      %input#email.input{:name => "email", :label => "username", :type => "text", :value => "email address", :onfocus => "if (this.value == 'email address') {this.value=''}", :onblur => "if(this.value == '') { this.value='email address'}"}
+    .form-item
+      %input#username.input{:name => "username", :label => "username", :type => "text", :value => "username", :onfocus => "if (this.value == 'username') {this.value=''}", :onblur => "if(this.value == '') { this.value='username'}"}
+    .form-item
+      %input#password.input{:name => "password", :type => "text", :value => "password", :onfocus => "if (this.value == 'password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='password'; this.type='text'}" }
+    .form-item
+      %input#password-check.input{:name => "password-check", :type => "text", :value => "confirm password", :onfocus => "if (this.value == 'confirm password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='confirm password'; this.type='text'}" }
+    .sign-in
+      %input#register-submit{:name => "login-submit", :type => "submit", :value => "Sign In"}

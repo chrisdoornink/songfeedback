@@ -5,7 +5,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= plural_table_name %> = <%= orm_class.all(class_name) %>
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.xml  { render :xml => @<%= plural_table_name %> }
     end
   end

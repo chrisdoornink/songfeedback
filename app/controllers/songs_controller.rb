@@ -1,4 +1,13 @@
 class SongsController < ApplicationController
+  before_filter :get_user_info
+
+  def get_user_info
+    @user_info = user_auth
+    if !@user_info.nil?
+      @username = @user_info["username"]
+    end
+  end
+
   def index
   end
 

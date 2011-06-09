@@ -1,0 +1,17 @@
+#login
+  %h1 Sign in
+  %a{:href => "register"} Not a member? Registering is free and easy.
+  %form#login-form{:method => "POST", :action => "/authentication/login"}
+    #noticebox{:style => "display:none;"}
+      #notice
+    .form-item
+      %input#username.input{:name => "username", :label => "username", :type => "text", :value => "username", :onfocus => "if (this.value == 'username') {this.value=''}", :onblur => "if(this.value == '') { this.value='username'}"}
+    .form-item
+      %input#password.input{:name => "password", :type => "text", :value => "password", :onfocus => "if (this.value == 'password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='password'; this.type='text'}" }
+    .form-item
+      %a{:target => "_blank", :href => ""} Forgot your password?
+
+    .sign-in
+      %input#login-submit{:name => "login-submit", :type => "submit", :value => "Sign In"}
+
+
