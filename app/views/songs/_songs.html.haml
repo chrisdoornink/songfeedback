@@ -1,0 +1,12 @@
+- @songs.each do |song|
+  .song-list-item
+    .song-list-names
+      .song-list-title
+        = song.title
+      .song-list-artist
+        = song.artist
+    .song-list-data
+      .song-list-date
+        = song.created_at
+      .song-list-time
+        something else goes here

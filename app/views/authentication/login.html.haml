@@ -1,6 +1,14 @@
+-##what-is
+-#  #upload
+-#    Upload
+-#  #get-feedback
+-#    Get Feedback
+-#  #improve
+-#    Improve Your Songs
+
 #login
   %h1 Sign in
-  %a{:href => "register"} Not a member? Registering is free and easy.
+
   %form#login-form{:method => "POST", :action => "/authentication/login"}
     #noticebox{:style => "display:none;"}
       #notice
@@ -13,5 +21,12 @@
 
     .sign-in
       %input#login-submit{:name => "login-submit", :type => "submit", :value => "Sign In"}
+
+  #reg-sell
+    %h1 Not a Member?
+    %h2 Registering is super easy, and super free!
+
+    #reg-log-button
+      %a{:href => "register"} Create an account
 
 

@@ -1,6 +1,15 @@
+-##what-is
+-#  #upload
+-#    Upload
+-#  #get-feedback
+-#    Get Feedback
+-#  #improve
+-#    Improve Your Songs
+
 #login
   %h1 Register
-
+  Already registered?
+  %a{:href => "login"}Click here to sign in.
   %form#login-form{:method => "POST", :action => "/authentication/register"}
     #noticebox{:style => "display:none;"}
       #notice
@@ -14,4 +23,4 @@
     .form-item
       %input#password-check.input{:name => "password-check", :type => "text", :value => "confirm password", :onfocus => "if (this.value == 'confirm password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='confirm password'; this.type='text'}" }
     .sign-in
-      %input#register-submit{:name => "login-submit", :type => "submit", :value => "Sign In"}
+      %input#register-submit{:name => "login-submit", :type => "submit", :value => "Register"}

@@ -22,6 +22,7 @@ class AuthenticationController < ApplicationController
     else
       #message about blank fields
     end
+    @not_logged = true
   end
 
   def register
@@ -33,6 +34,7 @@ class AuthenticationController < ApplicationController
       cookies[:authenticate] = {:value => @token_new, :expires => 1.years.from_now, :domain => nil}
       redirect_to "/welcome/index"
     end
+    @not_logged = true
   end
 
 end

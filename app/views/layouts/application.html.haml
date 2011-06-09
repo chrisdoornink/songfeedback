@@ -9,47 +9,46 @@
     #container
       #header
         #menu
-          #menu-songs
-            .songs Songs
-            .arrow
-            #menu-songs-list
-              %ul
-                %li
-                  %a.first.ajax{:href => "/songs/recent"} Recent
-                %li
-                  %a.ajax{:href => "/songs/least_rated"} Least Rated
-                %li
-                  %a.ajax{:href => "/songs/top_rated"} Top Rated
-                %li
-                  %a.ajax{:href => "/songs/random"} Random
-                %li
-                  %a.last.ajax{:href => "/songs/genre"} By Genre
-          #menu-myfeedback
-            .myfeedback My Feedback
-            .arrow
-            #menu-myfeedback-list
-              %ul
-                %li
-                  %a.first.ajax{:href => "/my_songs"} My Songs
-                %li
-                  %a.ajax{:href => "/upload"} Upload Songs
-                %li
-                  Feedback Score: 180
-                %li
-                  Level: Rockstar | Strictness: Harsh
-                %li
-                  Uploads: 3  Available: 2
-          #menu-myaccount
-            .arrow
-            .myaccount
-              = @username
+          - if @not_logged != true
+            #menu-songs
+              .songs Songs
+              .arrow
+              #menu-songs-list
+                %ul
+                  %li
+                    %a.first.ajax{:href => "/songs/recent"} Recent
+                  %li
+                    %a.ajax{:href => "/songs/least_rated"} Least Rated
+                  %li
+                    %a.ajax{:href => "/songs/top"} Top Rated
+                  %li
+                    %a.last.ajax{:href => "/songs/genre"} By Genre
+            #menu-myfeedback
+              .myfeedback My Feedback
+              .arrow
+              #menu-myfeedback-list
+                %ul
+                  %li
+                    %a.first.ajax{:href => "/my_songs"} My Songs
+                  %li
+                    %a.ajax{:href => "/upload"} Upload Songs
+                  %li
+                    Feedback Score: 180
+                  %li
+                    Level: Rockstar | Strictness: Harsh
+                  %li
+                    Uploads: 3  Available: 2
+            #menu-myaccount
+              .arrow
+              .myaccount
+                = @username
 
-            #menu-myaccount-list
-              %ul
-                %li
-                  %a.ajax{:href => "/authentication/signout"} Sign Out
-                %li
-                  %a.last.ajax{:href => "/account"} My Account
+              #menu-myaccount-list
+                %ul
+                  %li
+                    %a.ajax{:href => "/authentication/signout"} Sign Out
+                  %li
+                    %a.last.ajax{:href => "/account"} My Account
         #player
           #player-header
           #player-title
