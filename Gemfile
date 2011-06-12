@@ -10,7 +10,7 @@ gem "haml"
 gem "sass"
 gem "jquery-rails"
 gem "rake", "~> 0.8.7"
-
+gem "paperclip"
 
 # Use unicorn as the web server
 # gem 'unicorn'

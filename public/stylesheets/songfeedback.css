@@ -22,22 +22,8 @@
     border-top: 2px solid #aaaaaa;
     border-bottom: 2px solid #eeeeee;
     border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc; }
-    #login #login-form .form-item {
-      padding-top: 10px; }
-      #login #login-form .form-item .input {
-        padding: 8px 5px 5px;
-        font-size: 12px;
-        width: 300px;
-        border-top: 1px solid #888888;
-        border-bottom: 2px solid #eeeeee;
-        border-left: 1px solid #cccccc;
-        border-right: 1px solid #cccccc;
-        color: #606463;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px; }
-        #login #login-form .form-item .input:selected {
-          background: green; }
+    border-right: 1px solid #cccccc;
+    ground: green; }
     #login #login-form #login-submit {
       float: right;
       padding: 5px;
@@ -87,6 +73,20 @@
     cursor: pointer; }
     #login #reg-log-button a {
       color: white; }
+
+.form-item {
+  padding-top: 10px; }
+  .form-item .input {
+    padding: 8px 5px 5px;
+    font-size: 12px;
+    width: 300px;
+    border-top: 1px solid #888888;
+    border-bottom: 2px solid #eeeeee;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    color: #606463;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Verdana, Sans-Serif;
@@ -253,162 +253,163 @@ ul {
         #container #header #menu #menu-myaccount-list ul li .last {
           -moz-border-radius: 0 0 5px 5px;
           -webkit-border-radius: 0 0 5px 5px; }
-    #container #header #player {
-      float: left;
-      width: 250px;
-      background: #333333;
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #3d3d3d), color-stop(0.6, #232323));
-      background-image: -moz-linear-gradient(center bottom, #3d3d3d 20%, #232323 60%);
-      margin-top: 5px;
-      -moz-box-shadow: 0px 0px 15px #333333;
-      -webkit-box-shadow: 0px 0px 15px #333333; }
-      #container #header #player #player-header {
-        height: 50px;
-        width: 100%;
-        background: url(/images/sprites.png) no-repeat 16px 6px;
-        background-color: #81c3cf;
-        margin-bottom: 15px; }
-      #container #header #player #player-title p {
-        font-size: 14px;
-        font-weight: bold;
-        color: #f2f2f2;
-        margin: 4px;
-        padding: 0;
-        text-align: center; }
-      #container #header #player #player-artist p {
-        font-size: 14px;
-        color: #f2f2f2;
-        margin: 4px;
-        padding: 0;
-        text-align: center; }
-      #container #header #player #player-description p {
-        font-size: 11px;
-        color: #f2f2f2;
-        margin: 4px;
-        padding: 0;
-        text-align: center; }
-      #container #header #player #player-controls {
-        overflow: auto; }
-      #container #header #player #play-pause-control {
-        float: left;
-        margin: 4px 0 0 -10px;
-        height: 32px;
-        width: 32px;
-        cursor: pointer; }
-        #container #header #player #play-pause-control #play-button {
-          height: 32px;
-          width: 32px;
-          background: url(/images/sprites.png) no-repeat -10px -57px; }
-          #container #header #player #play-pause-control #play-button:hover {
-            background-position: -40px -57px; }
-      #container #header #player #player-time {
-        height: 11px;
-        float: right;
-        width: 183px;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        margin: 17 10px 0 2px; }
-        #container #header #player #player-time #progress-bar {
-          overflow: auto;
-          height: 11px;
-          background-color: #55595b;
-          background: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, #55595b), color-stop(0.91, #787c7d));
-          background: -moz-linear-gradient(center bottom, #55595b 41%, #787c7d 91%);
-          -moz-border-radius: 10px;
-          -webkit-border-radius: 10px;
-          margin: 0; }
-          #container #header #player #player-time #progress-bar #progress {
-            position: absolute;
-            background-color: #81c3cf;
-            height: 11px;
-            -moz-border-radius: 10px 0 0 10px;
-            -webkit-border-radius: 10px 0px 0 10px;
-            width: 20px; }
-        #container #header #player #player-time #current-time {
-          float: right;
-          font-size: 10px;
-          color: #f2f2f2;
-          margin: -1px 0 0 4px; }
-        #container #header #player #player-time #total-time {
-          float: right;
-          font-size: 10px;
-          color: #f2f2f2;
-          margin: -1px 0 0 0; }
-      #container #header #player #player-volume {
-        float: left;
-        height: 32px;
-        width: 32px;
-        background: url(/images/sprites.png) no-repeat -10px -95px; }
-        #container #header #player #player-volume:hover {
-          background-position: -39px -95px; }
-      #container #header #player .player-divider {
-        margin: 10px 10px 0; }
-      #container #header #player #feedback-frame {
-        margin: 0 5px 5px; }
-      #container #header #player .feedback-row {
-        border-top: 1px solid #4b4f4e;
-        border-bottom: 1px solid black;
-        background-color: black;
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #232323), color-stop(0.6, #333333));
-        background: -moz-linear-gradient(center bottom, #232323 20%, #333333 60%);
-        height: 32px;
-        padding-top: 3px; }
-        #container #header #player .feedback-row .category {
-          color: #f2f2f2;
-          font-size: 20px;
-          text-align: right; }
-        #container #header #player .feedback-row .star-frame {
-          cursor: pointer;
-          overflow: auto;
-          float: right;
-          width: 110px;
-          margin: 0 5px; }
-        #container #header #player .feedback-row .star {
-          float: left;
-          width: 20px;
-          height: 20px;
-          margin: 3px 1px;
-          background: url(/images/sprites.png) no-repeat -20px -146px; }
-          #container #header #player .feedback-row .star:hover {
-            background-position: -49px -146px; }
-      #container #header #player #feedback-form {
-        margin: 0; }
-      #container #header #player #comment-box {
-        width: 240px;
-        margin: 5px 0;
-        height: 135px;
-        font-size: 12px;
-        color: #eeeeee;
-        font-weight: normal;
-        background: #222222;
-        border-bottom: 1px solid #999999;
-        border-top: 2px solid black;
-        border-left: 1px solid #222222;
-        border-right: 1px solid #222222;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px; }
-      #container #header #player #feedback-submit {
-        width: 240px;
-        margin: 0;
-        font-size: 24px;
-        color: white;
-        background: #81c3cf;
-        border-top: 1px solid #4b4f4e;
-        border-left: 1px solid #222222;
-        border-right: 1px solid #222222;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        cursor: pointer; }
   #container #main-section-frame {
     overflow: auto;
     float: right;
-    width: 555px;
-    margin: 0 5px 10px; }
+    width: 575px;
+    margin: 0 0 10px; }
   #container .menu-background {
     background-color: #4b4f4e; }
+
+#player {
+  float: left;
+  width: 250px;
+  background: #333333;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #3d3d3d), color-stop(0.6, #232323));
+  background-image: -moz-linear-gradient(center bottom, #3d3d3d 20%, #232323 60%);
+  margin-top: 5px;
+  -moz-box-shadow: 0px 0px 15px #333333;
+  -webkit-box-shadow: 0px 0px 15px #333333; }
+  #player #player-header {
+    height: 50px;
+    width: 100%;
+    background: url(/images/sprites.png) no-repeat 16px 6px;
+    background-color: #81c3cf;
+    margin-bottom: 15px; }
+  #player #player-title p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f2f2f2;
+    margin: 4px;
+    padding: 0;
+    text-align: center; }
+  #player #player-artist p {
+    font-size: 14px;
+    color: #f2f2f2;
+    margin: 4px;
+    padding: 0;
+    text-align: center; }
+  #player #player-description p {
+    font-size: 11px;
+    color: #f2f2f2;
+    margin: 4px;
+    padding: 0;
+    text-align: center; }
+  #player #player-controls {
+    overflow: auto; }
+  #player #play-pause-control {
+    float: left;
+    margin: 4px 0 0 -10px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer; }
+    #player #play-pause-control #play-button {
+      height: 32px;
+      width: 32px;
+      background: url(/images/sprites.png) no-repeat -10px -57px; }
+      #player #play-pause-control #play-button:hover {
+        background-position: -40px -57px; }
+  #player #player-time {
+    height: 11px;
+    float: right;
+    width: 183px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 17 10px 0 2px; }
+    #player #player-time #progress-bar {
+      overflow: auto;
+      height: 11px;
+      background-color: #55595b;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, #55595b), color-stop(0.91, #787c7d));
+      background: -moz-linear-gradient(center bottom, #55595b 41%, #787c7d 91%);
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      margin: 0; }
+      #player #player-time #progress-bar #progress {
+        position: absolute;
+        background-color: #81c3cf;
+        height: 11px;
+        -moz-border-radius: 10px 0 0 10px;
+        -webkit-border-radius: 10px 0px 0 10px;
+        width: 20px; }
+    #player #player-time #current-time {
+      float: right;
+      font-size: 10px;
+      color: #f2f2f2;
+      margin: -1px 0 0 4px; }
+    #player #player-time #total-time {
+      float: right;
+      font-size: 10px;
+      color: #f2f2f2;
+      margin: -1px 0 0 0; }
+  #player #player-volume {
+    float: left;
+    height: 32px;
+    width: 32px;
+    background: url(/images/sprites.png) no-repeat -10px -95px; }
+    #player #player-volume:hover {
+      background-position: -39px -95px; }
+  #player .player-divider {
+    margin: 10px 10px 0; }
+  #player #feedback-frame {
+    margin: 0 5px 5px; }
+  #player .feedback-row {
+    border-top: 1px solid #4b4f4e;
+    border-bottom: 1px solid black;
+    background-color: black;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #232323), color-stop(0.6, #333333));
+    background: -moz-linear-gradient(center bottom, #232323 20%, #333333 60%);
+    height: 32px;
+    padding-top: 3px; }
+    #player .feedback-row .category {
+      color: #f2f2f2;
+      font-size: 20px;
+      text-align: right; }
+    #player .feedback-row .star-frame {
+      cursor: pointer;
+      overflow: auto;
+      float: right;
+      width: 110px;
+      margin: 0 5px; }
+    #player .feedback-row .star {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 3px 1px;
+      background: url(/images/sprites.png) no-repeat -20px -146px; }
+      #player .feedback-row .star:hover {
+        background-position: -49px -146px; }
+  #player #feedback-form {
+    margin: 0; }
+  #player #comment-box {
+    width: 240px;
+    margin: 5px 0;
+    height: 135px;
+    font-size: 12px;
+    color: #eeeeee;
+    font-weight: normal;
+    background: #222222;
+    border-bottom: 1px solid #999999;
+    border-top: 2px solid black;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; }
+  #player #feedback-submit {
+    width: 240px;
+    margin: 0;
+    font-size: 24px;
+    color: white;
+    background: #81c3cf;
+    border-top: 1px solid #4b4f4e;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer; }
 
 .song-list-container {
   margin: 15px 15px 15px 15px;
@@ -422,31 +423,104 @@ ul {
     font-size: 20px;
     height: 20px;
     padding: 6px 10px 10px; }
-  .song-list-container .song-list-item {
+    .song-list-container .song-list-category a {
+      color: #f2f2f2; }
+      .song-list-container .song-list-category a:hover {
+        text-decoration: underline; }
+  .song-list-container .song-item .song-list-item {
     overflow: hidden;
     height: 30px;
     padding: 5px 10px;
-    border-bottom: 1px solid #cbcfce;
-    cursor: pointer; }
-    .song-list-container .song-list-item:hover {
+    border-bottom: 1px solid #cbcfce; }
+    .song-list-container .song-item .song-list-item:hover {
       background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
       background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }
-    .song-list-container .song-list-item .song-list-names {
+    .song-list-container .song-item .song-list-item .song-list-play-button-container {
+      width: 30px;
+      height: 30px;
+      float: left;
+      margin-right: 7px;
+      cursor: pointer; }
+      .song-list-container .song-item .song-list-item .song-list-play-button-container .song-list-index {
+        width: 30px;
+        height: 30px;
+        margin: 5px 0 0 10px;
+        font-size: 16px;
+        color: #606463; }
+      .song-list-container .song-item .song-list-item .song-list-play-button-container .song-list-play-button {
+        display: none;
+        width: 30px;
+        height: 30px;
+        background: url(/images/sprites.png) no-repeat -76px -57px; }
+        .song-list-container .song-item .song-list-item .song-list-play-button-container .song-list-play-button:hover {
+          background: url(/images/sprites.png) no-repeat -106px -57px; }
+    .song-list-container .song-item .song-list-item .song-list-names {
       float: left; }
-      .song-list-container .song-list-item .song-list-names .song-list-title {
+      .song-list-container .song-item .song-list-item .song-list-names .song-list-title {
         position: relative;
         font-size: 12px;
         font-weight: bold; }
-      .song-list-container .song-list-item .song-list-names .song-list-artist {
+      .song-list-container .song-item .song-list-item .song-list-names .song-list-artist {
         font-size: 12px; }
-    .song-list-container .song-list-item .song-list-data {
-      float: right; }
-      .song-list-container .song-list-item .song-list-data .song-list-date {
+    .song-list-container .song-item .song-list-item .stats-button {
+      display: none;
+      float: right;
+      font-size: 9px;
+      font-weight: bold;
+      background: white;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      padding: 2px 4px;
+      cursor: pointer; }
+      .song-list-container .song-item .song-list-item .stats-button:hover {
+        background: #cbcfce; }
+    .song-list-container .song-item .song-list-item .song-list-data {
+      float: right;
+      overflow: hidden;
+      width: 150px;
+      height: 32px; }
+      .song-list-container .song-item .song-list-item .song-list-data .song-feedbacks {
+        float: left;
+        overflow: hidden;
+        width: 100px;
+        font-weight: bold; }
+      .song-list-container .song-item .song-list-item .song-list-data .song-overall {
+        float: right;
+        overflow: hidden;
+        width: 36px; }
+      .song-list-container .song-item .song-list-item .song-list-data .feedbacks-label {
+        color: #606463;
         text-align: right;
-        font-size: 12px; }
-      .song-list-container .song-list-item .song-list-data .song-list-time {
+        font-size: 10px;
+        margin-top: 3px; }
+      .song-list-container .song-item .song-list-item .song-list-data .comments-label {
+        color: #606463;
         text-align: right;
-        font-size: 12px; }
-  .song-list-container .song-list-overlay {
+        font-size: 10px;
+        margin-top: 0px; }
+      .song-list-container .song-item .song-list-item .song-list-data .overall-label {
+        background: url(/images/sprites.png) no-repeat -79px -146px;
+        float: left;
+        width: 20px;
+        height: 18px;
+        font-size: 12px;
+        margin: 6px 2px 0 0; }
+      .song-list-container .song-item .song-list-item .song-list-data .graph {
+        float: right;
+        width: 14px; }
+        .song-list-container .song-item .song-list-item .song-list-data .graph .bar {
+          height: 20px;
+          width: 6px;
+          margin: 0 4px;
+          background: #4b4f4e; }
+          .song-list-container .song-item .song-list-item .song-list-data .graph .bar .indicator {
+            background: #cbcfce;
+            width: 6px;
+            height: 0; }
+        .song-list-container .song-item .song-list-item .song-list-data .graph .number {
+          text-align: center;
+          height: 10px;
+          font-size: 8px; }
+  .song-list-container .song-item .song-list-overlay {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
     background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }

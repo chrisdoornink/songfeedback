@@ -29,6 +29,8 @@ Songfeedback::Application.routes.draw do
 
   get "welcome/show"
 
+  post "myfeedback/create"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

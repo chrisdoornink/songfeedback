@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "comments", :force => true do |t|
     t.integer  "song_id"
@@ -28,26 +28,30 @@ ActiveRecord::Schema.define(:version => 4) do
     t.string   "description"
     t.integer  "user_id"
     t.string   "location"
-    t.integer  "feedbacks"
-    t.float    "overall"
-    t.float    "vocals"
-    t.float    "songwriting"
-    t.float    "musicianship"
-    t.float    "creativity"
-    t.float    "production"
+    t.integer  "feedbacks",          :default => 0
+    t.float    "overall",            :default => 0.0
+    t.float    "vocals",             :default => 0.0
+    t.float    "songwriting",        :default => 0.0
+    t.float    "musicianship",       :default => 0.0
+    t.float    "creativity",         :default => 0.0
+    t.float    "production",         :default => 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
   end
 
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "password"
     t.string   "email"
-    t.integer  "plays"
-    t.integer  "feedbacks"
-    t.integer  "recs"
-    t.float    "harsh"
-    t.integer  "uploads"
+    t.integer  "plays",      :default => 0
+    t.integer  "feedbacks",  :default => 0
+    t.integer  "recs",       :default => 0
+    t.float    "harsh",      :default => 0.0
+    t.integer  "uploads",    :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "token"

@@ -1,0 +1,14 @@
+#login
+  %h1 Upload Your Song
+  - form_for @song, :as => :song, :url => { :action => "create"}, :html => { :id => "upload-form", :multipart => true } do |f|
+    .form-item
+      = f.text_field :title, :class => "input", :value => "song title", :onfocus => "if (this.value == 'song title') {this.value=''}", :onblur => "if(this.value == '') { this.value='song title'}"
+    .form-item
+      = f.text_field :artist, :class => "input", :value => "artist", :onfocus => "if (this.value == 'artist') {this.value=''}", :onblur => "if(this.value == '') { this.value='artist'}"
+    .form-item
+      = f.text_field :description, :class => "input", :value => "description", :onfocus => "if (this.value == 'description') {this.value=''}", :onblur => "if(this.value == '') { this.value='description'}"
+    .form-item
+      = f.file_field :audio
+    = f.hidden_field :user_id, :value => @user_info["id"]
+    .form-item
+      = submit_tag "Upload"

@@ -1,12 +1,26 @@
-- @songs.each do |song|
-  .song-list-item
-    .song-list-names
-      .song-list-title
-        = song.title
-      .song-list-artist
-        = song.artist
-    .song-list-data
-      .song-list-date
-        = song.created_at
-      .song-list-time
-        something else goes here
+- @songs.each_with_index do |song, index|
+  -puts song
+  .song-item{:class => song.id}
+    .song-list-item
+      .song-list-play-button-container
+        .song-list-index= index
+        .song-list-play-button
+      .song-list-names
+        .song-list-title
+          = song.title
+        .song-list-artist
+          = song.artist
+      .song-list-data
+        .song-feedbacks
+          .feedbacks-label= "ratings: " + song.feedbacks.to_s
+          .comments-label= "comments: 0"
+        .song-overall
+          .overall-label
+          .graph
+            .bar
+              - @bar = 20-(song.overall*4)
+              .indicator{:style => "height: "+@bar.to_s+";"}
+            .number
+              = song.overall
+      .stats-button view stats and comments
+

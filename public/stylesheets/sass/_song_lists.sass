@@ -10,33 +10,108 @@
     font-size: 20px
     height: 20px
     padding: 6px 10px 10px
-  .song-list-item
-    overflow: hidden
-    height: 30px
-    padding: 5px 10px
-    border-bottom: 1px solid $sf_light_gray
-    cursor: pointer
-    &:hover
+    a
+      color: $sf_white
+      &:hover
+        text-decoration: underline
+  .song-item
+    .song-list-item
+      overflow: hidden
+      height: 30px
+      padding: 5px 10px
+      border-bottom: 1px solid $sf_light_gray
+      &:hover
+        background: $inner_shadow_webkit
+        background: $inner_shadow_moz
+      .song-list-play-button-container
+        width: 30px
+        height: 30px
+        float: left
+        margin-right: 7px
+        cursor: pointer
+        .song-list-index
+          width: 30px
+          height: 30px
+          margin: 5px 0 0 10px
+          font-size: 16px
+          color: $sf_gray
+        .song-list-play-button
+          display: none
+          width: 30px
+          height: 30px
+          background: url(/images/sprites.png) no-repeat -76px -57px
+          &:hover
+            background: url(/images/sprites.png) no-repeat -106px -57px
+      .song-list-names
+        float: left
+        .song-list-title
+          position: relative
+          font-size: 12px
+          font-weight: bold
+        .song-list-artist
+          font-size: 12px
+      .stats-button
+        display: none
+        float: right
+        font-size: 9px
+        font-weight: bold
+        background: white
+        -moz-border-radius: 5px
+        -webkit-border-radius: 5px
+        padding: 2px 4px
+        cursor: pointer
+        &:hover
+          background: $sf_light_gray
+      .song-list-data
+        float: right
+        overflow: hidden
+        width: 150px
+        height: 32px
+        .song-feedbacks
+          float: left
+          overflow: hidden
+          width: 100px
+          font-weight: bold
+        .song-overall
+          float: right
+          overflow: hidden
+          width: 36px
+        .feedbacks-label
+          color: $sf_gray
+          text-align: right
+          font-size: 10px
+          margin-top: 3px
+        .comments-label
+          color: $sf_gray
+          text-align: right
+          font-size: 10px
+          margin-top: 0px
+        .overall-label
+          background: url(/images/sprites.png) no-repeat -79px -146px
+          float: left
+          width: 20px
+          height: 18px
+          font-size: 12px
+          margin: 6px 2px 0 0
+        .graph
+          float: right
+          width: 14px
+          .bar
+            height: 20px
+            width: 6px
+            margin: 0 4px
+            background: $sf_dark_gray
+            .indicator
+              background: $sf_light_gray
+              width: 6px
+              height: 0
+          .number
+            text-align: center
+            height: 10px
+            font-size: 8px
+
+
+    .song-list-overlay
       background: $inner_shadow_webkit
       background: $inner_shadow_moz
-    .song-list-names
-      float: left
-      .song-list-title
-        position: relative
-        font-size: 12px
-        font-weight: bold
-      .song-list-artist
-        font-size: 12px
-    .song-list-data
-      float: right
-      .song-list-date
-        text-align: right
-        font-size: 12px
-      .song-list-time
-        text-align: right
-        font-size: 12px
-  .song-list-overlay
-    background: $inner_shadow_webkit
-    background: $inner_shadow_moz
-
 

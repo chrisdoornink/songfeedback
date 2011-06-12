@@ -50,6 +50,18 @@ $(document).ready(function() {
     $("#menu-myaccount").removeClass("menu-background");
   });
 
+  $("#main-section-frame").delegate(".song-list-item", "mouseenter", function() {
+    $(this).children(".song-list-play-button-container").children(".song-list-play-button").show();
+    $(this).children(".song-list-play-button-container").children(".song-list-index").hide();
+  });
+
+  $("#main-section-frame").delegate(".song-list-item", "mouseleave", function() {
+    $(this).children(".song-list-play-button-container").children(".song-list-play-button").hide();
+    $(this).children(".song-list-play-button-container").children(".song-list-index").show();
+  });
+
+
+
 //  $("#main-section-frame").delegate(".song-list-item", "click", function() {
 //    //something to play this
 //  });

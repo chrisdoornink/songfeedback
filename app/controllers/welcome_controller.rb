@@ -12,6 +12,9 @@ class WelcomeController < ApplicationController
     @title = "Songs will play here."
     @artist = "Choose a song on the right to get started."
     @desc = ""
+    @recent = Song.order("created_at DESC").limit(5)
+    @least = Song.order("feedbacks ASC").limit(5)
+    @top = Song.order("overall DESC").limit(5)
   end
 
   def show
