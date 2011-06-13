@@ -14,6 +14,16 @@ class MyfeedbackController < ApplicationController
 
   def mysongs
     @songs = Song.find_all_by_user_id(@user_info["id"])
+    @vocals = Song.average("vocals")
+    @songwriting = Song.average("songwriting")
+    @musicianship = Song.average("musicianship")
+    @creativity = Song.average("creativity")
+    @production = Song.average("production")
+    @overall = Song.average("overall")
+
+    @song_count = Song.count
+
+
   end
 
   def upload

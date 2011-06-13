@@ -1,19 +1,50 @@
 - @songs.each do |song|
-  .song-list-item
-    .song-list-names
+  .my-songs-container
+    .song-list-category
+
       .song-list-title
         = song.title
-      .song-list-artist
+        = " - "
         = song.artist
-    .song-list-data
-      .song-feedbacks
+    .song-item
+      .ratings
         .feedbacks-label= "ratings: " + song.feedbacks.to_s
+        .feedbacks-label= "vocals: " + song.vocals.to_s
+        .feedbacks-label= "songwriting: " + song.songwriting.to_s
+        .feedbacks-label= "musicianship: " + song.musicianship.to_s
+        .feedbacks-label= "creativity: " + song.creativity.to_s
+        .feedbacks-label= "production: " + song.production.to_s
+        .feedbacks-label= "overall: " + song.overall.to_s
+        .feedbacks-label= "average vocals score: " + @vocals.to_s
+
+        -#.feedbacks-label= "average overall score: " + @overall_ordered["title"].to_s
         .comments-label= "comments: 0"
-      .song-overall
-        .overall-label
-        .graph
-          .bar
-            - @bar = 20-(song.overall*4)
-            .indicator{:style => "height: "+@bar.to_s+";"}
-          .number
-            = song.overall
+      .rankings
+        .song-overall
+          .overall-label
+          .graph
+            .bar
+              - @bar = 20-(song.overall*4)
+              .indicator{:style => "height: "+@bar.to_s+";"}
+            .number
+              = song.overall
+        .ranking-vocals
+          - @rank = Song.all(:order => "overall").index(song) + 1
+          = "vocal ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+        .ranking-songwriting
+          - @rank = Song.all(:order => "songwriting").index(song) + 1
+          = "songwriting ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+        .ranking-musicianship
+          - @rank = Song.all(:order => "musicianship").index(song) + 1
+          = "musicianship ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+        .ranking-creativity
+          - @rank = Song.all(:order => "creativity").index(song) + 1
+          = "creativity ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+        .ranking-production
+          - @rank = Song.all(:order => "production").index(song) + 1
+          = "production ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+        .ranking-overall
+          - @rank = Song.all(:order => "overall").index(song) + 1
+          = "overall ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+
+
