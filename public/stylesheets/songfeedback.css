@@ -261,102 +261,154 @@ ul {
   #container .menu-background {
     background-color: #4b4f4e; }
 
+.my-songs-title {
+  overflow: auto;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 7px; }
+  .my-songs-title .title {
+    float: left;
+    font-size: 30px;
+    color: #606463; }
+  .my-songs-title .upload {
+    float: left;
+    margin: 0 20px;
+    padding: 0; }
+    .my-songs-title .upload #add-button {
+      float: right;
+      margin-top: 8px;
+      padding: 5px 10px;
+      font-size: 11px;
+      text-align: center;
+      color: #4b4f4e;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      background: #cbcfce;
+      cursor: pointer; }
+      .my-songs-title .upload #add-button a {
+        color: #4b4f4e; }
+
+.all-songs-container {
+  overflow: auto; }
+
+.pick-song {
+  float: right;
+  width: 200px;
+  border-left: 2px solid #eeeeee;
+  padding: 5px 0; }
+  .pick-song .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4b4f4e;
+    padding: 0 5px 5px 5px; }
+  .pick-song .pick-song-item {
+    font-weight: bold;
+    font-size: 12px;
+    color: #606463;
+    padding: 4px 6px;
+    cursor: pointer; }
+    .pick-song .pick-song-item:hover {
+      background: #eeeeee; }
+
 .my-songs-container {
-  margin: 15px 15px 15px 15px;
+  float: left;
+  margin: 15px 15px 15px 0;
   padding: 0;
   background: white; }
-  .my-songs-container .song-list-category {
+  .my-songs-container .song-list-category .song-title {
     color: #4b4f4e;
     font-size: 20px;
     height: 20px;
-    padding: 6px 10px 10px 0; }
-    .my-songs-container .song-list-category a {
-      color: #f2f2f2; }
-      .my-songs-container .song-list-category a:hover {
-        text-decoration: underline; }
-  .my-songs-container .song-item {
+    padding: 6px 10px 5px 0; }
+  .my-songs-container .song-list-category .song-artist {
+    color: #606463;
+    font-size: 16px;
+    height: 16px;
+    padding: 0 10px 5px 0; }
+  .my-songs-container .top-graph {
+    width: 350px;
     overflow: auto; }
+    .my-songs-container .top-graph .total-ratings-label {
+      float: left;
+      height: 12px;
+      color: #606463;
+      font-size: 12px;
+      padding: 0 0 5px 0; }
+    .my-songs-container .top-graph .key {
+      float: right;
+      overflow: auto;
+      font-size: 10px; }
+      .my-songs-container .top-graph .key .score {
+        float: left;
+        overflow: auto; }
+        .my-songs-container .top-graph .key .score .box {
+          float: left;
+          width: 7px;
+          height: 7px;
+          margin: 3px 3px 0 5px;
+          border: 1px solid black;
+          background: #4b4f4e;
+          background: -webkit-gradient(linear, right top, left top, color-stop(0.01, #4b4f4e), color-stop(0.5, #5d6362), color-stop(0.99, #4b4f4e));
+          background: -moz-linear-gradient(right center, #4b4f4e 16%, #5d6362 50%, #4b4f4e 84%); }
+      .my-songs-container .top-graph .key .average {
+        float: right;
+        overflow: auto; }
+        .my-songs-container .top-graph .key .average .box {
+          float: left;
+          width: 7px;
+          height: 7px;
+          margin: 3px 3px 0 5px;
+          border: 1px solid black;
+          background: #d9423d; }
+  .my-songs-container .song-item {
+    overflow: none;
+    height: 320px; }
     .my-songs-container .song-item .ratings {
       float: left; }
     .my-songs-container .song-item .rankings {
       float: right; }
-    .my-songs-container .song-item .song-list-item {
-      overflow: hidden;
-      height: 30px;
-      padding: 5px 10px;
-      border-bottom: 1px solid #cbcfce; }
-      .my-songs-container .song-item .song-list-item:hover {
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
-        background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }
-      .my-songs-container .song-item .song-list-item .song-list-play-button-container {
-        width: 30px;
-        height: 30px;
+    .my-songs-container .song-item .graph-labels {
+      overflow: none;
+      height: 20px; }
+      .my-songs-container .song-item .graph-labels .graph-label {
+        width: 58px;
+        margin: 0 0px;
         float: left;
-        margin-right: 7px;
-        cursor: pointer; }
-        .my-songs-container .song-item .song-list-item .song-list-play-button-container .song-list-index {
+        font-size: 9px;
+        color: #606463;
+        text-align: center; }
+    .my-songs-container .song-item .graph {
+      height: 300px;
+      width: 350px;
+      border-top: 1px solid #cbcfce;
+      border-bottom: 2px solid #606463;
+      background: url(/images/graph_back.png); }
+      .my-songs-container .song-item .graph .bar1 {
+        float: left;
+        height: 300px;
+        width: 30px;
+        margin: 0 0 0 7px;
+        background: #4b4f4e;
+        background: -webkit-gradient(linear, right top, left top, color-stop(0.01, #4b4f4e), color-stop(0.5, #5d6362), color-stop(0.99, #4b4f4e));
+        background: -moz-linear-gradient(right center, #4b4f4e 16%, #5d6362 50%, #4b4f4e 84%); }
+        .my-songs-container .song-item .graph .bar1 .indicator1 {
+          background: white url(/images/graph_back.png);
           width: 30px;
-          height: 30px;
-          margin: 5px 0 0 10px;
-          font-size: 16px;
-          color: #606463; }
-        .my-songs-container .song-item .song-list-item .song-list-play-button-container .song-list-play-button {
-          display: none;
-          width: 30px;
-          height: 30px;
-          background: url(/images/sprites.png) no-repeat -76px -57px; }
-          .my-songs-container .song-item .song-list-item .song-list-play-button-container .song-list-play-button:hover {
-            background: url(/images/sprites.png) no-repeat -106px -57px; }
-      .my-songs-container .song-item .song-list-item .song-list-data {
-        float: right;
-        overflow: hidden;
-        width: 150px;
-        height: 32px; }
-        .my-songs-container .song-item .song-list-item .song-list-data .song-feedbacks {
-          float: left;
-          overflow: hidden;
-          width: 100px;
-          font-weight: bold; }
-        .my-songs-container .song-item .song-list-item .song-list-data .song-overall {
-          float: right;
-          overflow: hidden;
-          width: 36px; }
-        .my-songs-container .song-item .song-list-item .song-list-data .feedbacks-label {
-          color: #606463;
-          text-align: right;
-          font-size: 10px;
-          margin-top: 3px; }
-        .my-songs-container .song-item .song-list-item .song-list-data .comments-label {
-          color: #606463;
-          text-align: right;
-          font-size: 10px;
-          margin-top: 0px; }
-        .my-songs-container .song-item .song-list-item .song-list-data .overall-label {
-          background: url(/images/sprites.png) no-repeat -79px -146px;
-          float: left;
-          width: 20px;
-          height: 18px;
-          font-size: 12px;
-          margin: 6px 2px 0 0; }
-        .my-songs-container .song-item .song-list-item .song-list-data .graph {
-          float: right;
-          width: 14px; }
-          .my-songs-container .song-item .song-list-item .song-list-data .graph .bar {
-            height: 20px;
-            width: 6px;
-            margin: 0 4px;
-            background: #4b4f4e; }
-            .my-songs-container .song-item .song-list-item .song-list-data .graph .bar .indicator {
-              background: #cbcfce;
-              width: 6px;
-              height: 0; }
-          .my-songs-container .song-item .song-list-item .song-list-data .graph .number {
-            text-align: center;
-            height: 10px;
-            font-size: 8px; }
-    .my-songs-container .song-item .song-list-overlay {
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
-      background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }
+          height: 0; }
+      .my-songs-container .song-item .graph .bar2 {
+        float: left;
+        height: 300px;
+        width: 14px;
+        margin: 0 7px 0 0;
+        background: #d9423d; }
+        .my-songs-container .song-item .graph .bar2 .indicator2 {
+          background: white url(/images/graph_back.png);
+          width: 14px;
+          height: 0; }
+    .my-songs-container .song-item .legend {
+      float: right;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #eeeeee; }
 
 #player {
   float: left;

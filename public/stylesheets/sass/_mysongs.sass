@@ -1,99 +1,150 @@
+.my-songs-title
+  overflow: auto
+  border-bottom: 1px solid #EEE
+  padding-bottom: 7px
+  .title
+    float: left
+    font-size: 30px
+    color: $sf_gray
+  .upload
+    float: left
+    margin: 0 20px
+    padding: 0
+    #add-button
+      float: right
+      margin-top: 8px
+      padding: 5px 10px
+      font-size: 11px
+      text-align: center
+      color: $sf_dark_gray
+      -moz-border-radius: 10px
+      -webkit-border-radius: 10px
+      background: $sf_light_gray
+      cursor: pointer
+      a
+        color: $sf_dark_gray
+
+
+
+.all-songs-container
+  overflow: auto
+.pick-song
+  float: right
+  width: 200px
+  border-left: 2px solid #EEE
+  padding: 5px 0
+  .title
+    font-size: 14px
+    font-weight: bold
+    color: $sf_dark_gray
+    padding: 0 5px 5px 5px
+  .pick-song-item
+    font-weight: bold
+    font-size: 12px
+    color: $sf_gray
+    padding: 4px 6px
+    cursor: pointer
+    &:hover
+      background: #EEE
 .my-songs-container
-  margin: 15px 15px 15px 15px
+  float: left
+  margin: 15px 15px 15px 0
   padding: 0
   background: white
   .song-list-category
-    color: $sf_dark_gray
-    font-size: 20px
-    height: 20px
-    padding: 6px 10px 10px 0
-    a
-      color: $sf_white
-      &:hover
-        text-decoration: underline
-  .song-item
+    .song-title
+      color: $sf_dark_gray
+      font-size: 20px
+      height: 20px
+      padding: 6px 10px 5px 0
+    .song-artist
+      color: $sf_gray
+      font-size: 16px
+      height: 16px
+      padding: 0 10px 5px 0
+  .top-graph
+    width: 350px
     overflow: auto
+    .total-ratings-label
+      float: left
+      height: 12px
+      color: $sf_gray
+      font-size: 12px
+      padding: 0 0 5px 0
+    .key
+      float: right
+      overflow: auto
+      font-size: 10px
+      .score
+        float: left
+        overflow: auto
+        .box
+          float: left
+          width: 7px
+          height: 7px
+          margin: 3px 3px 0 5px
+          border: 1px solid black
+          background: $sf_dark_gray
+          background: $mysongs_bar_webkit
+          background: $mysongs_bar_moz
+      .average
+        float: right
+        overflow: auto
+        .box
+          float: left
+          width: 7px
+          height: 7px
+          margin: 3px 3px 0 5px
+          border: 1px solid black
+          background: $sf_red
+  .song-item
+    overflow: none
+    height: 320px
     .ratings
       float: left
     .rankings
       float: right
-    .song-list-item
-      overflow: hidden
-      height: 30px
-      padding: 5px 10px
-      border-bottom: 1px solid $sf_light_gray
-      &:hover
-        background: $inner_shadow_webkit
-        background: $inner_shadow_moz
-      .song-list-play-button-container
-        width: 30px
-        height: 30px
+    .graph-labels
+      overflow: none
+      height: 20px
+      .graph-label
+        width: 58px
+        margin: 0 0px
         float: left
-        margin-right: 7px
-        cursor: pointer
-        .song-list-index
+        font-size: 9px
+        color: $sf_gray
+        text-align: center
+    .graph
+      height: 300px
+      width: 350px
+      border-top: 1px solid $sf_light_gray
+      border-bottom: 2px solid $sf_gray
+      background: url(/images/graph_back.png)
+      .bar1
+        float: left
+        height: 300px
+        width: 30px
+        margin: 0 0 0 7px
+        background: $sf_dark_gray
+        background: $mysongs_bar_webkit
+        background: $mysongs_bar_moz
+        .indicator1
+          background: white url(/images/graph_back.png)
           width: 30px
-          height: 30px
-          margin: 5px 0 0 10px
-          font-size: 16px
-          color: $sf_gray
-        .song-list-play-button
-          display: none
-          width: 30px
-          height: 30px
-          background: url(/images/sprites.png) no-repeat -76px -57px
-          &:hover
-            background: url(/images/sprites.png) no-repeat -106px -57px
-      .song-list-data
-        float: right
-        overflow: hidden
-        width: 150px
-        height: 32px
-        .song-feedbacks
-          float: left
-          overflow: hidden
-          width: 100px
-          font-weight: bold
-        .song-overall
-          float: right
-          overflow: hidden
-          width: 36px
-        .feedbacks-label
-          color: $sf_gray
-          text-align: right
-          font-size: 10px
-          margin-top: 3px
-        .comments-label
-          color: $sf_gray
-          text-align: right
-          font-size: 10px
-          margin-top: 0px
-        .overall-label
-          background: url(/images/sprites.png) no-repeat -79px -146px
-          float: left
-          width: 20px
-          height: 18px
-          font-size: 12px
-          margin: 6px 2px 0 0
-        .graph
-          float: right
+          height: 0
+      .bar2
+        float: left
+        height: 300px
+        width: 14px
+        margin: 0 7px 0 0
+        background: $sf_red
+        .indicator2
+          background: white url(/images/graph_back.png)
           width: 14px
-          .bar
-            height: 20px
-            width: 6px
-            margin: 0 4px
-            background: $sf_dark_gray
-            .indicator
-              background: $sf_light_gray
-              width: 6px
-              height: 0
-          .number
-            text-align: center
-            height: 10px
-            font-size: 8px
-
-
-    .song-list-overlay
-      background: $inner_shadow_webkit
-      background: $inner_shadow_moz
+          height: 0
+    .legend
+      float: right
+      width: 100px
+      height: 100px
+      border: 2px solid #EEE
 

@@ -1,50 +1,57 @@
-- @songs.each do |song|
-  .my-songs-container
-    .song-list-category
+.all-songs-container
+  .pick-song
+    .title Choose a song:
+    - @songs.each do |song|
+      .pick-song-item{:id => "list_"+song.id.to_s}= song.title
+  - @songs.each do |song|
+    .my-songs-container{:id => "statsheet_"+song.id.to_s}
+      .song-list-category
+        .song-title= song.title
+        .song-artist= song.artist
+        - @song_ids << song.id
+      .top-graph
+        .total-ratings-label= "ratings: " + song.feedbacks.to_s
+        .key
+          .score
+            .box
+            your score
+          .average
+            .box
+            site average
+      .song-item
+        .ratings
 
-      .song-list-title
-        = song.title
-        = " - "
-        = song.artist
-    .song-item
-      .ratings
-        .feedbacks-label= "ratings: " + song.feedbacks.to_s
-        .feedbacks-label= "vocals: " + song.vocals.to_s
-        .feedbacks-label= "songwriting: " + song.songwriting.to_s
-        .feedbacks-label= "musicianship: " + song.musicianship.to_s
-        .feedbacks-label= "creativity: " + song.creativity.to_s
-        .feedbacks-label= "production: " + song.production.to_s
-        .feedbacks-label= "overall: " + song.overall.to_s
-        .feedbacks-label= "average vocals score: " + @vocals.to_s
-
-        -#.feedbacks-label= "average overall score: " + @overall_ordered["title"].to_s
-        .comments-label= "comments: 0"
-      .rankings
-        .song-overall
-          .overall-label
           .graph
-            .bar
-              - @bar = 20-(song.overall*4)
-              .indicator{:style => "height: "+@bar.to_s+";"}
-            .number
-              = song.overall
-        .ranking-vocals
-          - @rank = Song.all(:order => "overall").index(song) + 1
-          = "vocal ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
-        .ranking-songwriting
-          - @rank = Song.all(:order => "songwriting").index(song) + 1
-          = "songwriting ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
-        .ranking-musicianship
-          - @rank = Song.all(:order => "musicianship").index(song) + 1
-          = "musicianship ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
-        .ranking-creativity
-          - @rank = Song.all(:order => "creativity").index(song) + 1
-          = "creativity ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
-        .ranking-production
-          - @rank = Song.all(:order => "production").index(song) + 1
-          = "production ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
-        .ranking-overall
-          - @rank = Song.all(:order => "overall").index(song) + 1
-          = "overall ranking is "+ @rank.to_s + "out of "+ @song_count.to_s
+            .bar1
+              .indicator1{:style => "height: "+(300-(song.vocals*60)).to_s+";"}
+            .bar2
+              .indicator2{:style => "height: "+(300-(@vocals*60)).to_s+";"}
+            .bar1
+              .indicator1{:style => "height: "+(300-(song.songwriting*60)).to_s+";"}
+            .bar2
+              .indicator2{:style => "height: "+(300-(@songwriting*60)).to_s+";"}
+            .bar1
+              .indicator1{:style => "height: "+(300-(song.musicianship*60)).to_s+";"}
+            .bar2
+              .indicator2{:style => "height: "+(300-(@musicianship*60)).to_s+";"}
+            .bar1
+              .indicator1{:style => "height: "+(300-(song.creativity*60)).to_s+";"}
+            .bar2
+              .indicator2{:style => "height: "+(300-(@creativity*60)).to_s+";"}
+            .bar1
+              .indicator1{:style => "height: "+(300-(song.production*60)).to_s+";"}
+            .bar2
+              .indicator2{:style => "height: "+(300-(@production*60)).to_s+";"}
+            .bar1
+              .indicator1{:style => "height: "+(300-(song.overall*60)).to_s+";"}
+            .bar2
+              .indicator2{:style => "height: "+(300-(@overall*60)).to_s+";"}
 
+          .graph-labels
+            .graph-label= "vocals"
+            .graph-label= "songwriting"
+            .graph-label= "musicianship"
+            .graph-label= "creativity"
+            .graph-label= "production"
+            .graph-label= "overall"
 
