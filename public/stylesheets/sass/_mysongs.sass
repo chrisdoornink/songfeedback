@@ -46,21 +46,23 @@
     cursor: pointer
     &:hover
       background: #EEE
+  .current
+    background: #EEE
 .my-songs-container
+  display: none
   float: left
   margin: 15px 15px 15px 0
   padding: 0
   background: white
   .song-list-category
+    width: 350px
     .song-title
       color: $sf_dark_gray
       font-size: 20px
-      height: 20px
-      padding: 6px 10px 5px 0
+      padding: 0 10px 0 0
     .song-artist
       color: $sf_gray
       font-size: 16px
-      height: 16px
       padding: 0 10px 5px 0
   .top-graph
     width: 350px
@@ -84,9 +86,9 @@
           height: 7px
           margin: 3px 3px 0 5px
           border: 1px solid black
-          background: $sf_dark_gray
-          background: $mysongs_bar_webkit
-          background: $mysongs_bar_moz
+          background: $sf_pri
+          background: $mysongs_bigbar_webkit
+          background: $mysongs_bigbar_moz
       .average
         float: right
         overflow: auto
@@ -96,7 +98,9 @@
           height: 7px
           margin: 3px 3px 0 5px
           border: 1px solid black
-          background: $sf_red
+          background: $sf_dark_gray
+          background: $mysongs_bar_webkit
+          background: $mysongs_bar_moz
   .song-item
     overflow: none
     height: 320px
@@ -125,9 +129,9 @@
         height: 300px
         width: 30px
         margin: 0 0 0 7px
-        background: $sf_dark_gray
-        background: $mysongs_bar_webkit
-        background: $mysongs_bar_moz
+        background: $sf_pri
+        background: $mysongs_bigbar_webkit
+        background: $mysongs_bigbar_moz
         .indicator1
           background: white url(/images/graph_back.png)
           width: 30px
@@ -137,7 +141,9 @@
         height: 300px
         width: 14px
         margin: 0 7px 0 0
-        background: $sf_red
+        background: $sf_dark_gray
+        background: $mysongs_bar_webkit
+        background: $mysongs_bar_moz
         .indicator2
           background: white url(/images/graph_back.png)
           width: 14px

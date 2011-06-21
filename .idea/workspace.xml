@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a677fad-bda5-4b69-b1ee-af6c76514b2e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sprites.ai" afterPath="$PROJECT_DIR$/sprites.ai" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/sprites.png" afterPath="$PROJECT_DIR$/public/images/sprites.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/myfeedback_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/myfeedback_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/myfeedback/_songs.html.haml" afterPath="$PROJECT_DIR$/app/views/myfeedback/_songs.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/myfeedback/mysongs.html.haml" afterPath="$PROJECT_DIR$/app/views/myfeedback/mysongs.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/songs/_songs.html.haml" afterPath="$PROJECT_DIR$/app/views/songs/_songs.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/_least.html.haml" afterPath="$PROJECT_DIR$/app/views/welcome/_least.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/_recent.html.haml" afterPath="$PROJECT_DIR$/app/views/welcome/_recent.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/_top.html.haml" afterPath="$PROJECT_DIR$/app/views/welcome/_top.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/application.js" afterPath="$PROJECT_DIR$/public/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sass/_colors.sass" afterPath="$PROJECT_DIR$/public/stylesheets/sass/_colors.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sass/_mysongs.sass" afterPath="$PROJECT_DIR$/public/stylesheets/sass/_mysongs.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sass/_player.sass" afterPath="$PROJECT_DIR$/public/stylesheets/sass/_player.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass" afterPath="$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/songfeedback.css" afterPath="$PROJECT_DIR$/public/stylesheets/songfeedback.css" />
     </list>
     <ignored path="songfeedback.iws" />
@@ -36,55 +39,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_mysongs.sass" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_mysongs.sass">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="11" selection-start="602" selection-end="602" vertical-scroll-proportion="0.39427012">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_song_lists.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="36" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_colors.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_colors.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="58" selection-end="64" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_songs.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/myfeedback/_songs.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="11" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mysongs.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/myfeedback/mysongs.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="10" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_forms.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_forms.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="2" selection-start="1345" selection-end="1737" vertical-scroll-proportion="0.0">
+            <state line="80" column="30" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,25 +51,61 @@
       <file leaf-file-name="_least.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/_least.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="67" selection-end="86" vertical-scroll-proportion="0.0">
+            <state line="1" column="2" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myfeedback_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/myfeedback_controller.rb">
+      <file leaf-file-name="_recent.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/welcome/_recent.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="25" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+            <state line="1" column="2" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songfeedback.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/songfeedback.sass">
+      <file leaf-file-name="_top.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/welcome/_top.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="17" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+            <state line="23" column="43" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_songs.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/songs/_songs.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="12" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_player.sass" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_player.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="106" column="14" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.78333336">
               <folding />
             </state>
           </provider>
@@ -131,22 +125,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/welcome/_songs.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/welcome/index.html.haml" />
-        <option value="$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass" />
-        <option value="$PROJECT_DIR$/app/views/songs/_songs.html.haml" />
         <option value="$PROJECT_DIR$/public/stylesheets/sass/songfeedback.sass" />
-        <option value="$PROJECT_DIR$/app/views/welcome/_top.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/welcome/_recent.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/welcome/_least.html.haml" />
-        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/sass/_colors.sass" />
         <option value="$PROJECT_DIR$/app/controllers/myfeedback_controller.rb" />
         <option value="$PROJECT_DIR$/public/stylesheets/sass/_forms.sass" />
         <option value="$PROJECT_DIR$/app/views/myfeedback/mysongs.html.haml" />
         <option value="$PROJECT_DIR$/app/views/myfeedback/_songs.html.haml" />
+        <option value="$PROJECT_DIR$/public/stylesheets/sass/_colors.sass" />
         <option value="$PROJECT_DIR$/public/stylesheets/sass/_mysongs.sass" />
+        <option value="$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass" />
+        <option value="$PROJECT_DIR$/public/stylesheets/jplayer.blue.monday.css" />
+        <option value="$PROJECT_DIR$/app/views/songs/_songs.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/welcome/_least.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/welcome/_recent.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/welcome/_top.html.haml" />
+        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/public/stylesheets/sass/_player.sass" />
       </list>
     </option>
   </component>
@@ -176,8 +170,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,20 +198,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songfeedback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songfeedback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -238,7 +216,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
+              <option name="myItemId" value="system" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,33 +230,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songfeedback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songfeedback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +252,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="myfeedback" />
+              <option name="myItemId" value="welcome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="songfeedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="songfeedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,6 +291,8 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -558,7 +530,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="22" width="1445" height="874" extended-state="0" />
+    <frame x="1490" y="64" width="1421" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.6707193" order="3" side_tool="false" content_ui="tabs" />
@@ -566,7 +538,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20630373" sideWeight="0.67391306" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29081634" sideWeight="0.67391306" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -614,98 +586,102 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/song.rb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/songfeedback.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="419" column="0" selection-start="12977" selection-end="12977" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/jplayer.blue.monday.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_colors.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_layout.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_mysongs.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="16" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="20" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/songs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="396" selection-end="422" vertical-scroll-proportion="0.5523012" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/songs/_songs.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="177" selection-end="177" vertical-scroll-proportion="0.12048193" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/_top.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/_recent.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="5" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/songfeedback.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/_least.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="67" selection-end="86" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/myfeedback_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+        <state line="33" column="25" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.55">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_forms.sass">
+    <entry file="file://$PROJECT_DIR$/app/views/welcome/_least.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="2" selection-start="1345" selection-end="1737" vertical-scroll-proportion="0.0">
+        <state line="1" column="2" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_song_lists.sass">
+    <entry file="file://$PROJECT_DIR$/app/views/welcome/_recent.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+        <state line="1" column="2" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myfeedback/mysongs.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/songs/_songs.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="10" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_colors.sass">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="58" selection-end="64" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myfeedback/_songs.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/welcome/_top.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="11" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
+        <state line="23" column="43" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_mysongs.sass">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="11" selection-start="602" selection-end="602" vertical-scroll-proportion="0.39427012">
+        <state line="80" column="30" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="12" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_player.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="14" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.78333336">
           <folding />
         </state>
       </provider>

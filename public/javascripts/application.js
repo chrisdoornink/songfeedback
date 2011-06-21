@@ -60,12 +60,42 @@ $(document).ready(function() {
     $(this).children(".song-list-play-button-container").children(".song-list-index").show();
   });
 
+  $("#main-section-frame").delegate(".all-songs-container .pick-song .pick-song-item", "click", function() {
+    var statShow = $(this).attr("id");
+    $(".all-songs-container .my-songs-container").hide();
+    $(".all-songs-container ."+statShow).show();
+    $(".all-songs-container .pick-song .pick-song-item").removeClass("current");
+    $(this).addClass("current");
+  });
+
+  $(".all-songs-container .my-songs-container").first().show();
+  $(".all-songs-container .pick-song .pick-song-item").first().addClass("current");
 
 
-//  $("#main-section-frame").delegate(".song-list-item", "click", function() {
-//    //something to play this
-//  });
-//
+
+  $("#main-section-frame").delegate(".song-list-item", "click", function() {
+    $("#player #player-title p").html($(this).attr("songTitle"));
+    $("#player #player-artist p").html($(this).attr("artist"));
+    $("#player #player-description p").html($(this).attr("desc"));
+    $("#jquery_jplayer_1").jPlayer("setMedia", {
+      mp3: $(this).attr("loc")
+    });
+    $("#jquery_jplayer_1").jPlayer("play");
+
+  });
+
+
+  $("#jquery_jplayer_1").jPlayer({
+    ready: function() {
+      $.jPlayer.timeFormat.padMin = false;
+    },
+    swfPath: "/javascripts",
+    supplied: "mp3",
+    cssSelector: {
+      play: "#play-button",
+      pause: "#pause-button"
+    }
+  });
 
 
 

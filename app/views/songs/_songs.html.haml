@@ -1,7 +1,6 @@
 - @songs.each_with_index do |song, index|
-  -puts song
-  .song-item{:class => song.id}
-    .song-list-item
+  .song-item
+    .song-list-item{:id => song.id, :songTitle => song.title, :artist => song.artist, :desc => song.description, :loc => song.audio.url}
       .song-list-play-button-container
         .song-list-index= index+1
         .song-list-play-button

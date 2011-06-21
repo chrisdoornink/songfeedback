@@ -18,6 +18,12 @@
     margin-bottom: 15px
     //-moz-border-radius: 10px 10px 0 0
     //-webkit-border-radius: 10px 10px 0 0
+  #jquery_jplayer_1
+    overflow: auto
+  .jp-audio
+    overflow: auto
+  .jp-controls
+    float: left
   #player-title
     p
       font-size: 14px
@@ -28,11 +34,12 @@
       text-align: center
   #player-artist
     p
-      font-size: 14px
+      font-size: 13px
       color: $sf_white
       margin: 4px
       padding: 0
       text-align: center
+      font-style: italic
   #player-description
     p
       font-size: 11px
@@ -54,42 +61,50 @@
       background: url(/images/sprites.png) no-repeat -10px -57px
       &:hover
         background-position: -40px -57px
+    #pause-button
+      height: 32px
+      width: 32px
+      background: url(/images/sprites.png) no-repeat -72px -99px
+      &:hover
+        background-position: -102px -99px
   #player-time
     height: 11px
     float: right
-    width: 183px
+    width: 125px
     position: relative
     top: 0px
     left: 0px
     margin: 17 10px 0 2px
-    #progress-bar
-      overflow: auto
+  #progress-bar
+    overflow: auto
+    height: 11px
+    background-color: #55595B
+    background: $progress_bar_webkit
+    background: $progress_bar_moz
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
+    margin: 0
+  .jp-progress
+    width: 125px
+    #progress
+      position: absolute
+      background-color: $sf_pri
+      //background: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, rgb(49,72,83)), color-stop(0.91, rgb(106,123,131)))
+      //background: -moz-linear-gradient(center bottom, rgb(49,72,83) 41%, rgb(106,123,131) 91%)
       height: 11px
-      background-color: #55595B
-      background: $progress_bar_webkit
-      background: $progress_bar_moz
-      -moz-border-radius: 10px
-      -webkit-border-radius: 10px
-      margin: 0
-      #progress
-        position: absolute
-        background-color: $sf_pri
-        //background: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, rgb(49,72,83)), color-stop(0.91, rgb(106,123,131)))
-        //background: -moz-linear-gradient(center bottom, rgb(49,72,83) 41%, rgb(106,123,131) 91%)
-        height: 11px
-        -moz-border-radius: 10px 0 0 10px
-        -webkit-border-radius: 10px 0px 0 10px
-        width: 20px
-    #current-time
-      float: right
-      font-size: 10px
-      color: $sf_white
-      margin: -1px 0 0 4px
-    #total-time
-      float: right
-      font-size: 10px
-      color: $sf_white
-      margin: -1px 0 0 0
+      -moz-border-radius: 10px 0 0 10px
+      -webkit-border-radius: 10px 0px 0 10px
+      width: 20px
+  #current-time
+    float: right
+    font-size: 10px
+    color: $sf_white
+    margin: 15px 0 0 4px
+  #total-time
+    float: right
+    font-size: 10px
+    color: $sf_white
+    margin: 15px 0 0 0
   #player-volume
     float: left
     height: 32px

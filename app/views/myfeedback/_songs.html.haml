@@ -2,9 +2,9 @@
   .pick-song
     .title Choose a song:
     - @songs.each do |song|
-      .pick-song-item{:id => "list_"+song.id.to_s}= song.title
+      .pick-song-item{:id => "statsheet_"+song.id.to_s}= song.title
   - @songs.each do |song|
-    .my-songs-container{:id => "statsheet_"+song.id.to_s}
+    .my-songs-container{:class => "statsheet_"+song.id.to_s}
       .song-list-category
         .song-title= song.title
         .song-artist= song.artist
