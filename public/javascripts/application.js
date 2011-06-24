@@ -5,6 +5,8 @@
 //HOVER DELEGATES
 
 $(document).ready(function() {
+  $.jPlayer.timeFormat.padMin = false;
+
   $("#menu").delegate("#menu-songs", "mouseenter", function() {
     $("#menu-songs-list").show();
     $("#menu-songs").addClass("menu-background");
@@ -71,8 +73,6 @@ $(document).ready(function() {
   $(".all-songs-container .my-songs-container").first().show();
   $(".all-songs-container .pick-song .pick-song-item").first().addClass("current");
 
-
-
   $("#main-section-frame").delegate(".song-list-item", "click", function() {
     $("#player #player-title p").html($(this).attr("songTitle"));
     $("#player #player-artist p").html($(this).attr("artist"));
@@ -84,18 +84,34 @@ $(document).ready(function() {
 
   });
 
-
   $("#jquery_jplayer_1").jPlayer({
     ready: function() {
       $.jPlayer.timeFormat.padMin = false;
+    },
+    ended: function() {
+      $(this).jPlayer("playHead", 100)
     },
     swfPath: "/javascripts",
     supplied: "mp3",
     cssSelector: {
       play: "#play-button",
       pause: "#pause-button"
-    }
+    },
+    solution:"flash, html"
   });
+
+  $(".star-frame").delegate(".star", "mouseenter", function() {
+    $(this).addClass("hover_starred").removeClass("hover_unstar");
+    $(this).prevAll().addClass("hover_starred").removeClass("hover_unstar");
+    $(this).nextAll().removeClass("hover_starred").addClass("hover_unstar");
+  }).mouseleave(function() {
+     $(this).children().removeClass("hover_starred").removeClass("hover_unstar");
+  }).delegate(".star", "click", function() {
+    $(this).addClass("starred");
+    $(this).prevAll().addClass("starred");
+    $(this).nextAll().removeClass("starred");
+  });
+
 
 
 

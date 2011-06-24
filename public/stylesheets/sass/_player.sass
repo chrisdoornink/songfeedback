@@ -69,42 +69,49 @@
         background-position: -102px -99px
   #player-time
     height: 11px
-    float: right
+    float: left
     width: 125px
     position: relative
     top: 0px
     left: 0px
-    margin: 17 10px 0 2px
+    margin: 17 5px 0 2px
   #progress-bar
     overflow: auto
     height: 11px
-    background-color: #55595B
+    background-color: $sf_light_gray
     background: $progress_bar_webkit
     background: $progress_bar_moz
-    -moz-border-radius: 10px
-    -webkit-border-radius: 10px
+    //-moz-border-radius: 10px
+    //-webkit-border-radius: 10px
     margin: 0
   .jp-progress
     width: 125px
     #progress
       position: absolute
-      background-color: $sf_pri
+      background: $sf_pri
+      background: $progress_webkit
+      background: $progress_moz
       //background: -webkit-gradient(linear, left bottom, left top, color-stop(0.41, rgb(49,72,83)), color-stop(0.91, rgb(106,123,131)))
       //background: -moz-linear-gradient(center bottom, rgb(49,72,83) 41%, rgb(106,123,131) 91%)
       height: 11px
-      -moz-border-radius: 10px 0 0 10px
-      -webkit-border-radius: 10px 0px 0 10px
+      //-moz-border-radius: 10px 0 0 10px
+      //-webkit-border-radius: 10px 0px 0 10px
       width: 20px
   #current-time
-    float: right
+    float: left
     font-size: 10px
     color: $sf_white
-    margin: 15px 0 0 4px
+    margin: 16px 0 0 3px
   #total-time
-    float: right
+    float: left
     font-size: 10px
     color: $sf_white
-    margin: 15px 0 0 0
+    margin: 16px 0 0 0
+  #slash
+    float: left
+    font-size: 10px
+    color: $sf_white
+    margin: 16px 1px 0
   #player-volume
     float: left
     height: 32px
@@ -141,8 +148,12 @@
       height: 20px
       margin: 3px 1px
       background: url(/images/sprites.png) no-repeat -20px -146px
-      &:hover
-        background-position: -49px -146px
+    .hover_starred
+      background-position: -49px -146px
+    .starred
+      background-position: -49px -146px
+    .hover_unstar
+      background-position: -20px -146px
   #feedback-form
     margin: 0
   #comment-box
@@ -166,8 +177,8 @@
     font-size: 24px
     color: white
     background: $sf_pri
-    //background: -webkit-gradient(linear, 0% 24%, 0% 100%, from(#FF691F), to(#E35526))
-    //background: -moz-linear-gradient(0% 100% 90deg,#E35526, #FF691F)
+    background: $blue_button_webkit
+    background: $blue_button_moz
     border-top: 1px solid $sf_dark_gray
     border-left: 1px solid #222
     border-right: 1px solid #222
@@ -175,3 +186,6 @@
     -moz-border-radius: 4px
     border-radius: 4px
     cursor: pointer
+    &:hover
+      background: $blue_button_highlighted_webkit
+      background: $blue_button_highlighted_moz
