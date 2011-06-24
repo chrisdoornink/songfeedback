@@ -29,4 +29,8 @@ class SongsController < ApplicationController
   def genre
   end
 
+  def feedback
+    Feedback.create(:song_id => params[:songId], :user_id => @user_id, :vocals => params[:vocals], :songwriting => params[:songwriting], :musicianship => params[:musicianship], :creativity => params[:creativity], :production => params[:production], :overall => params[:overall], :comments => params[:comments])
+  end
+
 end

@@ -25,6 +25,8 @@ Songfeedback::Application.routes.draw do
 
   get "songs/genre"
 
+  post "songs/feedback"
+
   get "welcome/index"
 
   get "welcome/show"

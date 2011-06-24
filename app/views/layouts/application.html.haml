@@ -81,7 +81,7 @@
 
           .player-divider
           #feedback-frame
-            %form#feedback-form
+            #feedback-form
               #vocals.feedback-row
                 .star-frame
                   #vocal-star1.star
@@ -131,7 +131,7 @@
                   #overall-star5.star
                 .category overall
               %textarea#comment-box{:placeholder => "Your comments here", :name => "comments"}
-              %input#feedback-submit{:name => "feedback-submit", :type => "submit", :value => "Submit Feedback"}
+              #feedback-submit Submit Feedback
       #main-section-frame
         = yield
       #footer

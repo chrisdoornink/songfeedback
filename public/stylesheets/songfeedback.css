@@ -579,6 +579,7 @@ ul {
     width: 240px;
     margin: 0;
     font-size: 24px;
+    text-align: center;
     color: white;
     background: #81c3cf;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0.15, #81c3cf), color-stop(0.79, #9dd8e3));

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  song_id: 1
+  user_id: 1
+  vocals: 1
+  songwriting: 1
+  musicianship: 1
+  creativity: 1
+  production: 1
+  overall: 1
+  comments: MyString
+
+two:
+  song_id: 1
+  user_id: 1
+  vocals: 1
+  songwriting: 1
+  musicianship: 1
+  creativity: 1
+  production: 1
+  overall: 1
+  comments: MyString
