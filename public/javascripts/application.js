@@ -151,6 +151,7 @@ $(document).ready(function() {
 
   $("#feedback-form #feedback-submit").click(function() {
     var feedback = [vocals,songwriting,musicianship,creativity,production,overall,comments];
+    validateFeedbackForm();
     console.log(feedback);
     $.ajax({
       type: "POST",
@@ -175,4 +176,11 @@ function resetFeedbackForm(){
   production = null;
   overall = null;
   comments = null;
+}
+
+function validateFeedbackForm(){
+  if (vocals == null){
+    alert("you have to rate in every category fool!");
+  }
+
 }

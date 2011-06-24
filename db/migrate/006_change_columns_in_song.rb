@@ -8,6 +8,8 @@ class ChangeColumnsInSong < ActiveRecord::Migration
     change_column_default(:songs, :overall, 0)
     change_column_default(:songs, :production, 0)
 
+    rename_column :songs, :feedbacks, :reviews
+
     change_column_default(:users, :plays, 0)
     change_column_default(:users, :feedbacks, 0)
     change_column_default(:users, :recs, 0)
