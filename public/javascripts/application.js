@@ -151,14 +151,40 @@ $(document).ready(function() {
 
   $("#feedback-form #feedback-submit").click(function() {
     var feedback = [vocals,songwriting,musicianship,creativity,production,overall,comments];
-    validateFeedbackForm();
-    console.log(feedback);
+    if (validateFeedbackForm()){
+      console.log(feedback);
+      $.ajax({
+        type: "POST",
+        url: "/songs/feedback",
+        data: "vocals="+vocals+"&songwriting="+songwriting+"&musicianship="+musicianship+"&creativity="+creativity+"&production="+production+"&overall="+overall+"&comments="+comments+"&songId="+songId,
+        success: function(data, status, jqXHR){
+          if (data.indexOf("dupe") != -1){
+            console.log("js found the dupe, confirm then resend?");
+            $("#darkener").css("opacity", .5).show();
+            $("#duplicate-review").show();
+          }
+          else {
+            console.log("no dupe, should just add the event to database.");
+          }
+        }
+      });
+    }
+  });
+
+  $("#duplicate-review").delegate("#cancel", "click", function() {
+    $("#darkener").css("opacity", .5).hide();
+    $("#duplicate-review").hide();
+  });
+
+  $("#duplicate-review").delegate("#override", "click", function() {
+    $("#darkener").css("opacity", .5).hide();
+    $("#duplicate-review").hide();
     $.ajax({
       type: "POST",
-      url: "/songs/feedback",
+      url: "/songs/override",
       data: "vocals="+vocals+"&songwriting="+songwriting+"&musicianship="+musicianship+"&creativity="+creativity+"&production="+production+"&overall="+overall+"&comments="+comments+"&songId="+songId,
-      success: function(msg){
-        console.log("success");
+      success: function(data, status, jqXHR){
+        console.log(data)
       }
     });
   });
@@ -179,8 +205,14 @@ function resetFeedbackForm(){
 }
 
 function validateFeedbackForm(){
-  if (vocals == null){
-    alert("you have to rate in every category fool!");
+  if (songId == null){
+    alert("you have to pick a song you fool!");
+    return false;
   }
-
+  else if (vocals == null || creativity == null || songwriting == null || musicianship == null || production == null || overall == null){
+    alert("you have to rate the song in every category ass!");
+    return false;
+  }
+  else
+    return true
 }

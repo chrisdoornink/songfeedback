@@ -5,6 +5,7 @@
     = javascript_include_tag :all, :cache => true, :recursive => true
     = csrf_meta_tag
   %body
+    #darkener
     #banner
     #container
       #header
@@ -46,9 +47,7 @@
               #menu-myaccount-list
                 %ul
                   %li
-                    %a.ajax{:href => "/authentication/signout"} Sign Out
-                  %li
-                    %a.last.ajax{:href => "/account"} My Account
+                    %a.last.ajax{:href => "/authentication/logout"} Sign Out
         #player
           #player-header
           #player-title
@@ -135,3 +134,9 @@
       #main-section-frame
         = yield
       #footer
+
+      #duplicate-review
+        #message
+          You have already reviewed this song. Do you want to override your previous review?
+        #override Override
+        #cancel Cancel

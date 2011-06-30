@@ -7,6 +7,8 @@ Songfeedback::Application.routes.draw do
 
   get "authentication/login"
 
+  get "authentication/logout"
+
   post "authentication/login"
 
   get "authentication/register"
@@ -26,6 +28,8 @@ Songfeedback::Application.routes.draw do
   get "songs/genre"
 
   post "songs/feedback"
+
+  post "songs/override"
 
   get "welcome/index"
 

@@ -150,7 +150,7 @@ ul
         background: $sf_dark_gray
         position: absolute
         z-index: 1000
-        left: 749px
+        left: 773px
         top: 40px
         margin: 0
         padding: 0
@@ -183,3 +183,58 @@ ul
 
   .menu-background
     background-color: $sf_dark_gray
+
+#duplicate-review
+  display: none
+  position: absolute
+  top: 200px
+  left: 250px
+  width: 380px
+  padding: 10px
+  background: $sf_gray
+  border: 4px solid white
+  -moz-border-radius: 15px
+  -webkit-border-radius: 15px
+  color: white
+  font-size: 16px
+  #message
+    padding-bottom: 40px
+  #cancel
+    padding: 5px 10px
+    float: right
+    background: $sf_light_gray
+    &:hover
+      background: $sf_dark_gray
+      color: white
+    border: 2px solid white
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    color: #111
+    font-size: 14px
+    margin-right: 10px
+    cursor: pointer
+  #override
+    padding: 5px 10px
+    float: right
+    background: $sf_light_gray
+    &:hover
+      background: $sf_dark_gray
+      color: white
+    border: 2px solid white
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    color: #111
+    font-size: 14px
+    cursor: pointer
+  z-index: 10000
+
+#darkener
+  display: none
+  background-color: #000
+  position: absolute
+  opacity: .4
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999

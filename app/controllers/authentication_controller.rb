@@ -37,4 +37,9 @@ class AuthenticationController < ApplicationController
     @not_logged = true
   end
 
+  def logout
+    cookies.delete :authenticate
+    redirect_to "/authentication/login"
+  end
+
 end

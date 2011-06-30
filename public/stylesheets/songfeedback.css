@@ -233,7 +233,7 @@ ul {
         background: #4b4f4e;
         position: absolute;
         z-index: 1000;
-        left: 749px;
+        left: 773px;
         top: 40px;
         margin: 0;
         padding: 0;
@@ -261,6 +261,61 @@ ul {
   #container .menu-background {
     background-color: #4b4f4e; }
 
+#duplicate-review {
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  width: 380px;
+  padding: 10px;
+  background: #606463;
+  border: 4px solid white;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  z-index: 10000; }
+  #duplicate-review #message {
+    padding-bottom: 40px; }
+  #duplicate-review #cancel {
+    padding: 5px 10px;
+    float: right;
+    background: #cbcfce;
+    border: 2px solid white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #111111;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer; }
+    #duplicate-review #cancel:hover {
+      background: #4b4f4e;
+      color: white; }
+  #duplicate-review #override {
+    padding: 5px 10px;
+    float: right;
+    background: #cbcfce;
+    border: 2px solid white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #111111;
+    font-size: 14px;
+    cursor: pointer; }
+    #duplicate-review #override:hover {
+      background: #4b4f4e;
+      color: white; }
+
+#darkener {
+  display: none;
+  background-color: black;
+  position: absolute;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; }
+
 .my-songs-title {
   overflow: auto;
   border-bottom: 1px solid #eeeeee;
@@ -286,6 +341,9 @@ ul {
       cursor: pointer; }
       .my-songs-title .upload #add-button a {
         color: #4b4f4e; }
+      .my-songs-title .upload #add-button:hover {
+        background: #4b4f4e;
+        color: white; }
 
 .all-songs-container {
   overflow: auto; }
