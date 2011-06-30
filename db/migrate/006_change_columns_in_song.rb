@@ -15,6 +15,8 @@ class ChangeColumnsInSong < ActiveRecord::Migration
     change_column_default(:users, :recs, 0)
     change_column_default(:users, :harsh, 0)
     change_column_default(:users, :uploads, 0)
+
+    rename_column :users, :feedbacks, :reviews
   end
 
   def self.down

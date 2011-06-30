@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "password"
     t.string   "email"
     t.integer  "plays",      :default => 0
-    t.integer  "feedbacks",  :default => 0
+    t.integer  "reviews",    :default => 0
     t.integer  "recs",       :default => 0
     t.float    "harsh",      :default => 0.0
     t.integer  "uploads",    :default => 0
