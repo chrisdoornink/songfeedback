@@ -34,11 +34,15 @@
                   %li
                     %a.ajax{:href => "/myfeedback/upload"} Upload Songs
                   %li
-                    Feedback Score: 180
-                  %li
-                    Level: Rockstar | Strictness: Harsh
-                  %li
-                    Uploads: 3  Available: 2
+                    #user-stat-container.last
+                      .menu-stat
+                        Feedback Score: 180
+                      .menu-stat
+                        Level: Rockstar | Strictness: Harsh
+                      .menu-stat
+                        Uploads:
+                        =@user_info["uploads"]
+                        Available: 2
             #menu-myaccount
               .arrow
               .myaccount

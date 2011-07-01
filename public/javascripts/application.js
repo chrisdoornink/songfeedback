@@ -15,6 +15,10 @@ var songId = null;
 $(document).ready(function() {
   $.jPlayer.timeFormat.padMin = false;
 
+  $('#player').delegate("#player-header", "click", function() {
+    window.location = "/";
+  });
+
   $("#menu").delegate("#menu-songs", "mouseenter", function() {
     $("#menu-songs-list").show();
     $("#menu-songs").addClass("menu-background");

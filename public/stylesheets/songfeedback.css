@@ -178,6 +178,7 @@ ul {
       #container #header #menu #menu-songs-list {
         background: #4b4f4e;
         position: absolute;
+        width: 120px;
         z-index: 1000;
         left: 297px;
         top: 40px;
@@ -189,6 +190,7 @@ ul {
         -moz-box-shadow: 0px 8px 8px #888888;
         -webkit-box-shadow: 0px 8px 8px #888888; }
         #container #header #menu #menu-songs-list ul a {
+          font-size: 13px;
           display: block;
           outline: 0;
           padding: 4px 10px;
@@ -216,6 +218,7 @@ ul {
         -moz-box-shadow: 0px 8px 8px #888888;
         -webkit-box-shadow: 0px 8px 8px #888888; }
         #container #header #menu #menu-myfeedback-list ul a {
+          font-size: 13px;
           display: block;
           outline: 0;
           padding: 4px 10px;
@@ -223,6 +226,15 @@ ul {
           color: white; }
           #container #header #menu #menu-myfeedback-list ul a:hover {
             background-color: #81c3cf; }
+        #container #header #menu #menu-myfeedback-list ul #user-stat-container {
+          margin: 5px;
+          background: #cbcfce;
+          border-top: 1px solid white; }
+          #container #header #menu #menu-myfeedback-list ul #user-stat-container .menu-stat {
+            display: block;
+            outline: 0;
+            padding: 4px 10px;
+            color: #4b4f4e; }
         #container #header #menu #menu-myfeedback-list ul li .last {
           -moz-border-radius: 0 0 5px 5px;
           -webkit-border-radius: 0 0 5px 5px; }
@@ -233,7 +245,7 @@ ul {
         background: #4b4f4e;
         position: absolute;
         z-index: 1000;
-        left: 773px;
+        left: 785px;
         top: 40px;
         margin: 0;
         padding: 0;
@@ -243,6 +255,7 @@ ul {
         -moz-box-shadow: 0px 8px 8px #888888;
         -webkit-box-shadow: 0px 8px 8px #888888; }
         #container #header #menu #menu-myaccount-list ul a {
+          font-size: 13px;
           display: block;
           outline: 0;
           padding: 4px 10px;
@@ -485,6 +498,7 @@ ul {
   -moz-box-shadow: 0px 0px 15px #333333;
   -webkit-box-shadow: 0px 0px 15px #333333; }
   #player #player-header {
+    cursor: pointer;
     height: 50px;
     width: 100%;
     background: url(/images/sprites.png) no-repeat 16px 6px;
