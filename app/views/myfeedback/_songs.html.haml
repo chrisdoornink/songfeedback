@@ -54,4 +54,15 @@
             .graph-label= "creativity"
             .graph-label= "production"
             .graph-label= "overall"
+      -if song.comments.size > 0
+        .comments-title Comments
+      -song.comments.each do |comment|
+        .song-comments
 
+          .commenter-container
+            .commenter-username=comment.user.username
+            .commenter-critic=comment.user.harsh
+
+          .comment-container
+            .comment=comment.comment
+          .commenter-comment-date=comment.created_at

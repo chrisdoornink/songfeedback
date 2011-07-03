@@ -30,9 +30,9 @@ class SongsController < ApplicationController
   end
 
   def feedback
-    @testing = Feedback.all(:conditions => { :song_id => params[:songId], :user_id => @user_id })
+    @duplicate_test = Feedback.all(:conditions => { :song_id => params[:songId], :user_id => @user_id })
 
-    if @testing.length > 0
+    if @duplicate_test.length > 0
       @message = "dupe"
     else
       @message = "first"
@@ -44,10 +44,13 @@ class SongsController < ApplicationController
       @creativity_avg = Feedback.average(:creativity, :conditions => {:song_id => params[:songId]})
       @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
       @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
-      Song.update(params[:songId], {:reviews => @number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
+      unless params[:comments] == nil
+        Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
+      end
+      @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
+      Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
       @reviews = Feedback.count(:conditions => {:user_id => @user_id})
       User.update(@user_id, {:reviews => (@reviews)})
-
     end
 
     render :layout => false
@@ -64,7 +67,12 @@ class SongsController < ApplicationController
     @creativity_avg = Feedback.average(:creativity, :conditions => {:song_id => params[:songId]})
     @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
     @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
-    Song.update(params[:songId], {:reviews => @number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
+    unless params[:comments] == nil
+      Rails.logger.info(params[:comments])
+      Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
+    end
+    @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
+    Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
 
     render :layout => false
   end

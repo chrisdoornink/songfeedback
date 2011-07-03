@@ -12,7 +12,7 @@
       .song-list-data
         .song-feedbacks
           .feedbacks-label= "ratings: " + song.reviews.to_s
-          .comments-label= "comments: 0"
+          .comments-label= "comments: " + song.totalcomments.to_s
         .song-overall
           .overall-label
           .graph

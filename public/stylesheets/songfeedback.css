@@ -167,7 +167,8 @@ ul {
         padding: 4px 8px 5px 8px;
         margin-right: 10px;
         -moz-border-radius: 5px 5px 0 5px;
-        -webkit-border-radius: 5px 5px 0 5px; }
+        -webkit-border-radius: 5px 5px 0 5px;
+        min-width: 67px; }
         #container #header #menu #menu-myaccount .myaccount {
           float: right; }
         #container #header #menu #menu-myaccount .arrow {
@@ -487,6 +488,35 @@ ul {
       width: 100px;
       height: 100px;
       border: 2px solid #eeeeee; }
+  .my-songs-container .comments-title {
+    color: #4b4f4e;
+    font-size: 20px;
+    padding: 0 10px 0 0; }
+  .my-songs-container .song-comments {
+    width: 350px;
+    margin: 10px 0 5px;
+    border-top: 1px solid #cbcfce;
+    padding-top: 5px; }
+    .my-songs-container .song-comments .commenter-container {
+      width: 350px;
+      overflow: hidden; }
+      .my-songs-container .song-comments .commenter-container .commenter-username {
+        font-size: 14px;
+        font-weight: bold;
+        float: left;
+        margin: 0 10px 0 0; }
+      .my-songs-container .song-comments .commenter-container .commenter-critic {
+        font-size: 13px;
+        color: #4b4f4e;
+        float: left;
+        margin: 2px 0 0 0; }
+    .my-songs-container .song-comments .comment-container {
+      width: 350px;
+      margin: 3px 0 0; }
+    .my-songs-container .song-comments .commenter-comment-date {
+      font-size: 10px;
+      color: #606463;
+      margin: 3px 0 0 0; }
 
 #player {
   float: left;

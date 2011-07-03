@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "artist"
     t.string   "description"
     t.integer  "user_id"
-    t.string   "location"
+    t.string   "totalcomments",      :default => "0"
     t.integer  "reviews",            :default => 0
     t.float    "overall",            :default => 0.0
     t.float    "vocals",             :default => 0.0

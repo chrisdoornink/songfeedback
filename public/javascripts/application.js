@@ -163,12 +163,11 @@ $(document).ready(function() {
         data: "vocals="+vocals+"&songwriting="+songwriting+"&musicianship="+musicianship+"&creativity="+creativity+"&production="+production+"&overall="+overall+"&comments="+comments+"&songId="+songId,
         success: function(data, status, jqXHR){
           if (data.indexOf("dupe") != -1){
-            console.log("js found the dupe, confirm then resend?");
             $("#darkener").css("opacity", .5).show();
             $("#duplicate-review").show();
           }
           else {
-            console.log("no dupe, should just add the event to database.");
+            console.log("Should have a message here that says it worked");
           }
         }
       });
@@ -188,7 +187,7 @@ $(document).ready(function() {
       url: "/songs/override",
       data: "vocals="+vocals+"&songwriting="+songwriting+"&musicianship="+musicianship+"&creativity="+creativity+"&production="+production+"&overall="+overall+"&comments="+comments+"&songId="+songId,
       success: function(data, status, jqXHR){
-        console.log(data)
+        console.log("Should have a message here that says it worked");
       }
     });
   });
