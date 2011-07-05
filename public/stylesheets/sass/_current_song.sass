@@ -1,0 +1,128 @@
+.current-song-stats-container
+  margin: 15px
+  padding: 0
+  .song-list-category
+    width: 350px
+    .song-title
+      color: $sf_white
+      font-size: 20px
+      padding: 0 10px 0 0
+    .song-artist
+      color: white
+      font-size: 16px
+      padding: 0 10px 5px 0
+  .top-graph
+    width: 350px
+    overflow: auto
+    .total-ratings-label
+      float: left
+      height: 12px
+      color: $sf_light_gray
+      font-size: 12px
+      padding: 0 0 5px 0
+    .key
+      float: right
+      overflow: auto
+      font-size: 10px
+      .score
+        float: left
+        overflow: auto
+        .box
+          float: left
+          width: 7px
+          height: 7px
+          margin: 3px 3px 0 5px
+          border: 1px solid black
+          background: $sf_pri
+          background: $mysongs_bigbar_webkit
+          background: $mysongs_bigbar_moz
+      .average
+        float: right
+        overflow: auto
+        .box
+          float: left
+          width: 7px
+          height: 7px
+          margin: 3px 3px 0 5px
+          border: 1px solid black
+          background: $sf_dark_gray
+          background: $mysongs_bar_webkit
+          background: $mysongs_bar_moz
+  .song-item
+    overflow: none
+    height: 120px
+    .ratings
+      float: left
+    .rankings
+      float: right
+    .graph-labels
+      overflow: none
+      height: 20px
+      .graph-label
+        width: 58px
+        margin: 0 0px
+        float: left
+        font-size: 9px
+        color: $sf_white
+        text-align: center
+    .graph
+      height: 100px
+      width: 350px
+      border-top: 1px solid $sf_light_gray
+      border-bottom: 2px solid $sf_dark_gray
+      background: url(/images/graph_back_small.png)
+      .bar1
+        float: left
+        height: 100px
+        width: 14px
+        margin: 0 0 0 17px
+        background: $sf_pri
+        background: $mysongs_bigbar_webkit
+        background: $mysongs_bigbar_moz
+        .indicator1
+          background: $sf_gray url(/images/graph_back_small.png)
+          width: 14px
+          height: 0
+      .bar2
+        float: left
+        height: 100px
+        width: 10px
+        margin: 0 17px 0 0
+        background: $sf_dark_gray
+        background: $mysongs_bar_webkit
+        background: $mysongs_bar_moz
+        .indicator2
+          background: $sf_gray url(/images/graph_back_small.png)
+          width: 10px
+          height: 0
+  .comments-title
+    color: $sf_light_gray
+    font-size: 20px
+    padding: 0 10px 0 0
+  .song-comments
+    width: 350px
+    margin: 10px 0 5px
+    border-top: 1px solid $sf_dark_gray
+    padding-top: 5px
+    .commenter-container
+      width: 350px
+      overflow: hidden
+      .commenter-username
+        font-size: 13px
+        font-weight: bold
+        float: left
+        margin: 0 10px 0 0
+      .commenter-critic
+        font-size: 13px
+        color: $sf_light_gray
+        float: left
+        margin: 2px 0 0 0
+    .comment-container
+      width: 350px
+      margin: 3px 0 0
+      .comment
+        font-size: 12px
+    .commenter-comment-date
+      font-size: 10px
+      color: $sf_light_gray
+      margin: 3px 0 0 0

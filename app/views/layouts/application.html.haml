@@ -6,6 +6,7 @@
     = csrf_meta_tag
   %body
     #darkener
+    #darkener-click
     #banner
     #container
       #header
@@ -140,7 +141,30 @@
       #footer
 
       #duplicate-review
-        #message
-          You have already reviewed this song. Do you want to override your previous review?
-        #override Override
-        #cancel Cancel
+        .modal-popup
+          #message
+            You have already reviewed this song. Do you want to override your previous review?
+          #yes Override
+          #no Cancel
+
+      #review-submitted
+        .modal-popup
+          #message
+            Thank you for submitted your feedback for
+            %span#song-just-reviewed this song.
+            %br
+            %br Would you like to see what other people have said about this song?
+          #yes View Stats/Comments
+          #no No Thanks
+
+      #current-song-stats
+        .modal-popup-stats
+          #no
+          #current-song-stats-show No stats. An error occurred...
+          #yes Add Comment
+
+      #error-message
+        .modal-popup
+          #error-message-text Error
+          #no Okay
+

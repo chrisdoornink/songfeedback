@@ -1,3 +1,132 @@
+.current-song-stats-container {
+  margin: 15px;
+  padding: 0; }
+  .current-song-stats-container .song-list-category {
+    width: 350px; }
+    .current-song-stats-container .song-list-category .song-title {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 0 10px 0 0; }
+    .current-song-stats-container .song-list-category .song-artist {
+      color: white;
+      font-size: 16px;
+      padding: 0 10px 5px 0; }
+  .current-song-stats-container .top-graph {
+    width: 350px;
+    overflow: auto; }
+    .current-song-stats-container .top-graph .total-ratings-label {
+      float: left;
+      height: 12px;
+      color: #cbcfce;
+      font-size: 12px;
+      padding: 0 0 5px 0; }
+    .current-song-stats-container .top-graph .key {
+      float: right;
+      overflow: auto;
+      font-size: 10px; }
+      .current-song-stats-container .top-graph .key .score {
+        float: left;
+        overflow: auto; }
+        .current-song-stats-container .top-graph .key .score .box {
+          float: left;
+          width: 7px;
+          height: 7px;
+          margin: 3px 3px 0 5px;
+          border: 1px solid black;
+          background: #81c3cf;
+          background: -webkit-gradient(linear, right top, left top, color-stop(0.01, #81c3cf), color-stop(0.5, #aae1eb), color-stop(0.99, #81c3cf));
+          background: -moz-linear-gradient(right center, #81c3cf 16%, #aae1eb 50%, #81c3cf 84%); }
+      .current-song-stats-container .top-graph .key .average {
+        float: right;
+        overflow: auto; }
+        .current-song-stats-container .top-graph .key .average .box {
+          float: left;
+          width: 7px;
+          height: 7px;
+          margin: 3px 3px 0 5px;
+          border: 1px solid black;
+          background: #4b4f4e;
+          background: -webkit-gradient(linear, right top, left top, color-stop(0.01, #4b4f4e), color-stop(0.5, #5d6362), color-stop(0.99, #4b4f4e));
+          background: -moz-linear-gradient(right center, #4b4f4e 16%, #5d6362 50%, #4b4f4e 84%); }
+  .current-song-stats-container .song-item {
+    overflow: none;
+    height: 120px; }
+    .current-song-stats-container .song-item .ratings {
+      float: left; }
+    .current-song-stats-container .song-item .rankings {
+      float: right; }
+    .current-song-stats-container .song-item .graph-labels {
+      overflow: none;
+      height: 20px; }
+      .current-song-stats-container .song-item .graph-labels .graph-label {
+        width: 58px;
+        margin: 0 0px;
+        float: left;
+        font-size: 9px;
+        color: #f2f2f2;
+        text-align: center; }
+    .current-song-stats-container .song-item .graph {
+      height: 100px;
+      width: 350px;
+      border-top: 1px solid #cbcfce;
+      border-bottom: 2px solid #4b4f4e;
+      background: url(/images/graph_back_small.png); }
+      .current-song-stats-container .song-item .graph .bar1 {
+        float: left;
+        height: 100px;
+        width: 14px;
+        margin: 0 0 0 17px;
+        background: #81c3cf;
+        background: -webkit-gradient(linear, right top, left top, color-stop(0.01, #81c3cf), color-stop(0.5, #aae1eb), color-stop(0.99, #81c3cf));
+        background: -moz-linear-gradient(right center, #81c3cf 16%, #aae1eb 50%, #81c3cf 84%); }
+        .current-song-stats-container .song-item .graph .bar1 .indicator1 {
+          background: #606463 url(/images/graph_back_small.png);
+          width: 14px;
+          height: 0; }
+      .current-song-stats-container .song-item .graph .bar2 {
+        float: left;
+        height: 100px;
+        width: 10px;
+        margin: 0 17px 0 0;
+        background: #4b4f4e;
+        background: -webkit-gradient(linear, right top, left top, color-stop(0.01, #4b4f4e), color-stop(0.5, #5d6362), color-stop(0.99, #4b4f4e));
+        background: -moz-linear-gradient(right center, #4b4f4e 16%, #5d6362 50%, #4b4f4e 84%); }
+        .current-song-stats-container .song-item .graph .bar2 .indicator2 {
+          background: #606463 url(/images/graph_back_small.png);
+          width: 10px;
+          height: 0; }
+  .current-song-stats-container .comments-title {
+    color: #cbcfce;
+    font-size: 20px;
+    padding: 0 10px 0 0; }
+  .current-song-stats-container .song-comments {
+    width: 350px;
+    margin: 10px 0 5px;
+    border-top: 1px solid #4b4f4e;
+    padding-top: 5px; }
+    .current-song-stats-container .song-comments .commenter-container {
+      width: 350px;
+      overflow: hidden; }
+      .current-song-stats-container .song-comments .commenter-container .commenter-username {
+        font-size: 13px;
+        font-weight: bold;
+        float: left;
+        margin: 0 10px 0 0; }
+      .current-song-stats-container .song-comments .commenter-container .commenter-critic {
+        font-size: 13px;
+        color: #cbcfce;
+        float: left;
+        margin: 2px 0 0 0; }
+    .current-song-stats-container .song-comments .comment-container {
+      width: 350px;
+      margin: 3px 0 0; }
+      .current-song-stats-container .song-comments .comment-container .comment {
+        font-size: 12px; }
+    .current-song-stats-container .song-comments .commenter-comment-date {
+      font-size: 10px;
+      color: #cbcfce;
+      margin: 3px 0 0 0; }
+
 #login {
   width: 345px;
   margin: 30px auto; }
@@ -276,7 +405,18 @@ ul {
     background-color: #4b4f4e; }
 
 #duplicate-review {
-  display: none;
+  display: none; }
+
+#review-submitted {
+  display: none; }
+
+#current-song-stats {
+  display: none; }
+
+#error-message {
+  display: none; }
+
+.modal-popup {
   position: absolute;
   top: 200px;
   left: 250px;
@@ -289,9 +429,11 @@ ul {
   color: white;
   font-size: 16px;
   z-index: 10000; }
-  #duplicate-review #message {
+  .modal-popup #error-message-text {
     padding-bottom: 40px; }
-  #duplicate-review #cancel {
+  .modal-popup #message {
+    padding-bottom: 40px; }
+  .modal-popup #no {
     padding: 5px 10px;
     float: right;
     background: #cbcfce;
@@ -302,10 +444,10 @@ ul {
     font-size: 14px;
     margin-right: 10px;
     cursor: pointer; }
-    #duplicate-review #cancel:hover {
+    .modal-popup #no:hover {
       background: #4b4f4e;
       color: white; }
-  #duplicate-review #override {
+  .modal-popup #yes {
     padding: 5px 10px;
     float: right;
     background: #cbcfce;
@@ -315,11 +457,62 @@ ul {
     color: #111111;
     font-size: 14px;
     cursor: pointer; }
-    #duplicate-review #override:hover {
+    .modal-popup #yes:hover {
       background: #4b4f4e;
       color: white; }
 
+.modal-popup-stats {
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  width: 380px;
+  max-height: 425px;
+  overflow: auto;
+  padding: 10px;
+  background: #606463;
+  border: 4px solid white;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  z-index: 10000; }
+  .modal-popup-stats #message {
+    padding-bottom: 40px; }
+  .modal-popup-stats #no {
+    float: right;
+    height: 21px;
+    width: 21px;
+    background: url(/images/sprites.png) no-repeat -147px -108px;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold; }
+    .modal-popup-stats #no:hover {
+      background-position: -181px -108px; }
+  .modal-popup-stats #yes {
+    padding: 5px 10px;
+    float: right;
+    color: #f2f2f2;
+    font-size: 14px;
+    cursor: pointer; }
+
+#song-just-reviewed {
+  font-weight: bold; }
+
 #darkener {
+  display: none;
+  background-color: black;
+  position: absolute;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; }
+
+#darkener-click {
   display: none;
   background-color: black;
   position: absolute;

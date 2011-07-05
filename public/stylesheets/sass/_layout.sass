@@ -197,8 +197,20 @@ ul
   .menu-background
     background-color: $sf_dark_gray
 
+
 #duplicate-review
   display: none
+
+#review-submitted
+  display: none
+
+#current-song-stats
+  display: none
+
+#error-message
+  display: none
+
+.modal-popup
   position: absolute
   top: 200px
   left: 250px
@@ -210,9 +222,11 @@ ul
   -webkit-border-radius: 15px
   color: white
   font-size: 16px
+  #error-message-text
+    padding-bottom: 40px
   #message
     padding-bottom: 40px
-  #cancel
+  #no
     padding: 5px 10px
     float: right
     background: $sf_light_gray
@@ -226,7 +240,7 @@ ul
     font-size: 14px
     margin-right: 10px
     cursor: pointer
-  #override
+  #yes
     padding: 5px 10px
     float: right
     background: $sf_light_gray
@@ -241,7 +255,58 @@ ul
     cursor: pointer
   z-index: 10000
 
+.modal-popup-stats
+  position: absolute
+  top: 100px
+  left: 250px
+  width: 380px
+  max-height: 425px
+  overflow: auto
+  padding: 10px
+  background: $sf_gray
+  border: 4px solid white
+  -moz-border-radius: 15px
+  -webkit-border-radius: 15px
+  color: white
+  font-size: 16px
+  #message
+    padding-bottom: 40px
+  #no
+    float: right
+    height: 21px
+    width: 21px
+    background: url(/images/sprites.png) no-repeat -147px -108px
+    &:hover
+      background-position: -181px -108px
+    -moz-border-radius: 5px 5px 0 0
+    -webkit-border-radius: 5px 5px 0 0
+    color: white
+    font-size: 10px
+    cursor: pointer
+    font-weight: bold
+  #yes
+    padding: 5px 10px
+    float: right
+    color: $sf_white
+    font-size: 14px
+    cursor: pointer
+  z-index: 10000
+
+#song-just-reviewed
+  font-weight: bold
+
 #darkener
+  display: none
+  background-color: #000
+  position: absolute
+  opacity: .4
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+
+#darkener-click
   display: none
   background-color: #000
   position: absolute

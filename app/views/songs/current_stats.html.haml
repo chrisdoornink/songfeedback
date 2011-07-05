@@ -1,0 +1,64 @@
+.current-song-stats-container
+  .song-list-category
+    .song-title= @current_song["title"]
+    .song-artist= @current_song["artist"]
+  .top-graph
+    .total-ratings-label= "ratings: " + @current_song["reviews"].to_s
+    .key
+      .score
+        .box
+        your score
+      .average
+        .box
+        site average
+  .song-item
+    .ratings
+
+      .graph
+        .bar1
+          .indicator1{:style => "height: "+(100-(@current_song["vocals"]*20)).to_s+";"}
+        .bar2
+          .indicator2{:style => "height: "+(100-(@vocals*20)).to_s+";"}
+        .bar1
+          .indicator1{:style => "height: "+(100-(@current_song["songwriting"]*20)).to_s+";"}
+        .bar2
+          .indicator2{:style => "height: "+(100-(@songwriting*20)).to_s+";"}
+        .bar1
+          .indicator1{:style => "height: "+(100-(@current_song["musicianship"]*20)).to_s+";"}
+        .bar2
+          .indicator2{:style => "height: "+(100-(@musicianship*20)).to_s+";"}
+        .bar1
+          .indicator1{:style => "height: "+(100-(@current_song["creativity"]*20)).to_s+";"}
+        .bar2
+          .indicator2{:style => "height: "+(100-(@creativity*20)).to_s+";"}
+        .bar1
+          .indicator1{:style => "height: "+(100-(@current_song["production"]*20)).to_s+";"}
+        .bar2
+          .indicator2{:style => "height: "+(100-(@production*20)).to_s+";"}
+        .bar1
+          .indicator1{:style => "height: "+(100-(@current_song["overall"]*20)).to_s+";"}
+        .bar2
+          .indicator2{:style => "height: "+(100-(@overall*20)).to_s+";"}
+
+      .graph-labels
+        .graph-label= "vocals"
+        .graph-label= "songwriting"
+        .graph-label= "musicianship"
+        .graph-label= "creativity"
+        .graph-label= "production"
+        .graph-label= "overall"
+  - Rails.logger.info(@current_song.comments)
+  - Rails.logger.info(@current_song.comments.size)
+  - Rails.logger.info("__________________________________")
+  -if @current_song.comments.size > 0
+    .comments-title Comments
+  -@current_song.comments.each do |comment|
+    .song-comments
+
+      .commenter-container
+        .commenter-username=comment.user.username
+        .commenter-critic=comment.user.harsh
+
+      .comment-container
+        .comment=comment.comment
+      .commenter-comment-date=comment.created_at

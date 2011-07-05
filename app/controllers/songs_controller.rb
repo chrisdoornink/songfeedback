@@ -44,7 +44,7 @@ class SongsController < ApplicationController
       @creativity_avg = Feedback.average(:creativity, :conditions => {:song_id => params[:songId]})
       @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
       @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
-      unless params[:comments] == nil
+      unless params[:comments] == nil || params[:comments] == "null"
         Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
       end
       @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
@@ -67,13 +67,24 @@ class SongsController < ApplicationController
     @creativity_avg = Feedback.average(:creativity, :conditions => {:song_id => params[:songId]})
     @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
     @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
-    unless params[:comments] == nil
+    unless params[:comments] == nil || params[:comments] == "null"
       Rails.logger.info(params[:comments])
       Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
     end
     @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
     Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
 
+    render :layout => false
+  end
+
+  def current_stats
+    @current_song = Song.find(params[:songId])
+    @vocals = Song.average("vocals")
+    @songwriting = Song.average("songwriting")
+    @musicianship = Song.average("musicianship")
+    @creativity = Song.average("creativity")
+    @production = Song.average("production")
+    @overall = Song.average("overall")
     render :layout => false
   end
 

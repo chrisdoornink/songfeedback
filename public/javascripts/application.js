@@ -11,6 +11,7 @@ var production = null;
 var overall = null;
 var comments = null;
 var songId = null;
+var songTitle = null;
 
 $(document).ready(function() {
   $.jPlayer.timeFormat.padMin = false;
@@ -90,6 +91,7 @@ $(document).ready(function() {
     $("#player #player-artist p").html($(this).attr("artist"));
     $("#player #player-description p").html($(this).attr("desc"));
     songId = $(this).attr("id");
+    songTitle = $(this).attr("songtitle");
     $("#jquery_jplayer_1").jPlayer("setMedia", {
       mp3: $(this).attr("loc")
     });
@@ -167,29 +169,80 @@ $(document).ready(function() {
             $("#duplicate-review").show();
           }
           else {
-            console.log("Should have a message here that says it worked");
+            $("#darkener-click").css("opacity", .5).show();
+            $("#review-submitted").show();
           }
         }
       });
     }
   });
 
-  $("#duplicate-review").delegate("#cancel", "click", function() {
+  $("#duplicate-review").delegate("#no", "click", function() {
     $("#darkener").css("opacity", .5).hide();
     $("#duplicate-review").hide();
   });
 
-  $("#duplicate-review").delegate("#override", "click", function() {
-    $("#darkener").css("opacity", .5).hide();
-    $("#duplicate-review").hide();
+  $("#duplicate-review").delegate("#yes", "click", function() {
+
     $.ajax({
       type: "POST",
       url: "/songs/override",
       data: "vocals="+vocals+"&songwriting="+songwriting+"&musicianship="+musicianship+"&creativity="+creativity+"&production="+production+"&overall="+overall+"&comments="+comments+"&songId="+songId,
       success: function(data, status, jqXHR){
-        console.log("Should have a message here that says it worked");
+        $("#duplicate-review").hide();
+        $("#darkener").css("opacity", .5).hide();
+        $("#darkener-click").css("opacity", .5).show();
+        $("#review-submitted").show();
+        $("#song-just-reviewed").html(songTitle);
+      },
+      error: function(data){
+        console.log("NEED AN ERROR MESSAGE HERE");
       }
     });
+  });
+
+  $("#review-submitted").delegate("#no", "click", function() {
+    $("#darkener-click").css("opacity", .5).hide();
+    $("#review-submitted").hide();
+  });
+
+  $("#review-submitted").delegate("#yes", "click", function() {
+    $("#review-submitted").hide();
+    $.ajax({
+      type: "GET",
+      url: "/songs/current_stats",
+      data: "songId="+songId,
+      success: function(data, status, jqXHR){
+        $("#darkener-click").css("opacity", .5).show();
+        $("#darkener").css("opacity", .5).hide();
+        $("#current-song-stats").show();
+        $("#current-song-stats-show").html(data);
+      },
+      error: function(data){
+        $("#darkener-click").css("opacity", .5).show();
+        $("#darkener").css("opacity", .5).hide();
+        $("#current-song-stats").show();
+        $("#current-song-stats-show").html("An error occurred retrieving this songs data");
+      }
+    });
+
+  });
+
+  $("#current-song-stats").delegate("#no", "click", function() {
+    $("#darkener-click").css("opacity", .5).hide();
+    $("#current-song-stats").hide();
+  });
+
+  $("body").delegate("#darkener-click", "click", function() {
+    $("#darkener-click").css("opacity", .5).hide();
+    $("#current-song-stats").hide();
+    $("#review-submitted").hide();
+    $("#error-message").hide();
+  });
+
+  $("#error-message").delegate("#no", "click", function() {
+    $("#darkener-click").css("opacity", .5).hide();
+    $("#error-message").hide();
   });
 
 
@@ -213,9 +266,15 @@ function validateFeedbackForm(){
     return false;
   }
   else if (vocals == null || creativity == null || songwriting == null || musicianship == null || production == null || overall == null){
-    alert("you have to rate the song in every category ass!");
+    showError("You need to give a rating in every category");
     return false;
   }
   else
     return true
+}
+
+function showError(message){
+  $("#darkener-click").css("opacity", .5).show();
+  $("#error-message").show();
+  $("#error-message-text").html(message);
 }
