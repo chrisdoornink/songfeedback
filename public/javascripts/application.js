@@ -90,6 +90,8 @@ $(document).ready(function() {
     $("#player #player-title p").html($(this).attr("songTitle"));
     $("#player #player-artist p").html($(this).attr("artist"));
     $("#player #player-description p").html($(this).attr("desc"));
+    $("#player-metadata").show();
+    $(".jp-audio").show();
     songId = $(this).attr("id");
     songTitle = $(this).attr("songtitle");
     $("#jquery_jplayer_1").jPlayer("setMedia", {

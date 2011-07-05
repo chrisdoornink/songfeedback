@@ -726,13 +726,27 @@ ul {
     width: 100%;
     background: url(/images/sprites.png) no-repeat 16px 6px;
     background-color: #81c3cf;
-    margin-bottom: 15px; }
+    margin-bottom: 7px; }
   #player #jquery_jplayer_1 {
     overflow: auto; }
   #player .jp-audio {
+    display: none;
     overflow: auto; }
   #player .jp-controls {
     float: left; }
+  #player #player-metadata {
+    display: none;
+    margin: 4px 4px 0;
+    padding: 4px;
+    border-bottom: 1px solid #999999;
+    border-top: 2px solid black;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    background-color: black;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #373737), color-stop(0.6, #474747));
+    background: -moz-linear-gradient(center bottom, #232323 20%, #333333 60%);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px; }
   #player #player-title p {
     font-size: 14px;
     font-weight: bold;
