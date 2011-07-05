@@ -172,6 +172,9 @@ $(document).ready(function() {
             $("#darkener-click").css("opacity", .5).show();
             $("#review-submitted").show();
           }
+        },
+        error: function(data){
+          showError("There was an error submitting your feedback. Please try again.");
         }
       });
     }
@@ -196,7 +199,7 @@ $(document).ready(function() {
         $("#song-just-reviewed").html(songTitle);
       },
       error: function(data){
-        console.log("NEED AN ERROR MESSAGE HERE");
+        showError("There was an error submitting your feedback. Please try again.");
       }
     });
   });
@@ -262,7 +265,7 @@ function resetFeedbackForm(){
 
 function validateFeedbackForm(){
   if (songId == null){
-    alert("you have to pick a song you fool!");
+    showError("You can't submit feedback without selecting a song first");
     return false;
   }
   else if (vocals == null || creativity == null || songwriting == null || musicianship == null || production == null || overall == null){
