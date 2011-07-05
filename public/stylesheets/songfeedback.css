@@ -752,7 +752,7 @@ ul {
     font-weight: bold;
     color: #f2f2f2;
     margin: 4px;
-    padding: 0;
+    padding: 0 12px;
     text-align: center; }
   #player #player-artist p {
     font-size: 13px;
@@ -767,6 +767,16 @@ ul {
     margin: 4px;
     padding: 0;
     text-align: center; }
+  #player #player-stats-button {
+    position: absolute;
+    top: 69px;
+    left: 238px;
+    background: url(/images/sprites.png) no-repeat -126px -148px;
+    width: 19px;
+    height: 15px;
+    cursor: pointer; }
+    #player #player-stats-button:hover {
+      background-position: -162px -148px; }
   #player #player-controls {
     overflow: auto; }
   #player #play-pause-control {

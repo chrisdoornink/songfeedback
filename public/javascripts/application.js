@@ -213,24 +213,7 @@ $(document).ready(function() {
 
   $("#review-submitted").delegate("#yes", "click", function() {
     $("#review-submitted").hide();
-    $.ajax({
-      type: "GET",
-      url: "/songs/current_stats",
-      data: "songId="+songId,
-      success: function(data, status, jqXHR){
-        $("#darkener-click").css("opacity", .5).show();
-        $("#darkener").css("opacity", .5).hide();
-        $("#current-song-stats").show();
-        $("#current-song-stats-show").html(data);
-      },
-      error: function(data){
-        $("#darkener-click").css("opacity", .5).show();
-        $("#darkener").css("opacity", .5).hide();
-        $("#current-song-stats").show();
-        $("#current-song-stats-show").html("An error occurred retrieving this songs data");
-      }
-    });
-
+    getCurrentSongStats();
   });
 
   $("#current-song-stats").delegate("#no", "click", function() {
@@ -248,6 +231,10 @@ $(document).ready(function() {
   $("#error-message").delegate("#no", "click", function() {
     $("#darkener-click").css("opacity", .5).hide();
     $("#error-message").hide();
+  });
+
+  $("#player").delegate("#player-stats-button", "click", function() {
+    getCurrentSongStats();
   });
 
 
@@ -282,4 +269,24 @@ function showError(message){
   $("#darkener-click").css("opacity", .5).show();
   $("#error-message").show();
   $("#error-message-text").html(message);
+}
+
+function getCurrentSongStats(){
+  $.ajax({
+    type: "GET",
+    url: "/songs/current_stats",
+    data: "songId="+songId,
+    success: function(data, status, jqXHR){
+      $("#darkener-click").css("opacity", .5).show();
+      $("#darkener").css("opacity", .5).hide();
+      $("#current-song-stats").show();
+      $("#current-song-stats-show").html(data);
+    },
+    error: function(data){
+      $("#darkener-click").css("opacity", .5).show();
+      $("#darkener").css("opacity", .5).hide();
+      $("#current-song-stats").show();
+      $("#current-song-stats-show").html("An error occurred retrieving this songs data");
+    }
+  });
 }
