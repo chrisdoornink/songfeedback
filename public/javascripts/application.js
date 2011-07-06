@@ -237,6 +237,22 @@ $(document).ready(function() {
     getCurrentSongStats();
   });
 
+  $("#main-section-frame").delegate(".upload-song-button", "click", function() {
+    if ($("#song_title").val() != "song title" && $("#song_title").val().match(/\S/)){
+      if ($("#song_artist").val() != "artist" && $("#song_artist").val().match(/\S/)){
+        if ($("#song_audio").val().match(/.mp3$/))
+          return true;
+        else
+          showError("You need to select an mp3 file to upload")
+      }
+      else
+        showError("You need to enter an artist name");
+    }
+    else
+      showError("You need to enter a song title");
+    return false;
+  });
+
 
 });
 

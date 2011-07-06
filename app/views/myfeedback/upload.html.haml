@@ -11,4 +11,4 @@
       = f.file_field :audio
     = f.hidden_field :user_id, :value => @user_info["id"]
     .form-item
-      = submit_tag "Upload"
+      = submit_tag "Upload", :class => "upload-song-button"
