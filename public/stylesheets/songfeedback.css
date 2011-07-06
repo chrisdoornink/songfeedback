@@ -504,7 +504,7 @@ ul {
 #darkener {
   display: none;
   background-color: black;
-  position: absolute;
+  position: fixed;
   opacity: 0.4;
   top: 0;
   left: 0;
@@ -515,7 +515,7 @@ ul {
 #darkener-click {
   display: none;
   background-color: black;
-  position: absolute;
+  position: fixed;
   opacity: 0.4;
   top: 0;
   left: 0;
