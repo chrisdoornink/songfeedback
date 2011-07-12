@@ -837,12 +837,40 @@ ul {
     color: #f2f2f2;
     margin: 16px 1px 0; }
   #player #player-volume {
+    z-index: 1000;
     float: left;
     height: 32px;
     width: 32px;
-    background: url(/images/sprites.png) no-repeat -10px -95px; }
+    background: url(/images/sprites.png) no-repeat -10px -95px;
+    cursor: pointer; }
     #player #player-volume:hover {
       background-position: -39px -95px; }
+  #player #player-volume-container {
+    display: none;
+    z-index: 999;
+    position: absolute;
+    left: 21px;
+    margin-top: 8px;
+    height: 130px;
+    width: 24px;
+    background: #cbcfce url(/images/sprites.png) no-repeat -20px -193px;
+    border: 2px solid white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px; }
+  #player #player-volume-slider {
+    height: 100px;
+    width: 2px;
+    margin: 25px 11px 5px;
+    background: #4b4f4e; }
+    #player #player-volume-slider #player-slider-knob {
+      height: 5px;
+      width: 12px;
+      background: #606463;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border: 2px solid #4b4f4e;
+      position: relative;
+      right: 7px; }
   #player .player-divider {
     margin: 10px 10px 0; }
   #player #feedback-frame {
@@ -936,8 +964,8 @@ ul {
     padding: 5px 10px;
     border-bottom: 1px solid #cbcfce; }
     .song-list-container .song-item .song-list-item:hover {
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
-      background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }
+      background: #222222;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6)); }
     .song-list-container .song-item .song-list-item .song-list-play-button-container {
       width: 30px;
       height: 30px;
@@ -956,7 +984,7 @@ ul {
         height: 30px;
         background: url(/images/sprites.png) no-repeat -76px -57px; }
         .song-list-container .song-item .song-list-item .song-list-play-button-container .song-list-play-button:hover {
-          background: url(/images/sprites.png) no-repeat -106px -57px; }
+          background-position: -106px -57px; }
     .song-list-container .song-item .song-list-item .song-list-names {
       float: left;
       width: 330px; }

@@ -101,6 +101,34 @@ $(document).ready(function() {
     resetFeedbackForm();
   });
 
+  $("#player").delegate("#player-volume", "mouseenter", function(){
+    $("#player-volume-container").fadeIn();
+  });
+
+  $("#player-volume-container").mouseenter(function() {
+    clearTimeout($("#player-volume-container").data("idleTimeout"));
+  });
+
+  $("#player-volume-container").mouseleave(function() {
+    $("#player-volume-container").data("idleTimeout", setTimeout(function() {
+      $("#player-volume-container").fadeOut();
+    }, 1200));
+  });
+
+  $("body").delegate("#player #player-volume-container", "mouseenter", function() {
+    $("#player-slider-knob").draggable({
+      axis: "y",
+      containment: 'parent',
+      drag: function(event, ui) {
+        var slider_position_px = $("#player-slider-knob").css("top");
+        var slider_position = slider_position_px.substring(0,slider_position_px.indexOf("px"));
+        var slider_height = 91;
+        var slider_ratio = (slider_height-slider_position)/slider_height;
+        $("#jquery_jplayer_1").jPlayer("volume", slider_ratio);
+      }
+    });
+  });
+
   $("#jquery_jplayer_1").jPlayer({
     ready: function() {
       $.jPlayer.timeFormat.padMin = false;
@@ -167,11 +195,11 @@ $(document).ready(function() {
         data: "vocals="+vocals+"&songwriting="+songwriting+"&musicianship="+musicianship+"&creativity="+creativity+"&production="+production+"&overall="+overall+"&comments="+comments+"&songId="+songId,
         success: function(data, status, jqXHR){
           if (data.indexOf("dupe") != -1){
-            $("#darkener").css("opacity", .5).show();
+            $("#darkener").css("opacity", .5).fadeIn();
             $("#duplicate-review").show();
           }
           else {
-            $("#darkener-click").css("opacity", .5).show();
+            $("#darkener-click").css("opacity", .5).fadeIn();
             $("#review-submitted").show();
           }
         },
@@ -183,7 +211,7 @@ $(document).ready(function() {
   });
 
   $("#duplicate-review").delegate("#no", "click", function() {
-    $("#darkener").css("opacity", .5).hide();
+    $("#darkener").css("opacity", .5).fadeOut();
     $("#duplicate-review").hide();
   });
 
@@ -207,7 +235,7 @@ $(document).ready(function() {
   });
 
   $("#review-submitted").delegate("#no", "click", function() {
-    $("#darkener-click").css("opacity", .5).hide();
+    $("#darkener-click").css("opacity", .5).fadeOut();
     $("#review-submitted").hide();
   });
 
@@ -217,19 +245,19 @@ $(document).ready(function() {
   });
 
   $("#current-song-stats").delegate("#no", "click", function() {
-    $("#darkener-click").css("opacity", .5).hide();
+    $("#darkener-click").css("opacity", .5).fadeOut();
     $("#current-song-stats").hide();
   });
 
   $("body").delegate("#darkener-click", "click", function() {
-    $("#darkener-click").css("opacity", .5).hide();
+    $("#darkener-click").css("opacity", .5).fadeOut();
     $("#current-song-stats").hide();
     $("#review-submitted").hide();
     $("#error-message").hide();
   });
 
   $("#error-message").delegate("#no", "click", function() {
-    $("#darkener-click").css("opacity", .5).hide();
+    $("#darkener-click").css("opacity", .5).fadeOut();
     $("#error-message").hide();
   });
 
@@ -282,7 +310,7 @@ function validateFeedbackForm(){
 }
 
 function showError(message){
-  $("#darkener-click").css("opacity", .5).show();
+  $("#darkener-click").css("opacity", .5).fadeIn();
   $("#error-message").show();
   $("#error-message-text").html(message);
 }
@@ -293,13 +321,13 @@ function getCurrentSongStats(){
     url: "/songs/current_stats",
     data: "songId="+songId,
     success: function(data, status, jqXHR){
-      $("#darkener-click").css("opacity", .5).show();
+      $("#darkener-click").css("opacity", .5).fadeIn();
       $("#darkener").css("opacity", .5).hide();
       $("#current-song-stats").show();
       $("#current-song-stats-show").html(data);
     },
     error: function(data){
-      $("#darkener-click").css("opacity", .5).show();
+      $("#darkener-click").css("opacity", .5).fadeIn();
       $("#darkener").css("opacity", .5).hide();
       $("#current-song-stats").show();
       $("#current-song-stats-show").html("An error occurred retrieving this songs data");

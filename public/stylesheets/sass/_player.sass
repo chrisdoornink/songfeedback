@@ -138,12 +138,40 @@
     color: $sf_white
     margin: 16px 1px 0
   #player-volume
+    z-index: 1000
     float: left
     height: 32px
     width: 32px
     background: url(/images/sprites.png) no-repeat -10px -95px
     &:hover
       background-position: -39px -95px
+    cursor: pointer
+  #player-volume-container
+    display: none
+    z-index: 999
+    position: absolute
+    left: 21px
+    margin-top: 8px
+    height: 130px
+    width: 24px
+    background: $sf_light_gray url(/images/sprites.png) no-repeat -20px -193px
+    border: 2px solid white
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
+  #player-volume-slider
+    height: 100px
+    width: 2px
+    margin: 25px 11px 5px
+    background: $sf_dark_gray
+    #player-slider-knob
+      height: 5px
+      width: 12px
+      background: $sf_gray
+      -moz-border-radius: 2px
+      -webkit-border-radius: 2px
+      border: 2px solid $sf_dark_gray
+      position: relative
+      right: 7px
   .player-divider
     margin: 10px 10px 0
 
