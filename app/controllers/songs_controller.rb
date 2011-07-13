@@ -51,6 +51,15 @@ class SongsController < ApplicationController
         Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
         @reviews = Feedback.count(:conditions => {:user_id => @user_id})
         User.update(@user_id, {:reviews => (@reviews)})
+
+        @user_critiques = Feedback.find_all_by_user_id(@user_id)
+        @score = 0
+        @user_critiques.each do |critique|
+          @songs_average = Song.find(critique.song_id)
+          @score = @score+(critique.overall-@songs_average["overall"])
+        end
+        @score = ((@score/@reviews)*3)+5
+
       end
     else
       @message = "logged_out"
@@ -72,11 +81,19 @@ class SongsController < ApplicationController
     @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
     @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
     unless params[:comments] == nil || params[:comments] == "null"
-      Rails.logger.info(params[:comments])
       Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
     end
     @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
     Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
+
+    @user_critiques = Feedback.find_all_by_user_id(@user_id)
+    @score = 0
+    @user_critiques.each do |critique|
+      @songs_average = Song.find(critique.song_id)
+      @score = @score+(critique.overall-@songs_average["overall"])
+    end
+    @reviews = Feedback.count(:conditions => {:user_id => @user_id})
+    @score = ((@score/@reviews)*3)+5
 
     render :layout => false
   end
