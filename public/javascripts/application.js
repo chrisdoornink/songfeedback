@@ -50,6 +50,10 @@ $(document).ready(function() {
     $("#menu-myfeedback").removeClass("menu-background");
   });
 
+  $("#menu").delegate(".myfeedback-logged-out", "click", function() {
+    showLoginPrompt("You must be logged in to upload songs");
+  });
+
   $("#menu").delegate("#menu-myaccount", "mouseenter", function() {
     $("#menu-myaccount-list").show();
     $("#menu-myaccount").addClass("menu-background");
@@ -63,6 +67,10 @@ $(document).ready(function() {
   $("#menu").delegate("#menu-myaccount-list ul li a", "click", function() {
     $("#menu-myaccount-list").hide();
     $("#menu-myaccount").removeClass("menu-background");
+  });
+
+  $("#menu").delegate(".myaccount-logged-out", "click", function() {
+    window.location = '/authentication/login';
   });
 
   $("#main-section-frame").delegate(".song-list-item", "mouseenter", function() {
@@ -188,7 +196,6 @@ $(document).ready(function() {
   $("#feedback-form #feedback-submit").click(function() {
     var feedback = [vocals,songwriting,musicianship,creativity,production,overall,comments];
     if (validateFeedbackForm()){
-      console.log(feedback);
       $.ajax({
         type: "POST",
         url: "/songs/feedback",
@@ -198,9 +205,12 @@ $(document).ready(function() {
             $("#darkener").css("opacity", .5).fadeIn();
             $("#duplicate-review").show();
           }
-          else {
+          if (data.indexOf("first") != -1) {
             $("#darkener-click").css("opacity", .5).fadeIn();
             $("#review-submitted").show();
+          }
+          if (data.indexOf("logged_out") != -1) {
+            showLoginPrompt("You must be logged in to review songs");
           }
         },
         error: function(data){
@@ -216,7 +226,6 @@ $(document).ready(function() {
   });
 
   $("#duplicate-review").delegate("#yes", "click", function() {
-
     $.ajax({
       type: "POST",
       url: "/songs/override",
@@ -254,11 +263,19 @@ $(document).ready(function() {
     $("#current-song-stats").hide();
     $("#review-submitted").hide();
     $("#error-message").hide();
+    $("#login-message").hide();
   });
 
   $("#error-message").delegate("#no", "click", function() {
     $("#darkener-click").css("opacity", .5).fadeOut();
     $("#error-message").hide();
+  });
+
+  $("#login-message").delegate("#no", "click", function() {
+    window.location = '/authentication/login';
+  });
+  $("#login-message").delegate("#yes", "click", function() {
+    window.location = '/authentication/register';
   });
 
   $("#player").delegate("#player-stats-button", "click", function() {
@@ -333,4 +350,10 @@ function getCurrentSongStats(){
       $("#current-song-stats-show").html("An error occurred retrieving this songs data");
     }
   });
+}
+
+function showLoginPrompt(message){
+  $("#darkener-click").css("opacity", .5).fadeIn();
+  $("#login-message").show();
+  $("#login-message-text").html(message);
 }

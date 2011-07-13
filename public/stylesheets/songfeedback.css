@@ -266,6 +266,7 @@ ul {
       margin: 14px 0 0 30px; }
       #container #header #menu #menu-songs {
         overflow: auto;
+        cursor: pointer;
         float: left;
         padding: 4px 12px 5px 8px;
         margin-right: 10px;
@@ -279,6 +280,7 @@ ul {
           background: url(/images/sprites.png) no-repeat 22px -171px; }
       #container #header #menu #menu-myfeedback {
         overflow: auto;
+        cursor: pointer;
         float: left;
         padding: 4px 12px 5px 8px;
         margin-right: 10px;
@@ -290,8 +292,19 @@ ul {
           width: 108px;
           height: 14px;
           background: url(/images/sprites.png) no-repeat 74px -171px; }
+      #container #header #menu #menu-upload {
+        overflow: auto;
+        cursor: pointer;
+        float: left;
+        padding: 4px 12px 5px 8px;
+        margin-right: 10px;
+        -moz-border-radius: 5px 5px 0 0;
+        -webkit-border-radius: 5px 5px 0 0; }
+        #container #header #menu #menu-upload:hover {
+          color: #81c3cf; }
       #container #header #menu #menu-myaccount {
         overflow: auto;
+        cursor: pointer;
         float: right;
         padding: 4px 8px 5px 8px;
         margin-right: 10px;
@@ -305,6 +318,16 @@ ul {
           width: 10px;
           height: 14px;
           background: url(/images/sprites.png) no-repeat -23px -171px; }
+      #container #header #menu #menu-signin {
+        overflow: auto;
+        cursor: pointer;
+        float: right;
+        padding: 4px 12px 5px 8px;
+        margin-right: 10px;
+        -moz-border-radius: 5px 5px 0 0;
+        -webkit-border-radius: 5px 5px 0 0; }
+        #container #header #menu #menu-signin:hover {
+          color: #81c3cf; }
       #container #header #menu #menu-songs-list {
         background: #4b4f4e;
         position: absolute;
@@ -413,6 +436,9 @@ ul {
 #current-song-stats {
   display: none; }
 
+#login-message {
+  display: none; }
+
 #error-message {
   display: none; }
 
@@ -431,7 +457,7 @@ ul {
   z-index: 10000; }
   .modal-popup #error-message-text {
     padding-bottom: 40px; }
-  .modal-popup #message {
+  .modal-popup #message, .modal-popup #login-message-text {
     padding-bottom: 40px; }
   .modal-popup #no {
     padding: 5px 10px;
@@ -500,6 +526,51 @@ ul {
 
 #song-just-reviewed {
   font-weight: bold; }
+
+.modal-popup-login {
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  width: 380px;
+  padding: 10px;
+  background: #606463;
+  border: 4px solid white;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  z-index: 10000; }
+  .modal-popup-login #error-message-text {
+    padding-bottom: 40px; }
+  .modal-popup-login #message {
+    padding-bottom: 40px; }
+  .modal-popup-login #no {
+    padding: 5px 10px;
+    float: right;
+    background: #cbcfce;
+    border: 2px solid white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #111111;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer; }
+    .modal-popup-login #no:hover {
+      background: #4b4f4e;
+      color: white; }
+  .modal-popup-login #yes {
+    padding: 5px 10px;
+    float: right;
+    background: #cbcfce;
+    border: 2px solid white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #111111;
+    font-size: 14px;
+    cursor: pointer; }
+    .modal-popup-login #yes:hover {
+      background: #4b4f4e;
+      color: white; }
 
 #darkener {
   display: none;

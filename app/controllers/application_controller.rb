@@ -13,10 +13,10 @@ class ApplicationController < ActionController::Base
         User.update(@user_id, {:token => @token_new})
         cookies[:authenticate] = {:value => @token_new, :expires => 5.days.from_now, :domain => nil}
       else
-        redirect_to "/authentication/login"
+        #redirect_to "/authentication/login"
       end
     else
-      redirect_to "/authentication/login"
+      #redirect_to "/authentication/login"
     end
     user_info = @user_info
   end

@@ -30,28 +30,32 @@ class SongsController < ApplicationController
   end
 
   def feedback
-    @duplicate_test = Feedback.all(:conditions => { :song_id => params[:songId], :user_id => @user_id })
-
-    if @duplicate_test.length > 0
-      @message = "dupe"
-    else
-      @message = "first"
-      Feedback.create(:song_id => params[:songId], :user_id => @user_id, :vocals => params[:vocals], :songwriting => params[:songwriting], :musicianship => params[:musicianship], :creativity => params[:creativity], :production => params[:production], :overall => params[:overall], :comments => params[:comments])
-      @number = Feedback.count(:conditions => {:song_id => params[:songId]})
-      @vocals_avg = Feedback.average(:vocals, :conditions => {:song_id => params[:songId]})
-      @songwriting_avg = Feedback.average(:songwriting, :conditions => {:song_id => params[:songId]})
-      @musicianship_avg = Feedback.average(:musicianship, :conditions => {:song_id => params[:songId]})
-      @creativity_avg = Feedback.average(:creativity, :conditions => {:song_id => params[:songId]})
-      @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
-      @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
-      unless params[:comments] == nil || params[:comments] == "null"
-        Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
+    if @user_id != ""
+      @duplicate_test = Feedback.all(:conditions => { :song_id => params[:songId], :user_id => @user_id })
+      if @duplicate_test.length > 0
+        @message = "dupe"
+      else
+        @message = "first"
+        Feedback.create(:song_id => params[:songId], :user_id => @user_id, :vocals => params[:vocals], :songwriting => params[:songwriting], :musicianship => params[:musicianship], :creativity => params[:creativity], :production => params[:production], :overall => params[:overall], :comments => params[:comments])
+        @number = Feedback.count(:conditions => {:song_id => params[:songId]})
+        @vocals_avg = Feedback.average(:vocals, :conditions => {:song_id => params[:songId]})
+        @songwriting_avg = Feedback.average(:songwriting, :conditions => {:song_id => params[:songId]})
+        @musicianship_avg = Feedback.average(:musicianship, :conditions => {:song_id => params[:songId]})
+        @creativity_avg = Feedback.average(:creativity, :conditions => {:song_id => params[:songId]})
+        @production_avg = Feedback.average(:production, :conditions => {:song_id => params[:songId]})
+        @overall_avg = Feedback.average(:overall, :conditions => {:song_id => params[:songId]})
+        unless params[:comments] == nil || params[:comments] == "null"
+          Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
+        end
+        @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
+        Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
+        @reviews = Feedback.count(:conditions => {:user_id => @user_id})
+        User.update(@user_id, {:reviews => (@reviews)})
       end
-      @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
-      Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
-      @reviews = Feedback.count(:conditions => {:user_id => @user_id})
-      User.update(@user_id, {:reviews => (@reviews)})
+    else
+      @message = "logged_out"
     end
+
 
     render :layout => false
   end

@@ -25,34 +25,42 @@
                     %a.ajax{:href => "/songs/top"} Top Rated
                   -#%li
                   -#  %a.last.ajax{:href => "/songs/genre"} By Genre
-            #menu-myfeedback
-              .myfeedback My Feedback
-              .arrow
-              #menu-myfeedback-list
-                %ul
-                  %li
-                    %a.first.ajax{:href => "/myfeedback/mysongs"} My Songs
-                  %li
-                    %a.ajax{:href => "/myfeedback/upload"} Upload Songs
-                  %li
-                    #user-stat-container.last
-                      .menu-stat
-                        Feedback Score: 180
-                      .menu-stat
-                        Level: Rockstar | Strictness: Harsh
-                      .menu-stat
-                        Uploads:
-                        =@user_info["uploads"]
-                        Available: 2
-            #menu-myaccount
-              .arrow
-              .myaccount
-                = @username
+            -if @username
+              #menu-myfeedback
+                .myfeedback My Feedback
+                .arrow
+                #menu-myfeedback-list
+                  %ul
+                    %li
+                      %a.first.ajax{:href => "/myfeedback/mysongs"} My Songs
+                    %li
+                      %a.ajax{:href => "/myfeedback/upload"} Upload Songs
+                    %li
+                      #user-stat-container.last
+                        .menu-stat
+                          Feedback Score: 180
+                        .menu-stat
+                          Level: Rockstar | Strictness: Harsh
+                        .menu-stat
+                          Uploads:
+                          =@user_info["uploads"]
+                          Available: 2
+            -else
+              #menu-upload
+                .myfeedback-logged-out Upload
 
-              #menu-myaccount-list
-                %ul
-                  %li
-                    %a.last.ajax{:href => "/authentication/logout"} Sign Out
+            -if @username
+              #menu-myaccount
+                .arrow
+                .myaccount
+                  = @username
+                #menu-myaccount-list
+                  %ul
+                    %li
+                      %a.last.ajax{:href => "/authentication/logout"} Sign Out
+            -else
+              #menu-signin
+                .myaccount-logged-out Sign In / Register
         #player
           #player-header
           #player-metadata{:title => "View Song Stats and Comments"}
@@ -173,3 +181,8 @@
           #error-message-text Error
           #no Okay
 
+      #login-message
+        .modal-popup
+          #login-message-text You must be logged in to do that
+          #yes Register
+          #no Login
