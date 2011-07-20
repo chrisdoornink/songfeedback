@@ -166,14 +166,78 @@ ul
             &:hover
               background-color: $sf_pri
           #user-stat-container
-            margin: 5px
-            background: $sf_light_gray
-            border-top: 1px solid white
+            cursor: normal
+            margin: 0 5px 5px
+            background: #333
+            border-top: 1px solid $sf_gray
+            border-bottom: 1px solid black
+            border-left: 1px solid #333
+            border-right: 1px solid black
+            #critique-scale-container
+              width: 180px
+              height: 15px
+              padding: 4px 5px
+              overflow: hidden
+              color: $sf_dark_gray
+              background: $sf_light_gray
+              .critique-scale-box
+                float: left
+                width: 15px
+                height: 6px
+                margin-right: 3px
+                background: $sf_dark_gray
+              #csb1
+                background: #FF0800
+              #csb2
+                background: #FF1F17
+              #csb3
+                background: #FF342E
+              #csb4
+                background: #FF4C45
+              #csb5
+                background: #FF635C
+              #csb6
+                background: #505CDF
+              #csb7
+                background: #3C4ADF
+              #csb8
+                background: #2837DF
+              #csb9
+                background: #1425DF
+              #csb10
+                background: #0012DF
+              #critique-legend
+                width: 178px
+                overflow: auto
+                color: #222
+                #harsh-label
+                  width: 73px
+                  float: left
+                  font-size: 10px
+                #neutral-label
+                  float: left
+                  font-size: 10px
+                #nice-label
+                  float: right
+                  font-size: 10px
+            .critique-scale-title
+              color: #222
+              font-size: 11px
+              padding: 2px 5px 0
+              margin: 3px 0 0
+              border-top: 1px solid $sf_dark_gray
+              background: $sf_light_gray
             .menu-stat
+              font-size: 13px
               display: block
               outline: 0
-              padding: 4px 10px
-              color: $sf_dark_gray
+              padding: 2px 5px 0
+              color: $sf_light_gray
+              overflow: hidden
+              .stat-left
+                float: left
+              .stat-right
+                float: right
           li
             .last
               -moz-border-radius: 0 0 5px 5px

@@ -50,7 +50,8 @@ class SongsController < ApplicationController
         @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
         Song.update(params[:songId], {:reviews => @number, :totalcomments => @comment_number, :vocals => @vocals_avg, :songwriting => @songwriting_avg, :musicianship => @musicianship_avg, :creativity => @creativity_avg, :production => @production_avg, :overall => @overall_avg})
         @reviews = Feedback.count(:conditions => {:user_id => @user_id})
-        User.update(@user_id, {:reviews => (@reviews)})
+        @comments = Comment.count(:conditions => {:user_id => @user_id})
+        User.update(@user_id, {:reviews => (@reviews), :commented => (@comments), :score => ((@reviews*4)+(@comments))})
 
         @user_critiques = Feedback.find_all_by_user_id(@user_id)
         @score = 0
@@ -59,6 +60,7 @@ class SongsController < ApplicationController
           @score = @score+(critique.overall-@songs_average["overall"])
         end
         @score = ((@score/@reviews)*3)+5
+        User.update(@user_id, {:harsh => (@score)})
 
       end
     else
@@ -94,6 +96,11 @@ class SongsController < ApplicationController
     end
     @reviews = Feedback.count(:conditions => {:user_id => @user_id})
     @score = ((@score/@reviews)*3)+5
+    User.update(@user_id, {:harsh => (@score)})
+    @reviews = Feedback.count(:conditions => {:user_id => @user_id})
+    @comments = Comment.count(:conditions => {:user_id => @user_id})
+    User.update(@user_id, {:reviews => (@reviews), :commented => (@comments), :score => ((@reviews*4)+(@comments))})
+
 
     render :layout => false
   end

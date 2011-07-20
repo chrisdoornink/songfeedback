@@ -217,6 +217,27 @@
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px; }
 
+.song-feedback-button-reg {
+  float: left;
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 5px 15px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #888888;
+  border-bottom: 2px solid #eeeeee;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  color: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #81c3cf;
+  cursor: pointer; }
+  .song-feedback-button-reg a {
+    color: white; }
+    .song-feedback-button-reg a:hover {
+      color: #eeeeee; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Verdana, Sans-Serif;
   font-size: 0.9em;
@@ -380,14 +401,78 @@ ul {
           #container #header #menu #menu-myfeedback-list ul a:hover {
             background-color: #81c3cf; }
         #container #header #menu #menu-myfeedback-list ul #user-stat-container {
-          margin: 5px;
-          background: #cbcfce;
-          border-top: 1px solid white; }
+          cursor: normal;
+          margin: 0 5px 5px;
+          background: #333333;
+          border-top: 1px solid #606463;
+          border-bottom: 1px solid black;
+          border-left: 1px solid #333333;
+          border-right: 1px solid black; }
+          #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container {
+            width: 180px;
+            height: 15px;
+            padding: 4px 5px;
+            overflow: hidden;
+            color: #4b4f4e;
+            background: #cbcfce; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container .critique-scale-box {
+              float: left;
+              width: 15px;
+              height: 6px;
+              margin-right: 3px;
+              background: #4b4f4e; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb1 {
+              background: #ff0800; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb2 {
+              background: #ff1f17; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb3 {
+              background: #ff342e; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb4 {
+              background: #ff4c45; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb5 {
+              background: #ff635c; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb6 {
+              background: #505cdf; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb7 {
+              background: #3c4adf; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb8 {
+              background: #2837df; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb9 {
+              background: #1425df; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #csb10 {
+              background: #0012df; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #critique-legend {
+              width: 178px;
+              overflow: auto;
+              color: #222222; }
+              #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #critique-legend #harsh-label {
+                width: 73px;
+                float: left;
+                font-size: 10px; }
+              #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #critique-legend #neutral-label {
+                float: left;
+                font-size: 10px; }
+              #container #header #menu #menu-myfeedback-list ul #user-stat-container #critique-scale-container #critique-legend #nice-label {
+                float: right;
+                font-size: 10px; }
+          #container #header #menu #menu-myfeedback-list ul #user-stat-container .critique-scale-title {
+            color: #222222;
+            font-size: 11px;
+            padding: 2px 5px 0;
+            margin: 3px 0 0;
+            border-top: 1px solid #4b4f4e;
+            background: #cbcfce; }
           #container #header #menu #menu-myfeedback-list ul #user-stat-container .menu-stat {
+            font-size: 13px;
             display: block;
             outline: 0;
-            padding: 4px 10px;
-            color: #4b4f4e; }
+            padding: 2px 5px 0;
+            color: #cbcfce;
+            overflow: hidden; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container .menu-stat .stat-left {
+              float: left; }
+            #container #header #menu #menu-myfeedback-list ul #user-stat-container .menu-stat .stat-right {
+              float: right; }
         #container #header #menu #menu-myfeedback-list ul li .last {
           -moz-border-radius: 0 0 5px 5px;
           -webkit-border-radius: 0 0 5px 5px; }
@@ -1084,12 +1169,13 @@ ul {
     .song-list-container .song-item .song-list-item .song-list-data {
       float: right;
       overflow: hidden;
-      width: 150px;
-      height: 32px; }
+      width: 135px;
+      height: 32px;
+      cursor: pointer; }
       .song-list-container .song-item .song-list-item .song-list-data .song-feedbacks {
         float: left;
         overflow: hidden;
-        width: 100px;
+        width: 85px;
         font-weight: bold; }
       .song-list-container .song-item .song-list-item .song-list-data .song-overall {
         float: right;

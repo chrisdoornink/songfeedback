@@ -94,16 +94,16 @@ $(document).ready(function() {
   $(".all-songs-container .my-songs-container").first().show();
   $(".all-songs-container .pick-song .pick-song-item").first().addClass("current");
 
-  $("#main-section-frame").delegate(".song-list-item", "click", function() {
-    $("#player #player-title p").html($(this).attr("songTitle"));
-    $("#player #player-artist p").html($(this).attr("artist"));
-    $("#player #player-description p").html($(this).attr("desc"));
+  $("#main-section-frame").delegate(".song-list-play-button", "click", function() {
+    $("#player #player-title p").html($(this).parent().parent().attr("songTitle"));
+    $("#player #player-artist p").html($(this).parent().parent().attr("artist"));
+    $("#player #player-description p").html($(this).parent().parent().attr("desc"));
     $("#player-metadata").show();
     $(".jp-audio").show();
-    songId = $(this).attr("id");
-    songTitle = $(this).attr("songtitle");
+    songId = $(this).parent().parent().attr("id");
+    songTitle = $(this).parent().parent().attr("songtitle");
     $("#jquery_jplayer_1").jPlayer("setMedia", {
-      mp3: $(this).attr("loc")
+      mp3: $(this).parent().parent().attr("loc")
     });
     $("#jquery_jplayer_1").jPlayer("play");
     resetFeedbackForm();
@@ -253,6 +253,10 @@ $(document).ready(function() {
     getCurrentSongStats();
   });
 
+  $(".song-list-container").delegate(".song-list-data", "click", function() {
+    getCurrentSongStats($(this).parent().attr("id"));
+  });
+
   $("#current-song-stats").delegate("#no", "click", function() {
     $("#darkener-click").css("opacity", .5).fadeOut();
     $("#current-song-stats").hide();
@@ -332,11 +336,15 @@ function showError(message){
   $("#error-message-text").html(message);
 }
 
-function getCurrentSongStats(){
+function getCurrentSongStats(song){
+  if (song)
+    var current_song = song;
+  else
+    var current_song = songId;
   $.ajax({
     type: "GET",
     url: "/songs/current_stats",
-    data: "songId="+songId,
+    data: "songId="+current_song,
     success: function(data, status, jqXHR){
       $("#darkener-click").css("opacity", .5).fadeIn();
       $("#darkener").css("opacity", .5).hide();
