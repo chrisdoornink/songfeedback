@@ -12,6 +12,7 @@ var overall = null;
 var comments = null;
 var songId = null;
 var songTitle = null;
+var current_song = null;
 
 $(document).ready(function() {
   $.jPlayer.timeFormat.padMin = false;
@@ -243,6 +244,25 @@ $(document).ready(function() {
     });
   });
 
+
+  $("#comment-field-container").delegate("#submit", "click", function() {
+    comments = $("#comment-field").val();
+    console.log(comments);
+    $.ajax({
+      type: "POST",
+      url: "/songs/leave_comment",
+      data: "comments="+comments+"&songId="+current_song,
+      success: function(data, status, jqXHR){
+        getCurrentSongStats(current_song);
+        $("#comment-field-container").hide();
+        $("#current-song-stats #yes").show();
+      },
+      error: function(data){
+        showError("There was an error submitting your comment. Please try again.");
+      }
+    });
+  });
+
   $("#review-submitted").delegate("#no", "click", function() {
     $("#darkener-click").css("opacity", .5).fadeOut();
     $("#review-submitted").hide();
@@ -260,6 +280,11 @@ $(document).ready(function() {
   $("#current-song-stats").delegate("#no", "click", function() {
     $("#darkener-click").css("opacity", .5).fadeOut();
     $("#current-song-stats").hide();
+  });
+
+  $("#current-song-stats").delegate("#yes", "click", function() {
+    $("#comment-field-container").show();
+    $(this).hide();
   });
 
   $("body").delegate("#darkener-click", "click", function() {
@@ -338,9 +363,9 @@ function showError(message){
 
 function getCurrentSongStats(song){
   if (song)
-    var current_song = song;
+    current_song = song;
   else
-    var current_song = songId;
+    current_song = songId;
   $.ajax({
     type: "GET",
     url: "/songs/current_stats",
@@ -364,4 +389,8 @@ function showLoginPrompt(message){
   $("#darkener-click").css("opacity", .5).fadeIn();
   $("#login-message").show();
   $("#login-message-text").html(message);
+}
+
+function checkLogin(){
+
 }

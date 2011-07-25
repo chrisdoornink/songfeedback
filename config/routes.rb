@@ -31,6 +31,8 @@ Songfeedback::Application.routes.draw do
 
   post "songs/override"
 
+  post "songs/leave_comment"
+
   get "songs/current_stats"
 
   get "welcome/index"

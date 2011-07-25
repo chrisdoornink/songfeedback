@@ -116,4 +116,20 @@ class SongsController < ApplicationController
     render :layout => false
   end
 
+  def leave_comment
+    if @user_id != ""
+      unless params[:comments] == nil || params[:comments] == "null"
+        Comment.create(:song_id => params[:songId], :user_id => @user_id, :comment => params[:comments])
+        @comment_number = Comment.count(:conditions => {:song_id => params[:songId]})
+        Song.update(params[:songId], {:totalcomments => @comment_number})
+        @reviews = Feedback.count(:conditions => {:user_id => @user_id})
+        @comments = Comment.count(:conditions => {:user_id => @user_id})
+        User.update(@user_id, {:reviews => (@reviews), :commented => (@comments), :score => ((@reviews*4)+(@comments))})
+      end
+    else
+      @message = "logged_out"
+    end
+    render :layout => false
+  end
+
 end

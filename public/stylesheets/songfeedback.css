@@ -127,6 +127,25 @@
       color: #cbcfce;
       margin: 3px 0 0 0; }
 
+#comment-field-container {
+  display: none;
+  width: 350px;
+  margin: 10px 5px 5px 10px;
+  overflow: hidden; }
+  #comment-field-container #comment-field {
+    background: #4b4f4e;
+    border-top: 1px solid black;
+    border-left: 1px solid #333333;
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #999999;
+    height: 60px;
+    width: 340px;
+    padding: 5px;
+    color: #cbcfce; }
+
+#current-song-stats #yes {
+  margin-bottom: 50px; }
+
 #login {
   width: 345px;
   margin: 30px auto; }
@@ -603,6 +622,12 @@ ul {
     .modal-popup-stats #no:hover {
       background-position: -181px -108px; }
   .modal-popup-stats #yes {
+    padding: 5px 10px;
+    float: right;
+    color: #f2f2f2;
+    font-size: 14px;
+    cursor: pointer; }
+  .modal-popup-stats #submit {
     padding: 5px 10px;
     float: right;
     color: #f2f2f2;
