@@ -112,11 +112,60 @@
         font-weight: bold;
         float: left;
         margin: 0 10px 0 0; }
+      .current-song-stats-container .song-comments .commenter-container .commenter-feedback-score {
+        font-size: 10px;
+        color: #cbcfce;
+        float: right;
+        margin: 2px 5px 0 0; }
       .current-song-stats-container .song-comments .commenter-container .commenter-critic {
         font-size: 13px;
         color: #cbcfce;
-        float: left;
+        float: right;
         margin: 2px 0 0 0; }
+        .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container {
+          padding: 5px 0;
+          overflow: hidden;
+          color: #4b4f4e; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container .critique-scale-box {
+            float: left;
+            width: 5px;
+            height: 3px;
+            margin-right: 2px;
+            background: #cbcfce; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb1 {
+            background: #ff0800; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb2 {
+            background: #ff1f17; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb3 {
+            background: #ff342e; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb4 {
+            background: #ff4c45; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb5 {
+            background: #ff635c; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb6 {
+            background: #505cdf; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb7 {
+            background: #3c4adf; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb8 {
+            background: #2837df; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb9 {
+            background: #1425df; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb10 {
+            background: #0012df; }
+          .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend {
+            width: 178px;
+            overflow: auto;
+            color: #222222; }
+            .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend #harsh-label {
+              width: 73px;
+              float: left;
+              font-size: 10px; }
+            .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend #neutral-label {
+              float: left;
+              font-size: 10px; }
+            .current-song-stats-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend #nice-label {
+              float: right;
+              font-size: 10px; }
     .current-song-stats-container .song-comments .comment-container {
       width: 350px;
       margin: 3px 0 0; }
@@ -879,11 +928,60 @@ ul {
         font-weight: bold;
         float: left;
         margin: 0 10px 0 0; }
+      .my-songs-container .song-comments .commenter-container .commenter-feedback-score {
+        font-size: 10px;
+        color: #606463;
+        float: right;
+        margin: 2px 5px 0 0; }
       .my-songs-container .song-comments .commenter-container .commenter-critic {
         font-size: 13px;
         color: #4b4f4e;
-        float: left;
+        float: right;
         margin: 2px 0 0 0; }
+        .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container {
+          padding: 5px 0;
+          overflow: hidden;
+          color: #4b4f4e; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container .critique-scale-box {
+            float: left;
+            width: 5px;
+            height: 3px;
+            margin-right: 2px;
+            background: #cbcfce; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb1 {
+            background: #ff0800; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb2 {
+            background: #ff1f17; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb3 {
+            background: #ff342e; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb4 {
+            background: #ff4c45; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb5 {
+            background: #ff635c; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb6 {
+            background: #505cdf; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb7 {
+            background: #3c4adf; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb8 {
+            background: #2837df; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb9 {
+            background: #1425df; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #csb10 {
+            background: #0012df; }
+          .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend {
+            width: 178px;
+            overflow: auto;
+            color: #222222; }
+            .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend #harsh-label {
+              width: 73px;
+              float: left;
+              font-size: 10px; }
+            .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend #neutral-label {
+              float: left;
+              font-size: 10px; }
+            .my-songs-container .song-comments .commenter-container .commenter-critic #critique-scale-container #critique-legend #nice-label {
+              float: right;
+              font-size: 10px; }
     .my-songs-container .song-comments .comment-container {
       width: 350px;
       margin: 3px 0 0; }

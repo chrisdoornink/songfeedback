@@ -61,7 +61,128 @@
 
           .commenter-container
             .commenter-username=comment.user.username
-            .commenter-critic=comment.user.harsh
+            .commenter-critic
+              #critique-scale-container
+                -if comment.user.harsh <= 1
+                  #csb1.critique-scale-box
+                  #csb2.critique-scale-box
+                  #csb3.critique-scale-box
+                  #csb4.critique-scale-box
+                  #csb5.critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                -else
+                  -if comment.user.harsh <= 2
+                    .critique-scale-box
+                    #csb2.critique-scale-box
+                    #csb3.critique-scale-box
+                    #csb4.critique-scale-box
+                    #csb5.critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                  -else
+                    -if comment.user.harsh <= 3
+                      .critique-scale-box
+                      .critique-scale-box
+                      #csb3.critique-scale-box
+                      #csb4.critique-scale-box
+                      #csb5.critique-scale-box
+                      .critique-scale-box
+                      .critique-scale-box
+                      .critique-scale-box
+                      .critique-scale-box
+                      .critique-scale-box
+                    -else
+                      -if comment.user.harsh <= 4
+                        .critique-scale-box
+                        .critique-scale-box
+                        .critique-scale-box
+                        #csb4.critique-scale-box
+                        #csb5.critique-scale-box
+                        .critique-scale-box
+                        .critique-scale-box
+                        .critique-scale-box
+                        .critique-scale-box
+                        .critique-scale-box
+                      -else
+                        -if comment.user.harsh <= 5
+                          .critique-scale-box
+                          .critique-scale-box
+                          .critique-scale-box
+                          .critique-scale-box
+                          #csb5.critique-scale-box
+                          .critique-scale-box
+                          .critique-scale-box
+                          .critique-scale-box
+                          .critique-scale-box
+                          .critique-scale-box
+                        -else
+                          -if comment.user.harsh <= 6
+                            .critique-scale-box
+                            .critique-scale-box
+                            .critique-scale-box
+                            .critique-scale-box
+                            .critique-scale-box
+                            #csb6.critique-scale-box
+                            .critique-scale-box
+                            .critique-scale-box
+                            .critique-scale-box
+                            .critique-scale-box
+                          -else
+                            -if comment.user.harsh <= 7
+                              .critique-scale-box
+                              .critique-scale-box
+                              .critique-scale-box
+                              .critique-scale-box
+                              .critique-scale-box
+                              #csb6.critique-scale-box
+                              #csb7.critique-scale-box
+                              .critique-scale-box
+                              .critique-scale-box
+                              .critique-scale-box
+                            -else
+                              -if comment.user.harsh <= 8
+                                .critique-scale-box
+                                .critique-scale-box
+                                .critique-scale-box
+                                .critique-scale-box
+                                .critique-scale-box
+                                #csb6.critique-scale-box
+                                #csb7.critique-scale-box
+                                #csb8.critique-scale-box
+                                .critique-scale-box
+                                .critique-scale-box
+                              -else
+                                -if comment.user.harsh <= 9
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  #csb6.critique-scale-box
+                                  #csb7.critique-scale-box
+                                  #csb8.critique-scale-box
+                                  #csb9.critique-scale-box
+                                  .critique-scale-box
+                                -else
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  .critique-scale-box
+                                  #csb6.critique-scale-box
+                                  #csb7.critique-scale-box
+                                  #csb8.critique-scale-box
+                                  #csb9.critique-scale-box
+                                  #csb10.critique-scale-box
+            .commenter-feedback-score
+              score: #{comment.user.score}
 
           .comment-container
             .comment=comment.comment

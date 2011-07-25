@@ -173,11 +173,60 @@
         font-weight: bold
         float: left
         margin: 0 10px 0 0
+      .commenter-feedback-score
+        font-size: 10px
+        color: $sf_gray
+        float: right
+        margin: 2px 5px 0 0
       .commenter-critic
         font-size: 13px
         color: $sf_dark_gray
-        float: left
+        float: right
         margin: 2px 0 0 0
+        #critique-scale-container
+          padding: 5px 0
+          overflow: hidden
+          color: $sf_dark_gray
+          .critique-scale-box
+            float: left
+            width: 5px
+            height: 3px
+            margin-right: 2px
+            background: $sf_light_gray
+          #csb1
+            background: #FF0800
+          #csb2
+            background: #FF1F17
+          #csb3
+            background: #FF342E
+          #csb4
+            background: #FF4C45
+          #csb5
+            background: #FF635C
+          #csb6
+            background: #505CDF
+          #csb7
+            background: #3C4ADF
+          #csb8
+            background: #2837DF
+          #csb9
+            background: #1425DF
+          #csb10
+            background: #0012DF
+          #critique-legend
+            width: 178px
+            overflow: auto
+            color: #222
+            #harsh-label
+              width: 73px
+              float: left
+              font-size: 10px
+            #neutral-label
+              float: left
+              font-size: 10px
+            #nice-label
+              float: right
+              font-size: 10px
     .comment-container
       width: 350px
       margin: 3px 0 0

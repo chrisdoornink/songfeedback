@@ -59,7 +59,7 @@ class SongsController < ApplicationController
           @songs_average = Song.find(critique.song_id)
           @score = @score+(critique.overall-@songs_average["overall"])
         end
-        @score = ((@score/@reviews)*3)+5
+        @score = ((@score/@reviews)*8)+5
         User.update(@user_id, {:harsh => (@score)})
 
       end
@@ -95,7 +95,7 @@ class SongsController < ApplicationController
       @score = @score+(critique.overall-@songs_average["overall"])
     end
     @reviews = Feedback.count(:conditions => {:user_id => @user_id})
-    @score = ((@score/@reviews)*3)+5
+    @score = ((@score/@reviews)*8)+5
     User.update(@user_id, {:harsh => (@score)})
     @reviews = Feedback.count(:conditions => {:user_id => @user_id})
     @comments = Comment.count(:conditions => {:user_id => @user_id})
