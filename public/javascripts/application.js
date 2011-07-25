@@ -15,6 +15,8 @@ var songTitle = null;
 var current_song = null;
 
 $(document).ready(function() {
+  checkFirstTimer();
+
   $.jPlayer.timeFormat.padMin = false;
 
   $('#player').delegate("#player-header", "click", function() {
@@ -246,21 +248,26 @@ $(document).ready(function() {
 
 
   $("#comment-field-container").delegate("#submit", "click", function() {
-    comments = $("#comment-field").val();
-    console.log(comments);
-    $.ajax({
-      type: "POST",
-      url: "/songs/leave_comment",
-      data: "comments="+comments+"&songId="+current_song,
-      success: function(data, status, jqXHR){
-        getCurrentSongStats(current_song);
-        $("#comment-field-container").hide();
-        $("#current-song-stats #yes").show();
-      },
-      error: function(data){
-        showError("There was an error submitting your comment. Please try again.");
-      }
-    });
+    if (checkLogin() != null){
+      comments = $("#comment-field").val();
+      console.log(comments);
+      $.ajax({
+        type: "POST",
+        url: "/songs/leave_comment",
+        data: "comments="+comments+"&songId="+current_song,
+        success: function(data, status, jqXHR){
+          getCurrentSongStats(current_song);
+          $("#comment-field-container").hide();
+          $("#current-song-stats #yes").show();
+        },
+        error: function(data){
+          showError("There was an error submitting your comment. Please try again.");
+        }
+      });
+    }
+    else{
+      showLoginPrompt("You must be logged in to comment");
+    }
   });
 
   $("#review-submitted").delegate("#no", "click", function() {
@@ -392,5 +399,21 @@ function showLoginPrompt(message){
 }
 
 function checkLogin(){
+  var login = $.cookie('authenticate');
+  return login;
+}
+
+function checkFirstTimer(){
+  var onboard = $.cookie('visit');
+  if (onboard == null){
+    showOnboarding();
+    console.log("onboarding!");
+    $.cookie('visit', 'true', { expires: 1000, path: '/' });
+  }
 
 }
+
+function showOnboarding(){
+
+}
+
