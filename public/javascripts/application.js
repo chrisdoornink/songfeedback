@@ -318,6 +318,15 @@ $(document).ready(function() {
     getCurrentSongStats();
   });
 
+  $("#onboarding-container").delegate("#no", "click", function() {
+    $("#darkener-click").css("opacity", .5).fadeOut();
+    $("#onboarding-container").hide();
+  });
+  $("#onboarding-container").delegate("#yes", "click", function() {
+    $("#darkener-click").css("opacity", .5).fadeOut();
+    $("#onboarding-container").hide();
+  });
+
   $("#main-section-frame").delegate(".upload-song-button", "click", function() {
     if ($("#song_title").val() != "song title" && $("#song_title").val().match(/\S/)){
       if ($("#song_artist").val() != "artist" && $("#song_artist").val().match(/\S/)){
@@ -410,10 +419,10 @@ function checkFirstTimer(){
     console.log("onboarding!");
     $.cookie('visit', 'true', { expires: 1000, path: '/' });
   }
-
 }
 
 function showOnboarding(){
-
+  $("#darkener-click").css("opacity", .5).fadeIn();
+  $("#onboarding-container").show();
 }
 
