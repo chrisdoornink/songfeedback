@@ -1398,7 +1398,7 @@ ul {
         .song-list-container .song-item .song-list-item .song-list-data .graph .number {
           text-align: center;
           height: 10px;
-          font-size: 8px; }
+          font-size: 10px; }
   .song-list-container .song-item .song-list-overlay {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
     background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }

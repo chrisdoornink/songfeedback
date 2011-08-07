@@ -1,6 +1,8 @@
 class SongsController < ApplicationController
   before_filter :get_user_info
 
+  layout nil
+
   def get_user_info
     @user_info = user_auth
     if !@user_info.nil?

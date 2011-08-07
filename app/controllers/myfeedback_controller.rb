@@ -10,6 +10,7 @@ class MyfeedbackController < ApplicationController
 
 
   def index
+    render :layout => false
   end
 
   def mysongs
@@ -25,17 +26,21 @@ class MyfeedbackController < ApplicationController
     @song_ids = Array.new
 
     @song_count = Song.count
+    
+    render :layout => false
 
   end
 
   def upload
     @song = Song.new
+    render :layout => false
   end
 
   def create
     @song = Song.create( params[:song] )
     @uploads = Song.count(:conditions => {:user_id => @user_id})
     User.update(@user_id, {:uploads => (@uploads)})
+    render :layout => true
   end
 
 end

@@ -1,14 +1,14 @@
 .song-list-container
   .song-list-category
-    %a{:href => "songs/recent"} Most Recent
+    %a.ajax{:href => "songs/recent"} Most Recent
   = render :partial => "recent"
 
 .song-list-container
   .song-list-category
-    %a{:href => "songs/least_rated"} Least Rated
+    %a.ajax{:href => "songs/least_rated"} Least Rated
   = render :partial => "least"
 
 .song-list-container
   .song-list-category
-    %a{:href => "songs/top"} Top Rated
+    %a.ajax{:href => "songs/top"} Top Rated
   = render :partial => "top"

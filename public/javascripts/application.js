@@ -19,6 +19,29 @@ $(document).ready(function() {
 
   $.jPlayer.timeFormat.padMin = false;
 
+	$.ajaxSetup({
+    timeout: 20000
+  });
+  
+  // Disable address plugin doing its own Google Analytics tracking
+  $.address.tracker(null);
+
+	ajaxPage($.address.value());
+
+	// all links with the 'ajax' class will trigger an ajax load based on their href
+  $(document).delegate('a.ajax', 'click', function(event) {   
+    if (event.button == 0 && !(event.metaKey == true) && !(event.ctrlKey == true)) {
+      event.preventDefault();
+      href = $(this).attr('href');
+      href = href.replace(document.location.protocol + "//" + document.location.host, ""); // IE7 puts the domain name in href
+      if (href == $.address.value()) {
+      } else {
+        $.address.value(href);
+				ajaxPage($.address.value());
+      }
+    }
+  });
+
   $('#player').delegate("#player-header", "click", function() {
     window.location = "/";
   });
@@ -424,5 +447,24 @@ function checkFirstTimer(){
 function showOnboarding(){
   $("#darkener-click").css("opacity", .5).fadeIn();
   $("#onboarding-container").show();
+}
+
+function ajaxPage(newuri){
+	if (newuri != "/"){
+		console.log(newuri);
+		$.ajax({
+    	type: "GET",
+    	url: newuri,
+    	success: function(data, status, jqXHR){
+      	$("#main-section-frame").html(data);
+    	},
+    	error: function(data,status,detes){
+      	$("#darkener-click").css("opacity", .5).fadeIn();
+      	$("#darkener").css("opacity", .5).hide();
+      	$("#current-song-stats").show();
+      	$("#current-song-stats-show").html(detes);
+    	}
+  	});
+	}
 }
 

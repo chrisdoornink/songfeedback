@@ -207,7 +207,7 @@
                 #menu-myaccount-list
                   %ul
                     %li
-                      %a.last.ajax{:href => "/authentication/logout"} Sign Out
+                      %a.last{:href => "/authentication/logout"} Sign Out
             -else
               #menu-signin
                 .myaccount-logged-out Sign In / Register
@@ -313,7 +313,7 @@
       #review-submitted
         .modal-popup
           #message
-            Thank you for submitted your feedback for
+            Thank you for submitting your feedback for
             %span#song-just-reviewed this song.
             %br
             %br Would you like to see what other people have said about this song?
