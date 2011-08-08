@@ -394,6 +394,69 @@ function validateFeedbackForm(){
     return true
 }
 
+function validateRegisterForm(){
+  if (isEmailAddress($("#email").val())){
+    if (noSpacesOrSpecialChars($("#username").val(), "username")){
+			if (passwordsMatch($("#password").val(), $("#password-check").val())){
+      	return true
+			}
+    }
+  }
+  return false
+}
+
+function noSpacesOrSpecialChars(a, field) {
+  var re = /^[a-zA-Z\d]+$/;
+  if(!re.test(a)) {
+    showError("No special characters or spaces allowed in your "+field);
+    return false
+  }
+  return true
+}
+
+function isEmailAddress(a) {
+  var re = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  if (!a.match(re)) {
+    showError("Enter a valid email address");
+    return false
+  } 
+  return true
+}
+
+function noSpecialChars(a, field) {
+  var re = /^[\w\s ]+$/;
+  if(!re.test(a) && a != "") {
+    showError("No special characters allowed in your "+field+".");
+    return false
+  }
+  return true
+}
+
+function passwordsMatch(a, b) {
+	console.log("hi");
+	if (a != b){
+		showError("Your passwords do not match");
+		return false
+	}
+	return true
+}
+
+function numbersOnly(a, field) {
+  if(isNaN(a)) {
+    showError("Your "+field+" must only contain numbers.");
+    return false
+  }
+  return true
+}
+
+function stringLength(a, field, length) {
+  if(a.length > length) {
+    showError("Your "+field+" is too long ("+length+" character limit).");
+    return false
+  }
+  return true
+}
+
 function showError(message){
   $("#darkener-click").css("opacity", .5).fadeIn();
   $("#error-message").show();

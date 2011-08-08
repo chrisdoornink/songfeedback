@@ -1,19 +1,12 @@
--##what-is
--#  #upload
--#    Upload
--#  #get-feedback
--#    Get Feedback
--#  #improve
--#    Improve Your Songs
-
 #login
   %h1 Sign in
 
   %form#login-form{:method => "POST", :action => "/authentication/login"}
-    #noticebox{:style => "display:none;"}
-      #notice
+    -if !@error_message.nil?
+      #login-form-error-message-container
+        #login-form-error-message= @error_message
     .form-item
-      %input#username.input{:name => "username", :label => "username", :type => "text", :value => "username", :onfocus => "if (this.value == 'username') {this.value=''}", :onblur => "if(this.value == '') { this.value='username'}"}
+      %input#username.input{:name => "username", :label => "username", :type => "text", :value => "email", :onfocus => "if (this.value == 'email') {this.value=''}", :onblur => "if(this.value == '') { this.value='email'}"}
     .form-item
       %input#password.input{:name => "password", :type => "text", :value => "password", :onfocus => "if (this.value == 'password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='password'; this.type='text'}" }
     .form-item

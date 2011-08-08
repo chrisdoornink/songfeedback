@@ -10,9 +10,10 @@
   %h1 Register
   Already registered?
   %a{:href => "login"}Click here to sign in.
-  %form#login-form{:method => "POST", :action => "/authentication/register"}
-    #noticebox{:style => "display:none;"}
-      #notice
+  %form#login-form{:method => "POST", :action => "/authentication/register", :onSubmit => "return validateRegisterForm()"}
+    -if !@error_message.nil?
+      #login-form-error-message-container
+        #login-form-error-message= @error_message
 
     .form-item
       %input#email.input{:name => "email", :label => "username", :type => "text", :value => "email address", :onfocus => "if (this.value == 'email address') {this.value=''}", :onblur => "if(this.value == '') { this.value='email address'}"}

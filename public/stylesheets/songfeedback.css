@@ -198,6 +198,16 @@
 #login {
   width: 345px;
   margin: 30px auto; }
+  #login #login-form-error-message-container {
+    height: 20px;
+    background: #81c3cf;
+    width: 279px;
+    padding: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+    #login #login-form-error-message-container #login-form-error-message {
+      color: white;
+      font-size: 16px; }
   #login h1 {
     font-size: 24px;
     font-weight: normal;
