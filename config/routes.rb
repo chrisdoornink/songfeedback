@@ -15,6 +15,10 @@ Songfeedback::Application.routes.draw do
 
   post "authentication/register"
 
+  get "authentication/forgot_password"
+  
+  get "authentication/send_reminder"
+
   get "songs/index"
 
   get "songs/recent"

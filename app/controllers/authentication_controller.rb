@@ -1,4 +1,5 @@
 class AuthenticationController < ApplicationController
+require 'net/smtp'
 
   def index
   end
@@ -53,5 +54,12 @@ class AuthenticationController < ApplicationController
     cookies.delete :authenticate
     redirect_to "/authentication/login"
   end
+  
+  def forgot_password
+    render :layout => false
+  end
 
+  def send_reminder
+    PasswordMailer.reminder_email(params[:email])
+  end
 end

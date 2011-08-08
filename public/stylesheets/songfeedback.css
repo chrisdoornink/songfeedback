@@ -220,6 +220,10 @@
     padding: 0;
     margin: 0;
     color: #606463; }
+  #login #forgot-password {
+    cursor: pointer; }
+    #login #forgot-password:hover {
+      color: #81c3cf; }
   #login #login-form {
     overflow: auto;
     margin: 10px 0;
@@ -229,8 +233,7 @@
     border-top: 2px solid #aaaaaa;
     border-bottom: 2px solid #eeeeee;
     border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    ground: green; }
+    border-right: 1px solid #cccccc; }
     #login #login-form #login-submit {
       float: right;
       padding: 5px;
@@ -597,6 +600,12 @@ ul {
 
 #current-song-stats {
   display: none; }
+
+#get-password-popup {
+  display: none; }
+  #get-password-popup #email {
+    float: left;
+    margin-top: 10px; }
 
 #login-message {
   display: none; }

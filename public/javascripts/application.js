@@ -46,6 +46,22 @@ $(document).ready(function() {
     window.location = "/";
   });
 
+	$('#login').delegate("#forgot-password", "click", function() {
+    $.ajax({
+	    type: "GET",
+	    url: "/authentication/forgot_password",
+	    success: function(data, status, jqXHR){
+	      $("#darkener-click").css("opacity", .5).fadeIn();
+	      $("#darkener").css("opacity", .5).hide();
+	      $("#get-password-popup").show();
+	      $("#get-password-popup-show").html(data);
+	    },
+	    error: function(data){
+	      showError("An error occurred");
+	    }
+	  });
+  });
+
   $("#menu").delegate("#menu-songs", "mouseenter", function() {
     $("#menu-songs-list").show();
     $("#menu-songs").addClass("menu-background");
@@ -315,6 +331,33 @@ $(document).ready(function() {
   $("#current-song-stats").delegate("#yes", "click", function() {
     $("#comment-field-container").show();
     $(this).hide();
+  });
+
+	$("#get-password-popup").delegate("#no", "click", function() {
+    $("#darkener-click").css("opacity", .5).fadeOut();
+    $("#get-password-popup").hide();
+  });
+
+  $("#get-password-popup").delegate("#yes", "click", function() {
+    var email_address = $("#get-password-popup #email").val();
+		$.ajax({
+	    type: "GET",
+	    url: "/authentication/send_reminder",
+			data: "email="+email_address,
+	    success: function(data, status, jqXHR){
+	      $("#darkener-click").css("opacity", .5).fadeIn();
+	      $("#darkener").css("opacity", .5).hide();
+	      $("#current-song-stats").show();
+	      $("#current-song-stats-show").html("email sent");
+	    },
+	    error: function(data){
+	      $("#darkener-click").css("opacity", .5).fadeIn();
+	      $("#darkener").css("opacity", .5).hide();
+	      $("#current-song-stats").show();
+	      $("#current-song-stats-show").html("An error occurred, try again");
+	    }
+	  });
+    $("#get-password-popup").hide();
   });
 
   $("body").delegate("#darkener-click", "click", function() {

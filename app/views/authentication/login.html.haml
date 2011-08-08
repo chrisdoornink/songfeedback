@@ -10,7 +10,7 @@
     .form-item
       %input#password.input{:name => "password", :type => "text", :value => "password", :onfocus => "if (this.value == 'password') {this.value=''; this.type='password'}", :onblur => "if(this.value == '') { this.value='password'; this.type='text'}" }
     .form-item
-      %a{:target => "_blank", :href => ""} Forgot your password?
+      #forgot-password Forgot your password?
 
     .sign-in
       %input#login-submit{:name => "login-submit", :type => "submit", :value => "Sign In"}
