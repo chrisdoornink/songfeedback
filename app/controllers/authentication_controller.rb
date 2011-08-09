@@ -31,7 +31,7 @@ require 'net/smtp'
     @error_message = nil
     if params[:username] && params[:password] && params[:email]
       @user_info = User.find_by_username(params[:username])
-      @email_info = User.find_by_username(params[:email])
+      @email_info = User.find_by_email(params[:email])
       if @user_info.nil? && @email_info.nil?  
         @user_info = User.create(:username => params[:username], :password => params[:password], :email => params[:email])
         @user_id = @user_info["id"]
@@ -60,6 +60,6 @@ require 'net/smtp'
   end
 
   def send_reminder
-    PasswordMailer.reminder_email(params[:email])
+    PasswordMailer.reminder_email(params[:email]).deliver
   end
 end

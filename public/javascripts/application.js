@@ -319,7 +319,8 @@ $(document).ready(function() {
     getCurrentSongStats();
   });
 
-  $(".song-list-container").delegate(".song-list-data", "click", function() {
+  $("#main-section-frame").delegate(".song-list-data", "click", function() {
+    console.log("hello?");
     getCurrentSongStats($(this).parent().attr("id"));
   });
 
@@ -345,16 +346,10 @@ $(document).ready(function() {
 	    url: "/authentication/send_reminder",
 			data: "email="+email_address,
 	    success: function(data, status, jqXHR){
-	      $("#darkener-click").css("opacity", .5).fadeIn();
-	      $("#darkener").css("opacity", .5).hide();
-	      $("#current-song-stats").show();
-	      $("#current-song-stats-show").html("email sent");
+	      showError("Email sent");
 	    },
 	    error: function(data){
-	      $("#darkener-click").css("opacity", .5).fadeIn();
-	      $("#darkener").css("opacity", .5).hide();
-	      $("#current-song-stats").show();
-	      $("#current-song-stats-show").html("An error occurred, try again");
+        showError("An error occurred, try again");
 	    }
 	  });
     $("#get-password-popup").hide();
