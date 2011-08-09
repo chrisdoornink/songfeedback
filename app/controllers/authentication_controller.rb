@@ -38,7 +38,7 @@ require 'net/smtp'
         @token_new = @user_id.to_s + "-".to_s + Time.current.usec.to_s
         User.update(@user_id, {:token => @token_new})
         cookies[:authenticate] = {:value => @token_new, :expires => 1.years.from_now, :domain => nil}
-        redirect_to "/welcome/index"
+        redirect_to "/"
       else
         if @user_info.nil?
           @error_message = "Email address is already registered"
