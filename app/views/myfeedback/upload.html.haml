@@ -1,4 +1,4 @@
-#login
+#upload
   -if @avail_uploads > 0
     %h1 Upload Your Song
     %h2 You've earned #{@avail_uploads} uploads.
@@ -13,7 +13,7 @@
         = f.file_field :audio
       = f.hidden_field :user_id, :value => @user_info["id"]
       .form-item
-        = submit_tag "Upload", :class => "upload-song-button"
+        = submit_tag "Upload", :class => "upload-song-button", :id => "upload-submit"
   -else
     %h2 You need #{@points_needed} more feedback points before you can upload a song. Go rate some music!
     .song-feedback-button-reg

@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/haml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/haml/test/haml/spec" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/haml/vendor/sass" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/haml/vendor/sass/vendor/fssm" vcs="Git" />
   </component>
 </project>
 

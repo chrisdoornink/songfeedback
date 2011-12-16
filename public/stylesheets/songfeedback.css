@@ -196,35 +196,40 @@
   margin-bottom: 50px; }
 
 #login {
-  width: 345px;
+  margin: 60px 0; }
+
+#upload {
   margin: 30px auto; }
-  #login #login-form-error-message-container {
+
+#login, #upload {
+  width: 345px; }
+  #login #login-form-error-message-container, #upload #login-form-error-message-container {
     height: 20px;
     background: #81c3cf;
     width: 279px;
     padding: 10px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px; }
-    #login #login-form-error-message-container #login-form-error-message {
+    #login #login-form-error-message-container #login-form-error-message, #upload #login-form-error-message-container #login-form-error-message {
       color: white;
       font-size: 16px; }
-  #login h1 {
+  #login h1, #upload h1 {
     font-size: 24px;
     font-weight: normal;
     padding: 0;
     margin: 5px 0;
     color: #4b4f4e; }
-  #login h2 {
+  #login h2, #upload h2 {
     font-size: 18px;
     font-weight: normal;
     padding: 0;
     margin: 0;
     color: #606463; }
-  #login #forgot-password {
+  #login #forgot-password, #upload #forgot-password {
     cursor: pointer; }
-    #login #forgot-password:hover {
+    #login #forgot-password:hover, #upload #forgot-password:hover {
       color: #81c3cf; }
-  #login #login-form {
+  #login #login-form, #upload #login-form {
     overflow: auto;
     margin: 10px 0;
     padding: 10px 20px 15px;
@@ -234,7 +239,7 @@
     border-bottom: 2px solid #eeeeee;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc; }
-    #login #login-form #login-submit {
+    #login #login-form #login-submit, #upload #login-form #login-submit {
       float: right;
       padding: 5px;
       font-size: 14px;
@@ -248,7 +253,7 @@
       -webkit-border-radius: 3px;
       background: #81c3cf;
       cursor: pointer; }
-    #login #login-form #register-submit {
+    #login #login-form #register-submit, #upload #login-form #register-submit {
       margin-top: 15px;
       float: right;
       padding: 5px;
@@ -263,9 +268,9 @@
       -webkit-border-radius: 3px;
       background: #81c3cf;
       cursor: pointer; }
-  #login #reg-sell {
+  #login #reg-sell, #upload #reg-sell {
     margin-top: 30px; }
-  #login #reg-log-button {
+  #login #reg-log-button, #upload #reg-log-button {
     float: right;
     margin-top: 15px;
     padding: 5px 15px;
@@ -281,7 +286,7 @@
     -webkit-border-radius: 3px;
     background: #81c3cf;
     cursor: pointer; }
-    #login #reg-log-button a {
+    #login #reg-log-button a, #upload #reg-log-button a {
       color: white; }
 
 .form-item {
@@ -297,6 +302,21 @@
     color: #606463;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px; }
+  .form-item #upload-submit, .form-item #choose-file {
+    margin-top: 15px;
+    float: left;
+    padding: 5px;
+    font-size: 14px;
+    width: 100px;
+    border-top: 1px solid #888888;
+    border-bottom: 2px solid #eeeeee;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #81c3cf;
+    cursor: pointer; }
 
 .song-feedback-button-reg {
   float: left;
@@ -1325,7 +1345,8 @@ ul {
     border-bottom: 1px solid #cbcfce; }
     .song-list-container .song-item .song-list-item:hover {
       background: #222222;
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6)); }
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.7, #e6e6e6), color-stop(0.87, #d6d6d6));
+      background: -moz-linear-gradient(center bottom, #e6e6e6 70%, #d6d6d6 87%); }
     .song-list-container .song-item .song-list-item .song-list-play-button-container {
       width: 30px;
       height: 30px;

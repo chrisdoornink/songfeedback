@@ -1,7 +1,3 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
-
 //HOVER DELEGATES
 var creativity = null;
 var vocals = null;
@@ -93,7 +89,7 @@ $(document).ready(function() {
   });
 
   $("#menu").delegate(".myfeedback-logged-out", "click", function() {
-    showLoginPrompt("You must be logged in to upload songs");
+    showLoginPrompt("You are not logged in. Please login or register in order to upload songs.");
   });
 
   $("#menu").delegate("#menu-myaccount", "mouseenter", function() {
@@ -252,7 +248,7 @@ $(document).ready(function() {
             $("#review-submitted").show();
           }
           if (data.indexOf("logged_out") != -1) {
-            showLoginPrompt("You must be logged in to review songs");
+            showLoginPrompt("You are not logged in. Please login or register to review this song.");
           }
         },
         error: function(data){
@@ -305,7 +301,7 @@ $(document).ready(function() {
       });
     }
     else{
-      showLoginPrompt("You must be logged in to comment");
+      showLoginPrompt("You are not logged in. Please login or register to submit a comment.");
     }
   });
 
@@ -394,17 +390,15 @@ $(document).ready(function() {
         if ($("#song_audio").val().match(/.mp3$/))
           return true;
         else
-          showError("You need to select an mp3 file to upload")
+          showError("Your file must be in mp3 format.")
       }
       else
-        showError("You need to enter an artist name");
+        showError("You need to enter an artist name.");
     }
     else
-      showError("You need to enter a song title");
+      showError("You need to enter a song title.");
     return false;
   });
-
-
 });
 
 function resetFeedbackForm(){
@@ -421,11 +415,11 @@ function resetFeedbackForm(){
 
 function validateFeedbackForm(){
   if (songId == null){
-    showError("You can't submit feedback without selecting a song first");
+    showError("You have not selected a song to review.");
     return false;
   }
   else if (vocals == null || creativity == null || songwriting == null || musicianship == null || production == null || overall == null){
-    showError("You need to give a rating in every category");
+    showError("You must give a 1 to 5 star rating in each category before submitting.");
     return false;
   }
   else
@@ -540,7 +534,6 @@ function checkFirstTimer(){
   var onboard = $.cookie('visit');
   if (onboard == null){
     showOnboarding();
-    console.log("onboarding!");
     $.cookie('visit', 'true', { expires: 1000, path: '/' });
   }
 }
@@ -567,5 +560,11 @@ function ajaxPage(newuri){
     	}
   	});
 	}
+}
+
+function hidePlayer(){
+  $("#feedback-frame").hide();
+  $(".player-divider").hide();
+  $("#player-header").css("margin-bottom", "0");
 }
 
