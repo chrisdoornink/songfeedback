@@ -9,9 +9,11 @@ var comments = null;
 var songId = null;
 var songTitle = null;
 var current_song = null;
+var stat_change = null;
 
 $(document).ready(function() {
   checkFirstTimer();
+  updateStats();
 
   $.jPlayer.timeFormat.padMin = false;
 
@@ -246,6 +248,7 @@ $(document).ready(function() {
           if (data.indexOf("first") != -1) {
             $("#darkener-click").css("opacity", .5).fadeIn();
             $("#review-submitted").show();
+            updateStats();
           }
           if (data.indexOf("logged_out") != -1) {
             showLoginPrompt("You are not logged in. Please login or register to review this song.");
@@ -274,6 +277,7 @@ $(document).ready(function() {
         $("#darkener-click").css("opacity", .5).show();
         $("#review-submitted").show();
         $("#song-just-reviewed").html(songTitle);
+        updateStats();
       },
       error: function(data){
         showError("There was an error submitting your feedback. Please try again.");
@@ -285,7 +289,6 @@ $(document).ready(function() {
   $("#comment-field-container").delegate("#submit", "click", function() {
     if (checkLogin() != null){
       comments = $("#comment-field").val();
-      console.log(comments);
       $.ajax({
         type: "POST",
         url: "/songs/leave_comment",
@@ -294,6 +297,7 @@ $(document).ready(function() {
           getCurrentSongStats(current_song);
           $("#comment-field-container").hide();
           $("#current-song-stats #yes").show();
+          stat_change = true;
         },
         error: function(data){
           showError("There was an error submitting your comment. Please try again.");
@@ -316,13 +320,16 @@ $(document).ready(function() {
   });
 
   $("#main-section-frame").delegate(".song-list-data", "click", function() {
-    console.log("hello?");
     getCurrentSongStats($(this).parent().attr("id"));
   });
 
   $("#current-song-stats").delegate("#no", "click", function() {
     $("#darkener-click").css("opacity", .5).fadeOut();
     $("#current-song-stats").hide();
+    if (stat_change != null){
+      updateStats();
+      stat_change = null;
+    }
   });
 
   $("#current-song-stats").delegate("#yes", "click", function() {
@@ -357,6 +364,10 @@ $(document).ready(function() {
     $("#review-submitted").hide();
     $("#error-message").hide();
     $("#login-message").hide();
+    if (stat_change != null){
+      updateStats();
+      stat_change = null;
+    }
   });
 
   $("#error-message").delegate("#no", "click", function() {
@@ -465,7 +476,6 @@ function noSpecialChars(a, field) {
 }
 
 function passwordsMatch(a, b) {
-	console.log("hi");
 	if (a != b){
 		showError("Your passwords do not match");
 		return false
@@ -545,7 +555,6 @@ function showOnboarding(){
 
 function ajaxPage(newuri){
 	if (newuri != "/"){
-		console.log(newuri);
 		$.ajax({
     	type: "GET",
     	url: newuri,
@@ -566,5 +575,9 @@ function hidePlayer(){
   $("#feedback-frame").hide();
   $(".player-divider").hide();
   $("#player-header").css("margin-bottom", "0");
+}
+
+function updateStats(){
+  $("#user-stat-container").load("/welcome/user_stats", function(){});
 }
 

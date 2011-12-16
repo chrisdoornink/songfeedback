@@ -1,0 +1,156 @@
+.menu-stat
+  .stat-left
+    Songs Uploaded:
+  .stat-right
+    =@user_info["uploads"]
+.menu-stat
+  .stat-left
+    Available Uploads:
+  .stat-right
+    =@avail_uploads
+.menu-stat
+  .stat-left
+    Songs Rated:
+  .stat-right
+    =@user_info["reviews"]
+.menu-stat
+  .stat-left
+    Comments Made:
+  .stat-right
+    =@user_info["commented"]
+.menu-stat
+  .stat-left
+    Feedback Score:
+  .stat-right
+    =@user_info["score"]
+.menu-stat
+  .stat-left
+    Feedback Ranking:
+  .stat-right
+    =@rank
+.critique-scale-title
+  Critique Strictness Scale:
+#critique-scale-container
+  -if @user_info["harsh"] <= 1
+    #csb1.critique-scale-box
+    #csb2.critique-scale-box
+    #csb3.critique-scale-box
+    #csb4.critique-scale-box
+    #csb5.critique-scale-box
+    .critique-scale-box
+    .critique-scale-box
+    .critique-scale-box
+    .critique-scale-box
+    .critique-scale-box
+  -else
+    -if @user_info["harsh"] <= 2
+      .critique-scale-box
+      #csb2.critique-scale-box
+      #csb3.critique-scale-box
+      #csb4.critique-scale-box
+      #csb5.critique-scale-box
+      .critique-scale-box
+      .critique-scale-box
+      .critique-scale-box
+      .critique-scale-box
+      .critique-scale-box
+    -else
+      -if @user_info["harsh"] <= 3
+        .critique-scale-box
+        .critique-scale-box
+        #csb3.critique-scale-box
+        #csb4.critique-scale-box
+        #csb5.critique-scale-box
+        .critique-scale-box
+        .critique-scale-box
+        .critique-scale-box
+        .critique-scale-box
+        .critique-scale-box
+      -else
+        -if @user_info["harsh"] <= 4
+          .critique-scale-box
+          .critique-scale-box
+          .critique-scale-box
+          #csb4.critique-scale-box
+          #csb5.critique-scale-box
+          .critique-scale-box
+          .critique-scale-box
+          .critique-scale-box
+          .critique-scale-box
+          .critique-scale-box
+        -else
+          -if @user_info["harsh"] <= 5
+            .critique-scale-box
+            .critique-scale-box
+            .critique-scale-box
+            .critique-scale-box
+            #csb5.critique-scale-box
+            .critique-scale-box
+            .critique-scale-box
+            .critique-scale-box
+            .critique-scale-box
+            .critique-scale-box
+          -else
+            -if @user_info["harsh"] <= 6
+              .critique-scale-box
+              .critique-scale-box
+              .critique-scale-box
+              .critique-scale-box
+              .critique-scale-box
+              #csb6.critique-scale-box
+              .critique-scale-box
+              .critique-scale-box
+              .critique-scale-box
+              .critique-scale-box
+            -else
+              -if @user_info["harsh"] <= 7
+                .critique-scale-box
+                .critique-scale-box
+                .critique-scale-box
+                .critique-scale-box
+                .critique-scale-box
+                #csb6.critique-scale-box
+                #csb7.critique-scale-box
+                .critique-scale-box
+                .critique-scale-box
+                .critique-scale-box
+              -else
+                -if @user_info["harsh"] <= 8
+                  .critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                  #csb6.critique-scale-box
+                  #csb7.critique-scale-box
+                  #csb8.critique-scale-box
+                  .critique-scale-box
+                  .critique-scale-box
+                -else
+                  -if @user_info["harsh"] <= 9
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    #csb6.critique-scale-box
+                    #csb7.critique-scale-box
+                    #csb8.critique-scale-box
+                    #csb9.critique-scale-box
+                    .critique-scale-box
+                  -else
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    .critique-scale-box
+                    #csb6.critique-scale-box
+                    #csb7.critique-scale-box
+                    #csb8.critique-scale-box
+                    #csb9.critique-scale-box
+                    #csb10.critique-scale-box
+
+  #critique-legend
+    #harsh-label harsher
+    #neutral-label neutral
+    #nice-label nicer

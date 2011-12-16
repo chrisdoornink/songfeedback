@@ -19,4 +19,8 @@ class WelcomeController < ApplicationController
   def show
   end
 
+  def user_stats
+    render :layout => false
+  end
+
 end
