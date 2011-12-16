@@ -22,7 +22,7 @@
                   %li
                     %a.ajax{:href => "/songs/least_rated"} Least Rated
                   %li
-                    %a.ajax{:href => "/songs/top"} Top Rated
+                    %a.last.ajax{:href => "/songs/top"} Top Rated
                   -#%li
                   -#  %a.last.ajax{:href => "/songs/genre"} By Genre
             -if @username
@@ -147,7 +147,6 @@
               #feedback-submit Submit Feedback
       #main-section-frame
         = yield
-      #footer
 
       #duplicate-review
         .modal-popup
@@ -215,3 +214,12 @@
             .content
               You can view your status and available uploads under the My Feedback tab at the top of the page (when logged in).
           #yes Get Started!
+
+    #footer
+      #footer-menu
+        #about.footer-menu-item
+          About
+        #contact.footer-menu-item
+          Contact
+        .footer-copyright
+          &copy; 2012 SongFeedback.com
