@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a677fad-bda5-4b69-b1ee-af6c76514b2e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/jquery.js" afterPath="$PROJECT_DIR$/public/javascripts/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/jquery.min.js" afterPath="$PROJECT_DIR$/public/javascripts/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sass/_layout.sass" afterPath="$PROJECT_DIR$/public/stylesheets/sass/_layout.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/songfeedback.css" afterPath="$PROJECT_DIR$/public/stylesheets/songfeedback.css" />
     </list>
     <ignored path="songfeedback.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/jquery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9265" column="13" selection-start="248137" selection-end="248137" vertical-scroll-proportion="0.0">
+            <state line="9265" column="13" selection-start="248137" selection-end="248137" vertical-scroll-proportion="12.285906">
               <folding />
             </state>
           </provider>
@@ -70,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_layout.sass" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_layout.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_layout.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="542" column="26" selection-start="12425" selection-end="12425" vertical-scroll-proportion="0.6701847">
+            <state line="542" column="26" selection-start="12425" selection-end="12425" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -640,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9265" column="13" selection-start="248137" selection-end="248137" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_colors.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="16" selection-start="57" selection-end="64" vertical-scroll-proportion="0.0">
@@ -670,7 +658,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/sass/_layout.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="542" column="26" selection-start="12425" selection-end="12425" vertical-scroll-proportion="0.6701847">
+        <state line="542" column="26" selection-start="12425" selection-end="12425" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9265" column="13" selection-start="248137" selection-end="248137" vertical-scroll-proportion="12.285906">
           <folding />
         </state>
       </provider>
