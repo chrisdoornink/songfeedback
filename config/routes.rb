@@ -47,6 +47,16 @@ Songfeedback::Application.routes.draw do
 
   get "welcome/user_stats"
 
+  get "welcome/about"
+
+  get "welcome/contact"
+
+  get "welcome/send_contact_message"
+
+  get "welcome/terms"
+
+  get "welcome/privacy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

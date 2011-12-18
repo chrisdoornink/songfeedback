@@ -339,6 +339,84 @@
     .song-feedback-button-reg a:hover {
       color: #eeeeee; }
 
+#about-page {
+  padding: 20px; }
+  #about-page a {
+    text-decoration: underline; }
+  #about-page .title {
+    font-size: 20px;
+    margin: 15px 0 5px; }
+  #about-page .text {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 0 5px; }
+  #about-page .question {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px; }
+  #about-page .answer {
+    font-size: 14px;
+    margin: 0 15px 5px;
+    line-height: 19px;
+    margin: 0 0 5px; }
+
+#privacy-page, #terms-page {
+  padding: 20px; }
+  #privacy-page a, #terms-page a {
+    text-decoration: underline; }
+  #privacy-page .title, #terms-page .title {
+    font-size: 20px;
+    margin: 15px 0 5px; }
+  #privacy-page .subtitle, #terms-page .subtitle {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 10px 0 5px; }
+  #privacy-page .text, #terms-page .text {
+    font-size: 12px;
+    line-height: 19px;
+    margin: 0 0 8px; }
+  #privacy-page .subtext, #terms-page .subtext {
+    font-size: 11px;
+    line-height: 15px;
+    margin: 0 0 5px 10px; }
+  #privacy-page .subsubtext, #terms-page .subsubtext {
+    font-size: 11px;
+    line-height: 15px;
+    margin: 0 0 5px 20px; }
+
+#contact-page {
+  padding: 20px; }
+  #contact-page a {
+    text-decoration: underline; }
+  #contact-page .title {
+    font-size: 20px;
+    margin: 15px 0 5px; }
+  #contact-page .text {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 0 5px; }
+  #contact-page #email-submit {
+    float: left;
+    padding: 5px;
+    font-size: 14px;
+    width: 100px;
+    border-top: 1px solid #888888;
+    border-bottom: 2px solid #eeeeee;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #81c3cf;
+    cursor: pointer; }
+  #contact-page #comment-box {
+    width: 340px;
+    margin: 5px 0;
+    height: 135px;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 5px; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Verdana, Sans-Serif;
   font-size: 0.9em;
@@ -880,6 +958,38 @@ ul {
       margin: 10px 15px 0;
       font-size: 11px; }
 
+#welcome-message {
+  margin: 0px;
+  padding: 10px;
+  background: #eeeeee;
+  position: relative; }
+  #welcome-message .welcome {
+    color: #1b1f1e;
+    font-size: 16px;
+    font-weight: bold; }
+  #welcome-message h1 {
+    color: #2b2f2e;
+    font-size: 15px;
+    margin: 0 0 5px;
+    padding: 0;
+    line-height: 16px;
+    font-weight: normal; }
+  #welcome-message .question {
+    color: #2b2f2e;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0 0; }
+  #welcome-message .answer {
+    color: #2b2f2e;
+    font-size: 12px;
+    margin: 5px 0 2px; }
+  #welcome-message #hide-me {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    cursor: pointer; }
+
 .my-songs-title {
   overflow: auto;
   border-bottom: 1px solid #eeeeee;
@@ -1127,7 +1237,6 @@ ul {
   -moz-box-shadow: 0px 0px 15px #333333;
   -webkit-box-shadow: 0px 0px 15px #333333; }
   #player #player-header {
-    cursor: pointer;
     height: 50px;
     width: 100%;
     background: url(/images/sprites.png) no-repeat 16px 6px;

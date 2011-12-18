@@ -15,6 +15,14 @@ $(document).ready(function() {
   checkFirstTimer();
   updateStats();
 
+  if (document.location.pathname.indexOf("authentication") != -1){
+    $(".footer-menu-item").hide();
+    $('#player').delegate("#player-header", "click", function() {
+      window.location = "/";
+    });
+    $("#player-header").css("cursor", "pointer");
+  }
+
   $.jPlayer.timeFormat.padMin = false;
 
 	$.ajaxSetup({
@@ -38,10 +46,6 @@ $(document).ready(function() {
 				ajaxPage($.address.value());
       }
     }
-  });
-
-  $('#player').delegate("#player-header", "click", function() {
-    window.location = "/";
   });
 
 	$('#login').delegate("#forgot-password", "click", function() {
@@ -349,13 +353,37 @@ $(document).ready(function() {
 	    url: "/authentication/send_reminder",
 			data: "email="+email_address,
 	    success: function(data, status, jqXHR){
-	      showError("Email sent");
+	      showError("Your password was sent to your email address.");
 	    },
 	    error: function(data){
-        showError("An error occurred, try again");
+        showError("An error occurred, try again.");
 	    }
 	  });
     $("#get-password-popup").hide();
+  });
+
+  $("#main-section-frame").delegate("#email-submit", "click", function() {
+    var email_address = $("#contact-form #email").val();
+    var message = $("#contact-form #comment-box").val();
+    if (message == ""){
+      showError("You must enter a message.");
+    }
+    else if (!isEmailAddress(email_address)){
+      showError("You must use a valid email address");
+    }
+    else{
+      $.ajax({
+        type: "GET",
+        url: "/welcome/send_contact_message",
+        data: "email="+email_address+"&message="+message,
+        success: function(data, status, jqXHR){
+          showError("Thank you for contacting us! We'll get back to you as soon as we can.");
+        },
+        error: function(data){
+          showError("An error occurred, please try again.");
+        }
+      });
+    }
   });
 
   $("body").delegate("#darkener-click", "click", function() {
@@ -409,6 +437,10 @@ $(document).ready(function() {
     else
       showError("You need to enter a song title.");
     return false;
+  });
+
+  $("#main-section-frame").delegate("#welcome-message #hide-me", "click", function(){
+    $("#welcome-message").hide();
   });
 });
 
@@ -542,15 +574,14 @@ function checkLogin(){
 
 function checkFirstTimer(){
   var onboard = $.cookie('visit');
-  if (onboard == null){
-    showOnboarding();
+  if (onboard != null || checkLogin())
+    hideOnboarding();
+  else
     $.cookie('visit', 'true', { expires: 1000, path: '/' });
-  }
 }
 
-function showOnboarding(){
-  $("#darkener-click").css("opacity", .5).fadeIn();
-  $("#onboarding-container").show();
+function hideOnboarding(){
+  $("#welcome-message").hide();
 }
 
 function ajaxPage(newuri){
@@ -580,4 +611,3 @@ function hidePlayer(){
 function updateStats(){
   $("#user-stat-container").load("/welcome/user_stats", function(){});
 }
-

@@ -1,0 +1,14 @@
+#contact-page
+  -if @user_info
+    -@email = @user_info["email"]
+  -else
+    -@email = "email"
+  .title Contact Song Feedback
+  .subtitle Questions? Suggestions? Complaints?
+  %form#contact-form{:method => "POST", :action => ""}
+    .form-item
+      %input#email.input{:name => "username", :label => "username", :type => "text", :value => "#{@email}", :onfocus => "if (this.value == 'email') {this.value=''}", :onblur => "if(this.value == '') { this.value='email'}"}
+    .form-item
+      %textarea#comment-box{:placeholder => "Whats up?", :name => "comments"}
+    .send-message
+      #email-submit Send

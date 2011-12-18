@@ -217,9 +217,13 @@
 
     #footer
       #footer-menu
-        #about.footer-menu-item
+        %a{:id => "about", :class => "footer-menu-item ajax", :href => "/welcome/about"}
           About
-        #contact.footer-menu-item
+        %a{:id => "contact", :class => "footer-menu-item ajax", :href => "/welcome/contact"}
           Contact
+        %a{:id => "contact", :class => "footer-menu-item ajax", :href => "/welcome/terms"}
+          Terms
+        %a{:id => "contact", :class => "footer-menu-item ajax", :href => "/welcome/privacy"}
+          Privacy
         .footer-copyright
           &copy; 2012 SongFeedback.com

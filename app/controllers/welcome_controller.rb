@@ -23,4 +23,24 @@ class WelcomeController < ApplicationController
     render :layout => false
   end
 
+  def about
+    render :layout => false
+  end
+
+  def contact
+    render :layout => false
+  end
+
+  def send_contact_message
+    ContactMailer.contact_email(params[:email], params[:message]).deliver
+  end
+
+  def privacy
+    render :layout => false
+  end
+
+  def terms
+    render :layout => false
+  end
+
 end

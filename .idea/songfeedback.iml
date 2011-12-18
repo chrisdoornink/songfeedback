@@ -76,8 +76,8 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.27, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v2.1.2, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="abstract (v1.0.0, Ruby SDK 1.8.7-p174) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails (v3.0.7, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.5.7, Ruby SDK 1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails (v3.0.7, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.5.0, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.6.14, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.16, Ruby SDK 1.8.7-p174) [gem]" level="application" />
@@ -86,8 +86,8 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.0.7, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.6.6, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.1, Ruby SDK 1.8.7-p174) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="arel (v2.0.10, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.2.19, Ruby SDK 1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v2.0.10, Ruby SDK 1.8.7-p174) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
