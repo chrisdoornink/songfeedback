@@ -1,7 +1,7 @@
 #upload
-  -if @avail_uploads > 0
+  -if @user_info["avail_uploads"] > 0
     %h1 Upload Your Song
-    %h2 You've earned #{@avail_uploads} uploads.
+    %h2 You've earned #{@user_info["avail_uploads"]} uploads.
     - form_for @song, :as => :song, :url => { :action => "create"}, :html => { :id => "upload-form", :multipart => true } do |f|
       .form-item
         = f.text_field :title, :class => "input", :value => "song title", :onfocus => "if (this.value == 'song title') {this.value=''}", :onblur => "if(this.value == '') { this.value='song title'}"
@@ -14,7 +14,10 @@
       = f.hidden_field :user_id, :value => @user_info["id"]
       .form-item
         = submit_tag "Upload", :class => "upload-song-button", :id => "upload-submit"
+    .agreement
+      By clicking on the 'Upload' button, you agree to Song Feedback's
+      %a{:href => "/#/welcome/terms", :target => "_blank"} Terms of Service.
   -else
-    %h2 You need #{@points_needed} more feedback points before you can upload a song. Go rate some music!
+    %h2 You need #{@user_info["points_needed"]} more feedback points before you can upload a song. Go rate some music!
     .song-feedback-button-reg
       %a.ajax{:href => "/songs/recent"} Yes sir!

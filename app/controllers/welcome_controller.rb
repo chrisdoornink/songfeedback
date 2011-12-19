@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   before_filter :get_user_info
 
-  
+
 
   def get_user_info
     @user_info = user_auth

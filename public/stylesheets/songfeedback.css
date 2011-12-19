@@ -203,6 +203,13 @@
 
 #login, #upload {
   width: 345px; }
+  #login .agreement, #upload .agreement {
+    float: left;
+    font-size: 11px;
+    color: #4b4f4e;
+    margin: 4px 0 0; }
+    #login .agreement a, #upload .agreement a {
+      text-decoration: underline; }
   #login #login-form-error-message-container, #upload #login-form-error-message-container {
     height: 20px;
     background: #81c3cf;

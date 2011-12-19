@@ -11,9 +11,9 @@ class ApplicationController < ActionController::Base
         @user_info = User.find(@user_id)
 
         @sql = "select count(*) as rank from (select * from users where score > (select score from users where id = "+@user_id+") order by score desc) as s"
-        @rank = User.find_by_sql(@sql)[0].rank+1
-        @avail_uploads = (@user_info["score"]/20)-(@user_info["uploads"])+1
-        @points_needed = (@user_info["uploads"]*20)-(@user_info["score"])
+        @user_info["rank"] = User.find_by_sql(@sql)[0].rank+1
+        @user_info["avail_uploads"] = (@user_info["score"]/20)-(@user_info["uploads"])+1
+        @user_info["points_needed"] = (@user_info["uploads"]*20)-(@user_info["score"])
 
         @token_new = @user_id.to_s + "-".to_s + Time.current.usec.to_s
         User.update(@user_id, {:token => @token_new})
