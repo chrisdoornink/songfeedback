@@ -13,16 +13,23 @@ class SongsController < ApplicationController
   def index
   end
 
+  def show
+    @song = Song.find(params[:id])
+    @recent = Song.order("created_at DESC").limit(5)
+    @least = Song.order("reviews ASC").limit(5)
+    @top = Song.order("overall DESC").limit(5)
+  end
+
   def recent
-    @songs = Song.order("created_at DESC").limit(15)
+    @songs = Song.order("created_at DESC").limit(25)
   end
 
   def least_rated
-    @songs = Song.order("reviews ASC").limit(15)
+    @songs = Song.order("reviews ASC").limit(25)
   end
 
   def top
-    @songs = Song.order("overall DESC").limit(15)
+    @songs = Song.order("overall DESC").limit(25)
   end
 
   def random

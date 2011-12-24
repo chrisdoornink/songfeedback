@@ -21,6 +21,8 @@ Songfeedback::Application.routes.draw do
 
   get "songs/index"
 
+  get "songs/show"
+
   get "songs/recent"
 
   get "songs/least_rated"
@@ -56,6 +58,8 @@ Songfeedback::Application.routes.draw do
   get "welcome/terms"
 
   get "welcome/privacy"
+
+  match "songs/:id" => "songs#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

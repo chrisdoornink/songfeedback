@@ -12,6 +12,7 @@ var current_song = null;
 var stat_change = null;
 
 $(document).ready(function() {
+  checkGoTo();
   checkFirstTimer();
   updateStats();
 
@@ -118,6 +119,7 @@ $(document).ready(function() {
   });
 
   $("#menu").delegate(".myaccount-logged-out", "click", function() {
+    $.cookie('goto', document.location.hash);
     window.location = '/authentication/login';
   });
 
@@ -408,9 +410,11 @@ $(document).ready(function() {
   });
 
   $("#login-message").delegate("#no", "click", function() {
+    $.cookie('goto', document.location.hash);
     window.location = '/authentication/login';
   });
   $("#login-message").delegate("#yes", "click", function() {
+    $.cookie('goto', document.location.hash);
     window.location = '/authentication/register';
   });
 
@@ -614,4 +618,13 @@ function hidePlayer(){
 
 function updateStats(){
   $("#user-stat-container").load("/welcome/user_stats", function(){});
+}
+
+function checkGoTo(){
+  if (document.location.pathname == "/"){
+    var goto = $.cookie('goto');
+    if (goto != null)
+      window.location = document.location.origin +"/"+ goto;
+      $.cookie('goto', null);
+  }
 }

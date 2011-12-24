@@ -1,0 +1,43 @@
+:javascript
+  if (document.location.pathname != "/"){window.location = document.location.origin + "/#" + document.location.pathname;}
+.song-list-container
+  .song-list-category
+    Linked Song
+  .song-item
+    .song-list-item{:id => @song.id, :songTitle => @song.title, :artist => @song.artist, :desc => @song.description, :loc => @song.audio.url}
+      .song-list-play-button-container
+        .song-list-index 1
+        .song-list-play-button
+      .song-list-names
+        .song-list-title
+          = @song.title
+        .song-list-artist
+          = @song.artist
+      .song-list-data
+        .song-feedbacks
+          .feedbacks-label= "ratings: " + @song.reviews.to_s
+          .comments-label= "comments: " + @song.totalcomments.to_s
+        .song-overall
+          .overall-label
+          .graph
+            .bar
+              - @bar = 20-(@song.overall*4)
+              .indicator{:style => "height: "+@bar.to_s+";"}
+            .number
+              = @song.overall
+      .stats-button view stats and comments
+
+.song-list-container
+  .song-list-category
+    %a.ajax{:href => "songs/recent"} Most Recent
+  = render :partial => "welcome/recent"
+
+.song-list-container
+  .song-list-category
+    %a.ajax{:href => "songs/least_rated"} Least Rated
+  = render :partial => "welcome/least"
+
+.song-list-container
+  .song-list-category
+    %a.ajax{:href => "songs/top"} Top Rated
+  = render :partial => "welcome/top"
