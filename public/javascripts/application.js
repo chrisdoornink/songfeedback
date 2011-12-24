@@ -35,7 +35,7 @@ $(document).ready(function() {
 	ajaxPage($.address.value());
 
 	// all links with the 'ajax' class will trigger an ajax load based on their href
-  $(document).delegate('a.ajax', 'click', function(event) {   
+  $(document).delegate('a.ajax', 'click', function(event) {
     if (event.button == 0 && !(event.metaKey == true) && !(event.ctrlKey == true)) {
       event.preventDefault();
       href = $(this).attr('href');
@@ -46,6 +46,10 @@ $(document).ready(function() {
 				ajaxPage($.address.value());
       }
     }
+  });
+
+  $.address.externalChange(function(event) {
+    ajaxPage($.address.value());
   });
 
 	$('#login').delegate("#forgot-password", "click", function() {

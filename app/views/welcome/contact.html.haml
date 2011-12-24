@@ -1,3 +1,5 @@
+:javascript
+  if (document.location.pathname != "/"){window.location = document.location.origin + "/#" + document.location.pathname;}
 #contact-page
   -if @user_info
     -@email = @user_info["email"]

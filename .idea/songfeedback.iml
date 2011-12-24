@@ -86,8 +86,8 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.0.7, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.6.6, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.1, Ruby SDK 1.8.7-p174) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mail (v2.2.19, Ruby SDK 1.8.7-p174) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v2.0.10, Ruby SDK 1.8.7-p174) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.2.19, Ruby SDK 1.8.7-p174) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
