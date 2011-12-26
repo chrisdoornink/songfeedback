@@ -586,7 +586,7 @@ ul {
           #container #header #menu #menu-myfeedback-list ul a:hover {
             background-color: #81c3cf; }
         #container #header #menu #menu-myfeedback-list ul #user-stat-container {
-          cursor: normal;
+          cursor: default;
           margin: 0 5px 5px;
           background: #333333;
           border-top: 1px solid #606463;
