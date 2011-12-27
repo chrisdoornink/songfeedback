@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
 
   create_table "comments", :force => true do |t|
     t.integer  "song_id"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(:version => 8) do
     t.integer  "plays",      :default => 0
     t.integer  "reviews",    :default => 0
     t.integer  "recs",       :default => 0
-    t.float    "harsh",      :default => 0.0
+    t.float    "harsh",      :default => 5.0
     t.integer  "uploads",    :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
