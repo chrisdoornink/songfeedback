@@ -141,6 +141,19 @@ $(document).ready(function() {
     $(this).addClass("current");
   });
 
+  $("#main-section-frame").delegate(".all-songs-container .my-songs-container .share-button", "click", function() {
+    var shareShow = $(this).attr("id");
+//    $(this).hide();
+    $("."+shareShow).show();
+    $(this).css("border-radius", "5px 0 0 5px");
+  });
+
+  $("#main-section-frame").delegate(".share-link", "click", function() {
+    var linkId = $(this).attr("linkid");
+    showError("Copy this link to share by email or on your website: http://songfeedback.com/songs/"+linkId);
+  });
+
+
   $(".all-songs-container .my-songs-container").first().show();
   $(".all-songs-container .pick-song .pick-song-item").first().addClass("current");
 

@@ -1055,7 +1055,8 @@ ul {
   float: left;
   margin: 15px 15px 15px 0;
   padding: 0;
-  background: white; }
+  background: white;
+  width: 350px; }
   .my-songs-container .song-list-category {
     width: 350px; }
     .my-songs-container .song-list-category .song-title {
@@ -1233,6 +1234,144 @@ ul {
       font-size: 10px;
       color: #606463;
       margin: 3px 0 0 0; }
+
+.share-button {
+  float: left;
+  background: #81c3cf;
+  padding: 6px;
+  font-size: 12px;
+  color: #f2f2f2;
+  border-radius: 5px;
+  margin: 1px 0 5px;
+  cursor: pointer; }
+
+.share-container {
+  height: 22px;
+  float: left;
+  background: #81c3cf;
+  padding: 4px 0 0;
+  border-radius: 0 5px 5px 0;
+  margin: 1px 0 0; }
+  .share-container .share-twitter {
+    float: left;
+    margin: 0 10px 0;
+    border: 1px solid #aaaaaa;
+    background: #eeeeee url(/images/bird.png) no-repeat 1px 2px;
+    border-radius: 3px;
+    padding: 2px 3px 2px 18px;
+    font-size: 10px;
+    font-weight: bold; }
+    .share-container .share-twitter a {
+      color: #333333; }
+  .share-container .share-facebook {
+    float: left;
+    margin: 0 10px 0; }
+    .share-container .share-facebook .fb-share-button {
+      background: #29447e no-repeat;
+      display: inline-block;
+      padding: 0;
+      text-decoration: none !important;
+      outline: none;
+      background-image: url(https://s-static.ak.facebook.com/images/share/links/fb-button-icon18.png); }
+    .share-container .share-facebook .fb-share-button span {
+      background: #5f78ab;
+      border-top: solid 1px #879ac0;
+      border-bottom: solid 1px #1a356e;
+      color: white;
+      display: block;
+      font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+      font-weight: bold;
+      margin: 1px 1px 0 0;
+      text-shadow: none;
+      padding: 0 6px;
+      line-height: 15px;
+      font-size: 11px;
+      margin-left: 18px; }
+  .share-container .share-link {
+    float: left;
+    margin: 0 10px 0;
+    border: 1px solid #aaaaaa;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #bbbbbb), color-stop(0.6, #eeeeee));
+    background: -moz-linear-gradient(center bottom, #bbbbbb 10%, #eeeeee 60%);
+    border-radius: 2px;
+    padding: 2px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer; }
+    .share-container .share-link a {
+      color: #333333; }
+
+#create-page {
+  margin: 30px auto;
+  width: 500px;
+  overflow: auto; }
+  #create-page .downloaded-title {
+    font-weight: normal;
+    color: #4b4f4e; }
+  #create-page .share-downloaded-song {
+    float: left;
+    width: 370px;
+    overflow: auto;
+    margin-bottom: 15px;
+    background: #eeeeee;
+    padding: 20px;
+    border-radius: 10px; }
+    #create-page .share-downloaded-song .title {
+      width: 100%;
+      float: left;
+      font-size: 16px;
+      color: #4b4f4e;
+      margin-bottom: 15px; }
+    #create-page .share-downloaded-song .share-twitter {
+      float: left;
+      margin: 0 25px 0;
+      border: 1px solid #aaaaaa;
+      background: #f8f8f8 url(/images/bird.png) no-repeat 4px 5px;
+      border-radius: 3px;
+      padding: 2px 6px 3px 25px;
+      font-size: 13px;
+      font-weight: bold; }
+      #create-page .share-downloaded-song .share-twitter a {
+        color: #333333; }
+    #create-page .share-downloaded-song .share-facebook {
+      float: left;
+      margin: 0 25px 0; }
+      #create-page .share-downloaded-song .share-facebook .fb-share-button {
+        background: #29447e no-repeat;
+        display: inline-block;
+        padding: 0;
+        text-decoration: none !important;
+        outline: none;
+        /* size specific: */
+        background-image: url(https://s-static.ak.facebook.com/images/share/links/fb-button-icon22.png); }
+      #create-page .share-downloaded-song .share-facebook .fb-share-button span {
+        background: #5f78ab;
+        border-top: solid 1px #879ac0;
+        border-bottom: solid 1px #1a356e;
+        color: white;
+        display: block;
+        font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+        font-weight: bold;
+        margin: 1px 1px 0 0;
+        text-shadow: none;
+        padding: 0 6px;
+        /* size specific section: */
+        line-height: 19px;
+        font-size: 12px;
+        margin-left: 22px; }
+    #create-page .share-downloaded-song .share-link {
+      float: left;
+      margin: 0 25px 0;
+      border: 1px solid #aaaaaa;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #bbbbbb), color-stop(0.6, #eeeeee));
+      background: -moz-linear-gradient(center bottom, #bbbbbb 10%, #eeeeee 60%);
+      border-radius: 2px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer; }
+      #create-page .share-downloaded-song .share-link a {
+        color: #333333; }
 
 #player {
   float: left;

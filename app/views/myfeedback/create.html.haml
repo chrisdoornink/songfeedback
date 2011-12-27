@@ -1,5 +1,15 @@
-%h2 Your song has been uploaded successfully.
-.song-feedback-button-reg
-  %a{:href => "/#/myfeedback/upload"} Upload Another Song
-.song-feedback-button-reg
-  %a{:href => "/#/songs/recent"} View Your song
+#create-page
+  %h2.downloaded-title Your song has been uploaded successfully!
+  .share-downloaded-song
+    .title Now, share your song with your social network to grease the wheels.
+    .share-twitter
+      %a{:href=>"javascript:void(window.open('https://twitter.com/share?url=http%3A%2F%2Fwww.songfeedback.com%2Fsongs%2F#{@song["id"].to_s}&text=Rate my new song at&count=none&hashtags=songfeedback', 'share', 'width=626,height=254,toolbar=0,status=0'));"} Tweet
+    .share-facebook
+      %a.fb-share-button.fb-share-button-22{:href=>"javascript:void(window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.songfeedback.com/songs/#{@song["id"].to_s}', 'sharer', 'width=626,height=436,toolbar=0,status=0'));"}
+        %span Share
+    .share-link{:linkid => @song["id"].to_s}
+      get link
+  .song-feedback-button-reg
+    %a{:href => "/#/myfeedback/upload"} Upload Another Song
+  .song-feedback-button-reg
+    %a{:href => "/#/songs/recent"} View Your song

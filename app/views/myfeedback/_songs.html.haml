@@ -9,6 +9,15 @@
         .song-title= song.title
         .song-artist= song.artist
         - @song_ids << song.id
+      .share-button{:id => "share_"+song.id.to_s} Share
+      .share-container{:class => "share_"+song.id.to_s, :style => "display: none"}
+        .share-twitter
+          %a{:href=>"javascript:void(window.open('https://twitter.com/share?url=http%3A%2F%2Fwww.songfeedback.com%2Fsongs%2F#{song.id.to_s}&text=Rate my new song at&count=none&hashtags=songfeedback', 'share', 'width=626,height=254,toolbar=0,status=0'));"} Tweet
+        .share-facebook
+          %a.fb-share-button.fb-share-button-18{:href=>"javascript:void(window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.songfeedback.com/songs/#{song.id.to_s}', 'sharer', 'width=626,height=436,toolbar=0,status=0'));"}
+            %span Share
+        .share-link{:linkid => song.id.to_s}
+          link
       .top-graph
         .total-ratings-label= "ratings: " + song.reviews.to_s
         .key

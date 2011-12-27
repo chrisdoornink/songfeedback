@@ -9,6 +9,11 @@
           = song.title
         .song-list-artist
           = song.artist
+      -#-if @user_info && song.user_id == @user_info["id"]
+        -#.song-list-share-container
+        -#  .share-twitter
+        -#  .share-facebook
+        -#  .share-link
       .song-list-data
         .song-feedbacks
           .feedbacks-label= "ratings: " + song.reviews.to_s
