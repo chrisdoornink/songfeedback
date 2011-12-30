@@ -40,7 +40,12 @@ class MyfeedbackController < ApplicationController
     @song = Song.create( params[:song] )
     @uploads = Song.count(:conditions => {:user_id => @user_id})
     User.update(@user_id, {:uploads => (@uploads)})
-    render :layout => true
+    redirect_to "/#/myfeedback/success?song=" + @song["id"].to_s
+  end
+
+  def success
+    @songid = params[:song]
+    render :layout => false
   end
 
 end

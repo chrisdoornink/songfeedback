@@ -12,6 +12,7 @@ Songfeedback::Application.routes.draw do
   get "myfeedback/mysongs"
   get "myfeedback/upload"
   post "myfeedback/create"
+  get "myfeedback/success"
 
   get "songs/index"
   get "songs/show"
