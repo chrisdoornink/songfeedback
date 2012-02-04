@@ -641,3 +641,14 @@ function checkGoTo(){
       $.cookie('goto', null);
   }
 }
+
+function showMyFirstSong(){
+  var el = $(".all-songs-container .pick-song .pick-song-item").first();
+  if (el != null){
+    var statShow = el.attr("id");
+    $(".all-songs-container .my-songs-container").hide();
+    $(".all-songs-container ."+statShow).show();
+    $(".all-songs-container .pick-song .pick-song-item").removeClass("current");
+    el.addClass("current");
+  }
+}
