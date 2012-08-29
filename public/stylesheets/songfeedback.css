@@ -969,7 +969,8 @@ ul {
   margin: 0px;
   padding: 10px;
   background: #eeeeee;
-  position: relative; }
+  position: relative;
+  border: 1px solid #dddddd; }
   #welcome-message .welcome {
     color: #1b1f1e;
     font-size: 16px;
@@ -989,7 +990,8 @@ ul {
   #welcome-message .answer {
     color: #2b2f2e;
     font-size: 12px;
-    margin: 5px 0 2px; }
+    margin: 5px 0 2px;
+    line-height: 16px; }
   #welcome-message #hide-me {
     position: absolute;
     top: 5px;
